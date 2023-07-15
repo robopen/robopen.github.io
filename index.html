@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="RoboPen">
+    <meta name="keywords" content="large-scale robot learning robotic dataset">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/plasticine/100/robot.png" />
+    <title>RoboPen</title>
+
+    <link rel="stylesheet" href="index.css">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css'>
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet">
+</head>
+
+<div class="content is-centered has-text-centered" style="margin-right: 5%; margin-left: 5%; ">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a role="button" class="navbar-link" id="burger" aria-label="menu" aria-expanded="True">
+                Table of contents
+            </a>
+        </div>
+        <div class="navbar-menu" id="nav-links">
+            <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link" id="toc">
+                        Table of contents
+                    </a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="#hierarchy">
+                            Hierarchy
+                        </a>
+                        <a class="navbar-item" href="#datacomposition">
+                            Data Composition
+                        </a>
+                        <a class="navbar-item" href="#data">
+                            Data
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <h1 class="title is-1">
+        RoboPen
+    </h1>
+    <div class="columns is-centered">
+        <div class="column has-text-centered">
+            <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                    <p>
+                        <a href="https://homangab.github.io/" target="_blank">Homanga Bharadhwaj</a>,
+                        <a href="https://jdvakil.github.io" target="_blank">Jay Vakil</a>,
+                        <a href="https://mohitsharma0690.github.io/" target="_blank">Mohit Sharma</a>,
+                        <a href="http://www.cs.cmu.edu/~abhinavg/" target="_blank">Abhinav Gupta</a>,
+                        <a href="http://shubhtuls.github.io/" target="_blank">Shubham Tulsiani</a>,
+                        <a href="https://vikashplus.github.io" target="_blank">Vikash Kumar</a>
+                    </p>
+                </span>
+            </div>
+            <div class="column has-text-centered">
+                <div class="publication-links">
+                    <span class="link-block">
+                        <a href="" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                            <span class="icon">
+                                <i class="fa fa-file-pdf-o" style="font-size:24px"></i>
+                            </span>
+                            <span>Paper</span>
+                        </a>
+                    </span>
+                    <span class="link-block">
+                        <a href="" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                            <span class="icon">
+                                <i class="fa fa-github" style="font-size:24px"></i>
+                            </span>
+                            <span>Code</span>
+                        </a>
+                    </span>
+                    <span class="link-block">
+                        <a href="https://dl.fbaipublicfiles.com/RoboSet/roboset.html" target="_blank"
+                            class="external-link button is-normal is-rounded is-dark">
+                            <span class="icon">
+                                <i class="fa fa-database" style="font-size:24px"></i>
+                            </span>
+                            <span>DataSet</span>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column has-text-centered">
+        <h2>
+            Introduction
+        </h2>
+        <p style="text-align: justify; margin-left: 15%; margin-right: 15%;">
+            The grand aim of having a single robot that can manipulate arbitrary objects in diverse settings is at
+            odds with the paucity of robotics datasets. Acquiring and growing such datasets is strenuous due to
+            manual efforts, operational costs, and safety challenges. A path toward such a universal agent is in
+            need of an efficient framework capable of extracting generalization but within a reasonable data budget.
+            In this paper, we develop an efficient framework (MT-ACT) for training universal agents capable of
+            multi-task manipulation skills using (a) semantic augmentations that can rapidly multiply existing
+            datasets and (b) action representations that can extract performant policies with small yet diverse
+            multi-modal datasets without overfitting. In addition, reliable task conditioning and an expressive
+            policy architecture enables our agent to exhibit a diverse repertoire of skills in novel situations
+            specified using task commands. Using merely 7500 demonstrations, we are able to train a single agent
+            capable of 12 unique skills and demonstrate its generalization over 30 tasks spread across common daily
+            activities in diverse kitchen scenes. On average MT-ACT outperforms prior methods by over 40% in unseen
+            situations, while being more sample efficient.
+            <br><br>
+            MT-ACT agent capable of 12 manipulation skills across 6 activities, demonstrated across 30 tasks in 5
+            kitchen scenes
+        </p>
+    </div>
+</div>
+
+<script>
+    const burgerIcon = document.querySelector('#burger');
+    const navbarMenu = document.querySelector('#nav-links');
+    burgerIcon.addEventListener('click', () => {
+        navbarMenu.classList.toggle('is-active');
+    });
+</script>
+
+</html>

@@ -29,255 +29,285 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./static/css/bulma.min.css">
     <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
     <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <link rel="stylesheet" href="./static/css/index.css">
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-carousel.js"></script>
     <script src="./static/js/index.js"></script>
 </head>
 
-<div class="content is-centered has-text-centered" style="margin-right: 15%; margin-left: 15%; ">
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a role="button" class="navbar-link" id="burger" aria-label="menu" aria-expanded="True">
-                Table of contents
-            </a>
-        </div>
-        <div class="navbar-menu" id="nav-links">
-            <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link" id="toc">
-                        Table of contents
-                    </a>
-                    <div class="navbar-dropdown">
-                        <a class="navbar-item" href="#hierarchy">
-                            Hierarchy
+<body onload="updateResultVideo();">
+    <div class="content is-centered has-text-centered" style="margin-right: 15%; margin-left: 15%; ">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a role="button" class="navbar-link" id="burger" aria-label="menu" aria-expanded="True">
+                    Table of contents
+                </a>
+            </div>
+            <div class="navbar-menu" id="nav-links">
+                <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link" id="toc">
+                            Table of contents
                         </a>
-                        <a class="navbar-item" href="#datacomposition">
-                            Data Composition
-                        </a>
-                        <a class="navbar-item" href="#data">
-                            Data
-                        </a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="#hierarchy">
+                                Hierarchy
+                            </a>
+                            <a class="navbar-item" href="#datacomposition">
+                                Data Composition
+                            </a>
+                            <a class="navbar-item" href="#data">
+                                Data
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <h1 class="title is-1">
+            RoboPen
+        </h1>
+        <div class="columns is-centered">
+            <div class="column has-text-centered">
+                <div class="is-size-5 publication-authors">
+                    <span class="author-block">
+                        <p>
+                            <a href="https://homangab.github.io/" target="_blank">Homanga Bharadhwaj</a>,
+                            <a href="https://jdvakil.github.io" target="_blank">Jay Vakil</a>,
+                            <a href="https://mohitsharma0690.github.io/" target="_blank">Mohit Sharma</a>,
+                            <a href="http://www.cs.cmu.edu/~abhinavg/" target="_blank">Abhinav Gupta</a>,
+                            <a href="http://shubhtuls.github.io/" target="_blank">Shubham Tulsiani</a>,
+                            <a href="https://vikashplus.github.io" target="_blank">Vikash Kumar</a>
+                        </p>
+                    </span>
+                </div>
+                <div class="column has-text-centered">
+                    <div class="publication-links">
+                        <span class="link-block">
+                            <a href="" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                                <span class="icon">
+                                    <i class="fa fa-file-pdf-o" style="font-size:24px"></i>
+                                </span>
+                                <span>Paper</span>
+                            </a>
+                        </span>
+                        <span class="link-block">
+                            <a href="" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                                <span class="icon">
+                                    <i class="fa fa-github" style="font-size:24px"></i>
+                                </span>
+                                <span>Code</span>
+                            </a>
+                        </span>
+                        <span class="link-block">
+                            <a href="https://dl.fbaipublicfiles.com/RoboSet/roboset.html" target="_blank"
+                                class="external-link button is-normal is-rounded is-dark">
+                                <span class="icon">
+                                    <i class="fa fa-database" style="font-size:24px"></i>
+                                </span>
+                                <span>DataSet</span>
+                            </a>
+                        </span>
                     </div>
                 </div>
             </div>
         </div>
-    </nav>
-    <h1 class="title is-1">
-        RoboPen
-    </h1>
-    <div class="columns is-centered">
         <div class="column has-text-centered">
-            <div class="is-size-5 publication-authors">
-                <span class="author-block">
-                    <p>
-                        <a href="https://homangab.github.io/" target="_blank">Homanga Bharadhwaj</a>,
-                        <a href="https://jdvakil.github.io" target="_blank">Jay Vakil</a>,
-                        <a href="https://mohitsharma0690.github.io/" target="_blank">Mohit Sharma</a>,
-                        <a href="http://www.cs.cmu.edu/~abhinavg/" target="_blank">Abhinav Gupta</a>,
-                        <a href="http://shubhtuls.github.io/" target="_blank">Shubham Tulsiani</a>,
-                        <a href="https://vikashplus.github.io" target="_blank">Vikash Kumar</a>
+            <iframe width="955" height="542" src="https://www.youtube.com/embed/ux4yisjYHeI?autoplay=1?controls=0"
+                title="Overview of MT-ACT capabilities" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <div class="select is-small is-rounded" style="margin-bottom: 1%;">
+            <select id="single-menu-replay" onchange="updateResultVideo()">
+                <option value="IMG_2715" selected="selected">Placeholder 1</option>
+                <option value="IMG_2812">Placeholder 2</option>
+                <option value="IMG_2820">Placeholder 3
+                </option>
+                <option value="IMG_2827">Placeholder 4
+                </option>
+            </select>
+        </div><br><br>
+        <video id="result-video" class="full-image" muted autoplay loop width="70%">
+            <source src="media/IMG_2715.mp4" type="video/mp4">
+        </video><br>
+        <div class="column has-text-centered" style="margin-right: 20%; margin-left: 20%;">
+            <h2>
+                Introduction
+            </h2>
+            <p>
+                The grand aim of having a single robot that can manipulate arbitrary objects in diverse settings is at
+                odds with the paucity of robotics datasets. Acquiring and growing such datasets is strenuous due to
+                manual efforts, operational costs, and safety challenges. A path toward such a universal agent is in
+                need of an efficient framework capable of extracting generalization but within a reasonable data budget.
+                In this paper, we develop an efficient framework (MT-ACT) for training universal agents capable of
+                multi-task manipulation skills using (a) semantic augmentations that can rapidly multiply existing
+                datasets and (b) action representations that can extract performant policies with small yet diverse
+                multi-modal datasets without overfitting. In addition, reliable task conditioning and an expressive
+                policy architecture enables our agent to exhibit a diverse repertoire of skills in novel situations
+                specified using task commands. Using merely 7500 demonstrations, we are able to train a single agent
+                capable of 12 unique skills and demonstrate its generalization over 30 tasks spread across common daily
+                activities in diverse kitchen scenes. On average MT-ACT outperforms prior methods by over 40% in unseen
+                situations, while being more sample efficient.
+                <br><br>
+                MT-ACT agent capable of 12 manipulation skills across 6 activities, demonstrated across 30 tasks in 5
+                kitchen scenes
+            </p>
+            <h2>
+                Architecture
+            </h2>
+            <!-- <p style="text-align: justify; margin-left: 15%; margin-right: 15%;"> -->
+            <p>
+                Summary of the overall framework MT-ACT showing the two main stages: semantic augmentation
+                for multiplying data, and leveraging efficient action representations for ingesting multi-modal
+                multi-task
+                data
+                into a single multi-skill multi-task policy
+            </p>
+            <figure class="image is-inline-block">
+                <img src="media/mtact.png" alt="mtact" style="height: 50%; width: 70%;">
+            </figure>
+            <br>
+            <h2>
+                Results
+            </h2>
+            <p class="is-centered has-text-centered">
+                In the below sections we highlight some main results. For a complete analysis please read our
+                paper.
+            </p>
+            <br>
+            <h5><b>How well does our policy representation work?</b></h5>
+            <!-- <div class="card-image has-text-centered is-half"> -->
+            <!-- <div class="has-text-centered is-half"> -->
+            <div class="columns is-vcentered">
+                <div class="column is-half">
+                    <p class="has-text-justified">
+                        Figure on the right compares our proposed MT-ACT policy representation against several
+                        imitation
+                        learning architectures.
+                        For this result we use environment variations that include object pose changes and some
+                        lighting
+                        changes only.
+                        Somewhat similar to previous works, we refer to this as L1-generalization. From our results
+                        we
+                        can
+                        clearly
+                        see that using action-checking to model sub-trajectories significantly outperforms all
+                        baselines.
+                        Thus, a more sophisicated policy representation is crucial for sample efficient learning.
                     </p>
-                </span>
-            </div>
-            <div class="column has-text-centered">
-                <div class="publication-links">
-                    <span class="link-block">
-                        <a href="" class="external-link button is-normal is-rounded is-dark" target="_blank">
-                            <span class="icon">
-                                <i class="fa fa-file-pdf-o" style="font-size:24px"></i>
-                            </span>
-                            <span>Paper</span>
-                        </a>
-                    </span>
-                    <span class="link-block">
-                        <a href="" class="external-link button is-normal is-rounded is-dark" target="_blank">
-                            <span class="icon">
-                                <i class="fa fa-github" style="font-size:24px"></i>
-                            </span>
-                            <span>Code</span>
-                        </a>
-                    </span>
-                    <span class="link-block">
-                        <a href="https://dl.fbaipublicfiles.com/RoboSet/roboset.html" target="_blank"
-                            class="external-link button is-normal is-rounded is-dark">
-                            <span class="icon">
-                                <i class="fa fa-database" style="font-size:24px"></i>
-                            </span>
-                            <span>DataSet</span>
-                        </a>
-                    </span>
+                </div>
+                <div class="column card-image is-half">
+                    <figure class="image is-inline-block">
+                        <img src="media/l1_website.png" style="height: 100%; width: 100%;">
+                    </figure>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="column has-text-centered">
-        <iframe width="844" height="542" src="https://www.youtube.com/embed/ux4yisjYHeI?autoplay=1?controls=0"
-            title="Overview of MT-ACT capabilities" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-
-        </iframe>
-    </div>
-    <div class="column has-text-centered">
-        <h2>
-            Introduction
-        </h2>
-        <p style="text-align: justify; margin-left: 15%; margin-right: 15%;">
-            The grand aim of having a single robot that can manipulate arbitrary objects in diverse settings is at
-            odds with the paucity of robotics datasets. Acquiring and growing such datasets is strenuous due to
-            manual efforts, operational costs, and safety challenges. A path toward such a universal agent is in
-            need of an efficient framework capable of extracting generalization but within a reasonable data budget.
-            In this paper, we develop an efficient framework (MT-ACT) for training universal agents capable of
-            multi-task manipulation skills using (a) semantic augmentations that can rapidly multiply existing
-            datasets and (b) action representations that can extract performant policies with small yet diverse
-            multi-modal datasets without overfitting. In addition, reliable task conditioning and an expressive
-            policy architecture enables our agent to exhibit a diverse repertoire of skills in novel situations
-            specified using task commands. Using merely 7500 demonstrations, we are able to train a single agent
-            capable of 12 unique skills and demonstrate its generalization over 30 tasks spread across common daily
-            activities in diverse kitchen scenes. On average MT-ACT outperforms prior methods by over 40% in unseen
-            situations, while being more sample efficient.
-            <br><br>
-            MT-ACT agent capable of 12 manipulation skills across 6 activities, demonstrated across 30 tasks in 5
-            kitchen scenes
-        </p>
-    </div>
-    <!-- <div class="column has-text-centered is-centered"> -->
-    <div class="column has-text-left is-centered">
-        <h2>
-            Architecture
-        </h2>
-        <!-- <p style="text-align: justify; margin-left: 15%; margin-right: 15%;"> -->
-        <p>
-            Summary of the overall framework MT-ACT showing the two main stages: semantic augmentation
-            for multiplying data, and leveraging efficient action representations for ingesting multi-modal multi-task
-            data
-            into a single multi-skill multi-task policy
-        </p>
-        <figure class="image is-inline-block">
-            <img src="media/mtact.png" alt="mtact" style="height: 50%; width: 70%;">
-        </figure>
-    </div>
-    <div class="column has-text-left is-centered">
-        <div class="has-text-left">
-        <h2>
-            Results
-        </h2>
-        <p>In the below sections we highlight some main results. For a complete analysis please read our paper.</p>
-        <br>
-
-        </div>
-        <h4> How well does our policy representation work? </h4>
-        <!-- <div class="card-image has-text-centered is-half"> -->
-        <!-- <div class="has-text-centered is-half"> -->
-        <div class="columns">
-            <div class="column is-half">
-                <p class="has-text-justified">
-                Figure on the right compares our proposed MT-ACT policy representation against several imitation learning architectures.
-                For this result we use environment variations that include object pose changes and some lighting changes only. 
-                Somewhat similar to previous works, we refer to this as L1-generalization. From our results we can clearly
-                see that using action-checking to model sub-trajectories significantly outperforms all baselines.
-                Thus, a more sophisicated policy representation is crucial for sample efficient learning.
-                </p>
-            </div>
-            <div class="column card-image is-half">
+            <br>
+            <h5> <b>Scaling properties of generative augmentations </b></h5>
+            <div class="card-image has-text-centered is-half">
                 <figure class="image is-inline-block">
-                    <img src="media/l1_website.png"  style="height: 100%; width: 100%;">
+                    <img src="media/l123_generalization.png" style="height: 40%; width: 80%;">
                 </figure>
             </div>
-        </div>
-        <br>
-
-        <h4> Scaling properties of generative augmentations </h4>
-        <div class="card-image has-text-centered is-half">
-            <figure class="image is-inline-block">
-                <img src="media/l123_generalization.png"  style="height: 40%; width: 80%;">
-            </figure>
-        </div>
-        <br>
-        <div class="is-half">
+            <br>
             <p class="has-text-justified">
-                Figure above plots results for all methods across multiple levels of generalization -- L1, L2 and L3.
-                We also visualize the increasing levels of generalization, L1 with object pose changes, L2 with diverse table backgrounds and distractors 
+                Figure above plots results for all methods across multiple levels of generalization -- L1,
+                L2
+                and
+                L3.
+                We also visualize the increasing levels of generalization, L1 with object pose changes, L2
+                with
+                diverse
+                table backgrounds and distractors
                 and L3 with novel skill-object combinations.
-                From above figure we see that by virtue of semantic augmentations and action representations, 
-                our approach significantly outperforms all the baselines we consider. 
+                From above figure we see that by virtue of semantic augmentations and action
+                representations,
+                our approach significantly outperforms all the baselines we consider.
                 While semantic augmentations have less effect for L1-generalization (~ 30% relative),
-                they provide a much more significant improvement for both L2-generalization (~100% relative) and L3-generalization (~400% relative).
-                Finally, we also plot how increasing number of augmentations affect the results (TODO: Need to add.)
+                they provide a much more significant improvement for both L2-generalization (~100% relative)
+                and
+                L3-generalization (~400% relative).
+                Finally, we also plot how increasing number of augmentations affect the results (TODO: Need
+                to
+                add.)
             </p>
+            <br><br>
+
+            <h5> <b>Diverse multi-task policies can lead to policy diluation. </b></h5>
+            <div class="card-image has-text-centered is-half">
+                <figure class="image is-inline-block">
+                    <img src="media/single_task_vs_multi_task.png" style="height: 40%; width: 80%;">
+                </figure>
+            </div>
+            <br>
+            <div class="is-half">
+                <p class="has-text-justified">
+                    Given that we use most commonly used multi-task algorithms we also investigate
+                    if our universal multi-task policy can outperform all single-task as well as customized
+                    multi-task
+                    policies.
+                    For this we use one of the activities (Heat-Soup) and train single-task agents for all 4
+                    skills
+                    in this activity as well as one multi-task policy for all 4 skills.
+                    We compare this against our universal policy.
+                    From the above figure we see that single-task policies often perform poorly (especially for
+                    harder
+                    skills).
+                    However, our multi-task policy trained on the 4 evaluated skills alone out performs our
+                    universal
+                    policy.
+                    Thus, given limited training data training one policy for very diverse skills can lead to
+                    some
+                    policy
+                    dilution.
+                    We believe future research in efficient multi-task architectures may help reduce this gap.
+                </p>
+            </div>
+
         </div>
         <br><br>
-
-        <h4> Diverse multi-task policies can lead to policy diluation. </h4>
-        <div class="card-image has-text-centered is-half">
-            <figure class="image is-inline-block">
-                <img src="media/single_task_vs_multi_task.png"  style="height: 40%; width: 80%;">
-            </figure>
-        </div>
-        <br>
-        <div class="is-half">
-            <p class="has-text-justified">
-                Given that we use most commonly used multi-task algorithms we also investigate
-                if our universal multi-task policy can outperform all single-task as well as customized multi-task policies.
-                For this we use one of the activities (Heat-Soup) and train single-task agents for all 4 skills
-                in this activity as well as one multi-task policy for all 4 skills.
-                We compare this against our universal policy.
-                From the above figure we see that single-task policies often perform poorly (especially for harder skills).
-                However, our multi-task policy trained on the 4 evaluated skills alone out performs our universal policy.
-                Thus, given limited training data training one policy for very diverse skills can lead to some policy dilution.
-                We believe future research in efficient multi-task architectures may help reduce this gap.
-            </p>
-        </div>
-
-    </div>
-
-
-    <section class="hero is-light is-small">
-        <div class="hero-body">
-            <div class="container">
-                <div id="results-carousel" class="carousel results-carousel">
-                    <div class="item item-mask">
-                        <video poster="" autoplay controls muted loop playsinline height="100%">
-                            <source src="media/IMG_2715.MOV"
-                                    type="video/mp4">
-                          </video>
-                    </div>
-                    <div class="item item-mask">
-                        <video poster="" autoplay controls muted loop playsinline height="100%">
-                            <source src="media/IMG_2812.MOV"
-                                    type="video/mp4">
-                          </video>
-                    </div>
-                    <div class="item item-mask">
-                        <video poster="" autoplay controls muted loop playsinline height="100%">
-                            <source src="media/IMG_2820.MOV"
-                                    type="video/mp4">
-                          </video>
-                    </div>
-                    <div class="item item-mask">
-                        <video poster="" autoplay controls muted loop playsinline height="100%">
-                            <source src="media/IMG_2827.MOV"
-                                    type="video/mp4">
-                          </video>
+        <div class="column is-centered is-vcentered">
+            <h2>Videos</h2>
+            <section class="hero is-light is-small">
+                <div class="hero-body">
+                    <div class="container">
+                        <div id="results-carousel" class="carousel results-carousel">
+                            <div class="item item-mask">
+                                <video poster="" autoplay controls muted loop playsinline height="100%">
+                                    <source src="media/IMG_2715.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="item item-mask">
+                                <video poster="" autoplay controls muted loop playsinline height="100%">
+                                    <source src="media/IMG_2812.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="item item-mask">
+                                <video poster="" autoplay controls muted loop playsinline height="100%">
+                                    <source src="media/IMG_2820.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="item item-mask">
+                                <video poster="" autoplay controls muted loop playsinline height="100%">
+                                    <source src="media/IMG_2827.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
-    </section>
-
-</div>
-
-<script>
-    const burgerIcon = document.querySelector('#burger');
-    const navbarMenu = document.querySelector('#nav-links');
-    burgerIcon.addEventListener('click', () => {
-        navbarMenu.classList.toggle('is-active');
-    });
-</script>
-
-</html>
+    </div>
+    <script>
+        const burgerIcon = document.querySelector('#burger');
+        const navbarMenu = document.querySelector('#nav-links');
+        burgerIcon.addEventListener('click', () => {
+            navbarMenu.classList.toggle('is-active');
+        });
+    </script>
+</body>

@@ -76,3 +76,15 @@ $(document).ready(function() {
     bulmaSlider.attach();
 
 })
+function updateResultVideo() {
+  var task = document.getElementById("single-menu-replay").value;
+
+  console.log("qpred", "media/" + task + ".mp4");
+  var video = document.getElementById("result-video");
+  video.src = "media/" + task + ".mp4";
+  video.playbackRate = 0.5;
+  video.play();
+
+
+  includeHTML()
+}

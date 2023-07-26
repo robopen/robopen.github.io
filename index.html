@@ -38,7 +38,7 @@
     <script src="./static/js/index.js"></script>
 </head>
 
-<body onload="updateResultVideo();">
+<body class="vsc-initialized" onload="updateResultVideo();">
     <div class="content is-centered has-text-centered" style="margin-right: 15%; margin-left: 15%; ">
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
@@ -67,61 +67,81 @@
                 </div>
             </div>
         </nav>
-        <h1 class="title is-1">
-            RoboPen
-        </h1>
-        <div class="columns is-centered">
-            <div class="column has-text-centered">
-                <div class="is-size-5 publication-authors">
-                    <span class="author-block">
-                        <p>
-                            <a href="https://homangab.github.io/" target="_blank">Homanga Bharadhwaj*</a>,
-                            <a href="https://jdvakil.github.io" target="_blank">Jay Vakil*</a>,
-                            <a href="https://mohitsharma0690.github.io/" target="_blank">Mohit Sharma*</a>,
-                            <a href="http://www.cs.cmu.edu/~abhinavg/" target="_blank">Abhinav Gupta</a>,
-                            <a href="http://shubhtuls.github.io/" target="_blank">Shubham Tulsiani</a>,
-                            <a href="https://vikashplus.github.io" target="_blank">Vikash Kumar</a>
-                        </p>
-                        <p> *equal contribution, Carnegie Mellon University and Meta AI</p>
-                    </span>
-                </div>
+
+        <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
                 <div class="column has-text-centered">
-                    <div class="publication-links">
-                        <span class="link-block">
-                            <a href="" class="external-link button is-normal is-rounded is-dark" target="_blank">
-                                <span class="icon">
-                                    <i class="fa fa-file-pdf-o" style="font-size:24px"></i>
-                                </span>
-                                <span>Paper</span>
-                            </a>
+                    <h1 class="title is-1 publication-title"> RoboPen </h1>
+                    <div class="is-size-5 publication-authors">
+                        <span class="author-block">
+                            <a href="https://homangab.github.io/" target="_blank">Homanga Bharadhwaj*</a>,
                         </span>
-                        <span class="link-block">
-                            <a href="" class="external-link button is-normal is-rounded is-dark" target="_blank">
-                                <span class="icon">
-                                    <i class="fa fa-github" style="font-size:24px"></i>
-                                </span>
-                                <span>Code</span>
-                            </a>
+                        <span class="author-block">
+                                <a href="https://jdvakil.github.io" target="_blank">Jay Vakil*</a>,
                         </span>
-                        <span class="link-block">
-                            <a href="https://dl.fbaipublicfiles.com/RoboSet/roboset.html" target="_blank"
-                                class="external-link button is-normal is-rounded is-dark">
-                                <span class="icon">
-                                    <i class="fa fa-database" style="font-size:24px"></i>
-                                </span>
-                                <span>DataSet</span>
-                            </a>
+                        <span class="author-block">
+                                <a href="https://mohitsharma0690.github.io/" target="_blank">Mohit Sharma*</a>,
+                        </span>
+                        <span class="author-block">
+                                <a href="http://www.cs.cmu.edu/~abhinavg/" target="_blank">Abhinav Gupta</a>,
+                        </span>
+                        <span class="author-block">
+                                <a href="http://shubhtuls.github.io/" target="_blank">Shubham Tulsiani</a>,
+                        </span>
+                        <span class="author-block">
+                                <a href="https://vikashplus.github.io" target="_blank">Vikash Kumar</a>
                         </span>
                     </div>
+                    <div class="is-size-5 publication-authors">
+                        <span class="author-block">
+                            *equal contribution, Carnegie Mellon University and Meta AI
+                        </span>
+                    </div>
+                        
+                    <div class="column has-text-centered">
+                        <div class="publication-links">
+                            <span class="link-block">
+                                <a href="" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                                    <span class="icon">
+                                        <i class="fa fa-file-pdf-o" style="font-size:24px"></i>
+                                    </span>
+                                    <span>Paper</span>
+                                </a>
+                            </span>
+                            <span class="link-block">
+                                <a href="" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                                    <span class="icon">
+                                        <i class="fa fa-github" style="font-size:24px"></i>
+                                    </span>
+                                    <span>Code</span>
+                                </a>
+                            </span>
+                            <span class="link-block">
+                                <a href="https://dl.fbaipublicfiles.com/RoboSet/roboset.html" target="_blank"
+                                    class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                        <i class="fa fa-database" style="font-size:24px"></i>
+                                    </span>
+                                    <span>DataSet</span>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
                 </div>
             </div>
         </div>
+        </section>
         <div class="column has-text-centered">
-            <iframe width="955" height="542" src="https://www.youtube.com/embed/ux4yisjYHeI?autoplay=1?controls=0"
-                title="Overview of MT-ACT capabilities" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-            </iframe>
+            <div class="publication-video">
+                <iframe src="https://www.youtube.com/embed/ux4yisjYHeI?autoplay=1?controls=0"
+                    title="Overview of MT-ACT capabilities" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
         </div>
         <div class="select is-small is-rounded" style="margin-bottom: 1%;">
             <select id="single-menu-replay" onchange="updateResultVideo()">
@@ -136,10 +156,9 @@
         <video id="result-video" class="full-image" muted autoplay loop width="70%">
             <source src="media/IMG_2715.mp4" type="video/mp4">
         </video><br>
-        <div class="column has-text-centered" style="margin-right: 20%; margin-left: 20%;">
-            <h2>
-                Introduction
-            </h2>
+        <!-- <div class="column has-text-centered" style="margin-right: 20%; margin-left: 20%;"> -->
+        <div class="column has-text-justified">
+            <h2 class="title is-3"> Introduction </h2>
             <p>
                 The grand aim of having a single robot that can manipulate arbitrary objects in diverse settings is at
                 odds with the paucity of robotics datasets. Acquiring and growing such datasets is strenuous due to
@@ -158,9 +177,7 @@
                 MT-ACT agent capable of 12 manipulation skills across 6 activities, demonstrated across 30 tasks in 5
                 kitchen scenes
             </p>
-            <h2>
-                Architecture
-            </h2>
+            <h2 class="title is-3""> Architecture </h2>
             <!-- <p style="text-align: justify; margin-left: 15%; margin-right: 15%;"> -->
             <p>
                 Summary of the overall framework MT-ACT showing the two main stages: semantic augmentation
@@ -169,20 +186,17 @@
                 data
                 into a single multi-skill multi-task policy
             </p>
-            <figure class="image is-inline-block">
-                <img src="media/mtact.png" alt="mtact" style="height: 50%; width: 70%;">
-            </figure>
+            <div class="column overlay-image has-text-centered">
+                <img src="media/mtact.png" alt="mtact">
+            </div>
             <br>
-            <h2>
-                Results
-            </h2>
-            <p class="is-centered has-text-centered">
+            <h2 class="title is-3"> Results </h2>
+            <p class="is-centered">
                 In the sections below we highlight some main results. For a complete analysis please read our paper.
             </p>
             <br>
             <h5><b>How well does our policy representation work?</b></h5>
-            <!-- <div class="card-image has-text-centered is-half"> -->
-            <!-- <div class="has-text-centered is-half"> -->
+
             <div class="columns is-vcentered">
                 <div class="column is-half">
                     <p class="has-text-justified">
@@ -201,18 +215,14 @@
                         Thus, a more sophisicated policy representation is crucial for sample efficient learning.
                     </p>
                 </div>
-                <div class="column card-image is-half">
-                    <figure class="image is-inline-block">
-                        <img src="media/l1_website.png" style="height: 100%; width: 100%;">
-                    </figure>
+                <div class="column overlay-image has-text-centered">
+                    <img src="media/l1_website.png">
                 </div>
             </div>
             <br>
             <h5> <b>Scaling properties of generative augmentations </b></h5>
-            <div class="card-image has-text-centered is-half">
-                <figure class="image is-inline-block">
-                    <img src="media/l123_generalization.png"  style="height: 60%; width: 100%;">
-                </figure>
+            <div class="column overlay-image has-text-centered">
+                <img src="media/l123_generalization.png" >
             </div>
             <br>
             <p class="has-text-justified">
@@ -232,17 +242,12 @@
                 they provide a much more significant improvement for both L2-generalization (~100% relative)
                 and
                 L3-generalization (~400% relative).
-                Finally, we also plot how increasing number of augmentations affect the results (TODO: Need
-                to
-                add.)
             </p>
             <br><br>
 
-            <h5> <b>Diverse multi-task policies can lead to some policy dilution. </b></h5>
-            <div class="card-image has-text-centered is-half">
-                <figure class="image is-inline-block">
-                    <img src="media/single_task_vs_multi_task.png" style="height: 40%; width: 80%;">
-                </figure>
+            <h5 > <b>Diverse multi-task policies can lead to some policy dilution. </b></h5>
+            <div class="column overlay-image has-text-centered">
+                <img src="media/single_task_vs_multi_task.png"">
             </div>
             <br>
             <div class="is-half">

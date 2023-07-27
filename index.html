@@ -103,8 +103,8 @@
                             <div class="column has-text-centered">
                                 <div class="publication-links">
                                     <span class="link-block">
-                                        <a href="media/robopen.pdf" class="external-link button is-normal is-rounded is-dark"
-                                            target="_blank">
+                                        <a href="media/robopen.pdf"
+                                            class="external-link button is-normal is-rounded is-dark" target="_blank">
                                             <span class="icon">
                                                 <i class="fa fa-file-pdf-o" style="font-size:24px"></i>
                                             </span>
@@ -137,16 +137,22 @@
             </div>
         </section>
 
-        <div class="column has-text-justified">           
-            <p> The grand aim of having a single robot that can manipulate arbitrary objects in diverse settings has been 
-                a distant goal for several decades. This is in-part because of the paucity of diverse robotics datasets, and 
-                the lack of expressive architectures and policy learning algorithms that can leverage multi-modal datasets for
-                generalization to out-of-domain scenarios. We develop a robot manipulation framework with commodity hardware (RoboPen),
-                collect a large-scale high quality dataset with everyday objects (RoboSet), and develop an efficient mutli-task
-                robot manipulation agent (RoboAgent) that can semantically augment trajectories with diverse variations, and extract performant
+        <div class="column has-text-justified">
+            <p> The grand aim of having a single robot that can manipulate arbitrary objects in diverse settings has
+                been
+                a distant goal for several decades. This is in-part because of the paucity of diverse robotics datasets,
+                and
+                the lack of expressive architectures and policy learning algorithms that can leverage multi-modal
+                datasets for
+                generalization to out-of-domain scenarios. We develop a robot manipulation framework with commodity
+                hardware (RoboPen),
+                collect a large-scale high quality dataset with everyday objects (RoboSet), and develop an efficient
+                mutli-task
+                robot manipulation agent (RoboAgent) that can semantically augment trajectories with diverse variations,
+                and extract performant
                 policies with efficient action representations.
             </p>
-        </div>            
+        </div>
         <div class="column has-text-centered">
             <div class="publication-video">
                 <iframe src="https://www.youtube.com/embed/ux4yisjYHeI?autoplay=1?controls=0"
@@ -158,13 +164,16 @@
         </div><br><br>
         <!-- <div class="column has-text-centered" style="margin-right: 20%; margin-left: 20%;"> -->
         <div class="column has-text-justified">
-           
-            <p> RoboAgnent is capable of 12 unique skills demonstrated across 38 tasks categorized into 6 kitchen activities. The system is 
-                capable of a wide diversity of non-trivial skills beyond picking/pushing, including articulated object manipulation
-                and object re-orientation. The system generalizes to diverse unseen scenarios involving unseen objects, unseen tasks,
+
+            <p> RoboAgnent is capable of 12 unique skills demonstrated across 38 tasks categorized into 6 kitchen
+                activities. The system is
+                capable of a wide diversity of non-trivial skills beyond picking/pushing, including articulated object
+                manipulation
+                and object re-orientation. The system generalizes to diverse unseen scenarios involving unseen objects,
+                unseen tasks,
                 and to completely unseen kitchens.
             </p>
-            
+
             <h2 class="title is-3""> Architecture </h2>
             <!-- <p style=" text-align: justify; margin-left: 15%; margin-right: 15%;"> -->
                 <p>
@@ -367,25 +376,53 @@
                             </b>
                         </h5>
                         <div id="results-carousel" class="carousel results-carousel">
-                            <div class="item item-mask">
-                                <video poster="" autoplay muted loop playsinline height="100%">
-                                    <source src="media/baking_prep/open_drawer.mp4" type="video/mp4">
-                                </video>
+                            <div class="card">
+                                <div class="card-image">
+                                    <video poster="" autoplay muted loop playsinline height="100%">
+                                        <source src="media/baking_prep/open_drawer.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item__title" style="text-align: center;">
+                                        Slide-Open Drawer
+                                    </div>
+                                </div>
                             </div>
-                            <div class="item item-mask">
-                                <video poster="" autoplay  muted loop playsinline height="100%">
-                                    <source src="media/baking_prep/pick_butter.mp4" type="video/mp4">
-                                </video>
+                            <div class="card">
+                                <div class="card-image">
+                                    <video poster="" autoplay muted loop playsinline height="100%">
+                                        <source src="media/baking_prep/place_butter.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item__title" style="text-align: center;">
+                                        Pick Butter
+                                    </div>
+                                </div>
                             </div>
-                            <div class="item item-mask">
-                                <video poster="" autoplay  muted loop playsinline height="100%">
-                                    <source src="media/baking_prep/place_butter.mp4" type="video/mp4">
-                                </video>
+                            <div class="card">
+                                <div class="card-image">
+                                    <video poster="" autoplay muted loop playsinline height="100%">
+                                        <source src="media/baking_prep/place_butter.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item__title" style="text-align: center;">
+                                        Place Butter
+                                    </div>
+                                </div>
                             </div>
-                            <div class="item item-mask">
-                                <video poster="" autoplay  muted loop playsinline height="100%">
-                                    <source src="media/baking_prep/close_drawer.mp4" type="video/mp4">
-                                </video>
+                            <div class="card">
+                                <div class="card-image">
+                                    <video poster="" autoplay muted loop playsinline height="100%">
+                                        <source src="media/baking_prep/close_drawer.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item__title" style="text-align: center;">
+                                        Slide-Close Drawer
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -400,31 +437,59 @@
                             </b>
                         </h5>
                         <div id="results-carousel" class="carousel results-carousel">
-                            <div class="item item-mask">
-                                <video poster="" autoplay  muted loop playsinline height="100%">
-                                    <source src="media/clean_kitchen/close_oven.mp4" type="video/mp4">
-                                </video>
+                            <div class="card">
+                                <div class="card-image">
+                                    <video poster="" autoplay muted loop playsinline height="100%">
+                                        <source src="media/clean_kitchen/close_drawer.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item__title" style="text-align: center;">
+                                        Slide-Close Drawer
+                                    </div>
+                                </div>
                             </div>
-                            <div class="item item-mask">
-                                <video poster="" autoplay  muted loop playsinline height="100%">
-                                    <source src="media/clean_kitchen/close_drawer.mp4" type="video/mp4">
-                                </video>
+                            <div class="card">
+                                <div class="card-image">
+                                    <video poster="" autoplay muted loop playsinline height="100%">
+                                        <source src="media/clean_kitchen/close_oven.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item__title" style="text-align: center;">
+                                        Flap-Close Oven
+                                    </div>
+                                </div>
                             </div>
-                            <div class="item item-mask">
-                                <video poster="" autoplay  muted loop playsinline height="100%">
-                                    <source src="media/clean_kitchen/pick_towel.mp4" type="video/mp4">
-                                </video>
+                            <div class="card">
+                                <div class="card-image">
+                                    <video poster="" autoplay muted loop playsinline height="100%">
+                                        <source src="media/clean_kitchen/pick_towel.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item__title" style="text-align: center;">
+                                        Pick Towel
+                                    </div>
+                                </div>
                             </div>
-                            <div class="item item-mask">
-                                <video poster="" autoplay  muted loop playsinline height="100%">
-                                    <source src="media/clean_kitchen/wipe_towel.mp4" type="video/mp4">
-                                </video>
+                            <div class="card">
+                                <div class="card-image">
+                                    <video poster="" autoplay muted loop playsinline height="100%">
+                                        <source src="media/clean_kitchen/wipe_towel.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item__title" style="text-align: center;">
+                                        Wipe Counter
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="hero is-light is-small">
+            <!-- <section class="hero is-light is-small">
                 <div class="hero-body">
                     <div class="container">
                         <h5 id="vidtit">
@@ -456,7 +521,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
             <section class="hero is-light is-small">
                 <div class="hero-body">
                     <div class="container">
@@ -466,25 +531,53 @@
                             </b>
                         </h5>
                         <div id="results-carousel" class="carousel results-carousel">
-                            <div class="item item-mask">
-                                <video poster="" autoplay muted loop playsinline height="100%">
-                                    <source src="media/serve_souo/open_oven.mp4" type="video/mp4">
-                                </video>
+                            <div class="card">
+                                <div class="card-image">
+                                    <video poster="" autoplay muted loop playsinline height="100%">
+                                        <source src="media/serve_souo/open_oven.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item__title" style="text-align: center;">
+                                        Flap-Open Oven
+                                    </div>
+                                </div>
                             </div>
-                            <div class="item item-mask">
-                                <video poster="" autoplay muted loop playsinline height="100%">
-                                    <source src="media/serve_souo/pick_bowl.mp4" type="video/mp4">
-                                </video>
+                            <div class="card">
+                                <div class="card-image">
+                                    <video poster="" autoplay muted loop playsinline height="100%">
+                                        <source src="media/serve_souo/pick_bowl.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item__title" style="text-align: center;">
+                                        Pick Bowl
+                                    </div>
+                                </div>
                             </div>
-                            <div class="item item-mask">
-                                <video poster="" autoplay muted loop playsinline height="100%">
-                                    <source src="media/serve_souo/place_bowl.mp4" type="video/mp4">
-                                </video>
+                            <div class="card">
+                                <div class="card-image">
+                                    <video poster="" autoplay muted loop playsinline height="100%">
+                                        <source src="media/serve_souo/place_bowl.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item__title" style="text-align: center;">
+                                        Place Bowl
+                                    </div>
+                                </div>
                             </div>
-                            <div class="item item-mask">
-                                <video poster="" autoplay muted loop playsinline height="100%">
-                                    <source src="media/serve_souo/close_oven.mp4" type="video/mp4">
-                                </video>
+                            <div class="card">
+                                <div class="card-image">
+                                    <video poster="" autoplay muted loop playsinline height="100%">
+                                        <source src="media/serve_souo/close_oven.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item__title" style="text-align: center;">
+                                        Flap-Close Oven
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -499,30 +592,65 @@
                             </b>
                         </h5>
                         <div id="results-carousel" class="carousel results-carousel">
-                            <div class="item item-mask">
-                                <video poster="" autoplay muted loop playsinline height="100%">
-                                    <source src="media/make_tea/unlid.mp4" type="video/mp4">
-                                </video>
+                            <div class="card">
+                                <div class="card-image">
+                                    <video poster="" autoplay muted loop playsinline height="100%">
+                                        <source src="media/make_tea/unlid.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item__title" style="text-align: center;">
+                                        Uncap Lid
+                                    </div>
+                                </div>
                             </div>
-                            <div class="item item-mask">
-                                <video poster="" autoplay muted loop playsinline height="100%">
-                                    <source src="media/make_tea/pick_teabag.mp4" type="video/mp4">
-                                </video>
+                            <div class="card">
+                                <div class="card-image">
+                                    <video poster="" autoplay muted loop playsinline height="100%">
+                                        <source src="media/make_tea/pick_teabag.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item__title" style="text-align: center;">
+                                        Pick Teabag
+                                    </div>
+                                </div>
                             </div>
-                            <div class="item item-mask">
-                                <video poster="" autoplay muted loop playsinline height="100%">
-                                    <source src="media/make_tea/place_teabag.mp4" type="video/mp4">
-                                </video>
+                            <div class="card">
+                                <div class="card-image">
+                                    <video poster="" autoplay muted loop playsinline height="100%">
+                                        <source src="media/make_tea/place_teabag.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item__title" style="text-align: center;">
+                                        Place Teabag
+                                    </div>
+                                </div>
                             </div>
-                            <div class="item item-mask">
-                                <video poster="" autoplay muted loop playsinline height="100%">
-                                    <source src="media/make_tea/picklid.mp4" type="video/mp4">
-                                </video>
+                            <div class="card">
+                                <div class="card-image">
+                                    <video poster="" autoplay muted loop playsinline height="100%">
+                                        <source src="media/make_tea/picklid.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item__title" style="text-align: center;">
+                                        Pick Lid
+                                    </div>
+                                </div>
                             </div>
-                            <div class="item item-mask">
-                                <video poster="" autoplay muted loop playsinline height="100%">
-                                    <source src="media/make_tea/close_lid.mp4" type="video/mp4">
-                                </video>
+                            <div class="card">
+                                <div class="card-image">
+                                    <video poster="" autoplay muted loop playsinline height="100%">
+                                        <source src="media/make_tea/close_lid.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item__title" style="text-align: center;">
+                                        Cap Lid
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -537,25 +665,53 @@
                             </b>
                         </h5>
                         <div id="results-carousel" class="carousel results-carousel">
-                            <div class="item item-mask">
-                                <video poster="" autoplay muted loop playsinline height="100%">
-                                    <source src="media/putting_away/open_drawer.mp4" type="video/mp4">
-                                </video>
+                            <div class="card">
+                                <div class="card-image">
+                                    <video poster="" autoplay muted loop playsinline height="100%">
+                                        <source src="media/putting_away/open_drawer.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item__title" style="text-align: center;">
+                                        Slide-Open Drawer
+                                    </div>
+                                </div>
                             </div>
-                            <div class="item item-mask">
-                                <video poster="" autoplay muted loop playsinline height="100%">
-                                    <source src="media/putting_away/pick_cup.mp4" type="video/mp4">
-                                </video>
+                            <div class="card">
+                                <div class="card-image">
+                                    <video poster="" autoplay muted loop playsinline height="100%">
+                                        <source src="media/putting_away/pick_cup.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item__title" style="text-align: center;">
+                                        Pick Cup
+                                    </div>
+                                </div>
                             </div>
-                            <div class="item item-mask">
-                                <video poster="" autoplay muted loop playsinline height="100%">
-                                    <source src="media/putting_away/place_cup.mp4" type="video/mp4">
-                                </video>
+                            <div class="card">
+                                <div class="card-image">
+                                    <video poster="" autoplay muted loop playsinline height="100%">
+                                        <source src="media/putting_away/place_cup.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item__title" style="text-align: center;">
+                                        Place Cup
+                                    </div>
+                                </div>
                             </div>
-                            <div class="item item-mask">
-                                <video poster="" autoplay muted loop playsinline height="100%">
-                                    <source src="media/putting_away/close_drawer.mp4" type="video/mp4">
-                                </video>
+                            <div class="card">
+                                <div class="card-image">
+                                    <video poster="" autoplay muted loop playsinline height="100%">
+                                        <source src="media/putting_away/close_drawer.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item__title" style="text-align: center;">
+                                        Slide-Close Drawer
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

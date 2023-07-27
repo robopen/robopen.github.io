@@ -103,7 +103,7 @@
                             <div class="column has-text-centered">
                                 <div class="publication-links">
                                     <span class="link-block">
-                                        <a href="" class="external-link button is-normal is-rounded is-dark"
+                                        <a href="media/robopen.pdf" class="external-link button is-normal is-rounded is-dark"
                                             target="_blank">
                                             <span class="icon">
                                                 <i class="fa fa-file-pdf-o" style="font-size:24px"></i>
@@ -126,7 +126,7 @@
                                             <span class="icon">
                                                 <i class="fa fa-database" style="font-size:24px"></i>
                                             </span>
-                                            <span>DataSet</span>
+                                            <span>RoboSet</span>
                                         </a>
                                     </span>
                                 </div>
@@ -136,6 +136,17 @@
                 </div>
             </div>
         </section>
+
+        <div class="column has-text-justified">           
+            <p> The grand aim of having a single robot that can manipulate arbitrary objects in diverse settings has been 
+                a distant goal for several decades. This is in-part because of the paucity of diverse robotics datasets, and 
+                the lack of expressive architectures and policy learning algorithms that can leverage multi-modal datasets for
+                generalization to out-of-domain scenarios. We develop a robot manipulation framework with commodity hardware (RoboPen),
+                collect a large-scale high quality dataset with everyday objects (RoboSet), and develop an efficient mutli-task
+                robot manipulation agent (RoboAgent) that can semantically augment trajectories with diverse variations, and extract performant
+                policies with efficient action representations.
+            </p>
+        </div>            
         <div class="column has-text-centered">
             <div class="publication-video">
                 <iframe src="https://www.youtube.com/embed/ux4yisjYHeI?autoplay=1?controls=0"
@@ -147,25 +158,13 @@
         </div><br><br>
         <!-- <div class="column has-text-centered" style="margin-right: 20%; margin-left: 20%;"> -->
         <div class="column has-text-justified">
-            <h2 class="title is-3"> Introduction </h2>
-            <p>
-                The grand aim of having a single robot that can manipulate arbitrary objects in diverse settings is at
-                odds with the paucity of robotics datasets. Acquiring and growing such datasets is strenuous due to
-                manual efforts, operational costs, and safety challenges. A path toward such a universal agent is in
-                need of an efficient framework capable of extracting generalization but within a reasonable data budget.
-                In this paper, we develop an efficient framework (MT-ACT) for training universal agents capable of
-                multi-task manipulation skills using (a) semantic augmentations that can rapidly multiply existing
-                datasets and (b) action representations that can extract performant policies with small yet diverse
-                multi-modal datasets without overfitting. In addition, reliable task conditioning and an expressive
-                policy architecture enables our agent to exhibit a diverse repertoire of skills in novel situations
-                specified using task commands. Using merely 7500 demonstrations, we are able to train a single agent
-                capable of 12 unique skills and demonstrate its generalization over 30 tasks spread across common daily
-                activities in diverse kitchen scenes. On average MT-ACT outperforms prior methods by over 40% in unseen
-                situations, while being more sample efficient.
-                <br><br>
-                MT-ACT agent capable of 12 manipulation skills across 6 activities, demonstrated across 30 tasks in 5
-                kitchen scenes
+           
+            <p> RoboAgnent is capable of 12 unique skills demonstrated across 38 tasks categorized into 6 kitchen activities. The system is 
+                capable of a wide diversity of non-trivial skills beyond picking/pushing, including articulated object manipulation
+                and object re-orientation. The system generalizes to diverse unseen scenarios involving unseen objects, unseen tasks,
+                and to completely unseen kitchens.
             </p>
+            
             <h2 class="title is-3""> Architecture </h2>
             <!-- <p style=" text-align: justify; margin-left: 15%; margin-right: 15%;"> -->
                 <p>

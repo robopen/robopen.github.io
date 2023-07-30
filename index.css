@@ -51,3 +51,7 @@ p{
 #vidtit{
     padding: 2%;
 }
+
+h2 .subtitle {
+    margin-top: -0.2em;
+  }

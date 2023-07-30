@@ -9,7 +9,7 @@
     <link rel="icon" type="image/x-icon" href="https://img.icons8.com/plasticine/100/robot.png" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>RoboPen</title>
+    <title>RoboPen: Towards Sample Efficient Robot Manipulation with Semantic Augmentations and Action Chunking</title>
 
     <link rel="stylesheet" href="index.css">
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css'>
@@ -18,6 +18,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Source+Sans+3:wght@300;400&display=swap" rel="stylesheet">
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -73,7 +78,15 @@
                 <div class="container is-max-desktop">
                     <div class="columns is-centered">
                         <div class="column has-text-centered">
-                            <h1 class="title is-1 publication-title"> RoboPen </h1>
+                            <h2 class="title is-1 publication-title"> 
+                                <strong>RoboAgent</strong>
+                            </h2>
+                            <h2 class="subtitle" style="font-family: 'Source Sans 3', sans-serif; font-weight: 300;">
+                            <!-- <h2 style="font-family: 'Poppins', sans-serif; font-weight: 100;"> -->
+                                <strong>
+                                Towards Sample Efficient Robot Manipulation with Semantic Augmentations and Action Chunking
+                                </strong>
+                            </h2>
                             <div class="is-size-5 publication-authors">
                                 <span class="author-block">
                                     <a href="https://homangab.github.io/" target="_blank">Homanga Bharadhwaj*</a>,
@@ -94,7 +107,7 @@
                                     <a href="https://vikashplus.github.io" target="_blank">Vikash Kumar</a>
                                 </span>
                             </div>
-                            <div class="is-size-5 publication-authors">
+                            <div class="is-size-8 publication-authors">
                                 <span class="author-block">
                                     *equal contribution, Carnegie Mellon University and Meta AI
                                 </span>
@@ -174,7 +187,7 @@
                 and to completely unseen kitchens.
             </p>
 
-            <h2 class="title is-3""> Architecture </h2>
+            <h2 class="title is-3""> RoboAgent is capable of 12 skills across 38 tasks. </h2>
             <!-- <p style=" text-align: justify; margin-left: 15%; margin-right: 15%;"> -->
                 <p>
                     Summary of the overall framework MT-ACT showing the two main stages: semantic augmentation
@@ -183,8 +196,12 @@
                     data
                     into a single multi-skill multi-task policy
                 </p>
-                <div class="column overlay-image has-text-centered">
-                    <img src="media/mtact.png" alt="mtact">
+                <!-- <div class="column overlay-image has-text-centered"> -->
+                    <!-- <img src="media/mtact.png" alt="mtact"> -->
+                <div class="column">
+                    <video autoplay="" muted="" loop="" playsinline="" height="100%">
+                        <source src="./media/libx264_output_28.mp4" type="video/mp4">
+                    </video>
                 </div>
                 <br>
                 <h2 class="title is-3">
@@ -278,13 +295,11 @@
                 </section>
 
 
-                <h2 class="title is-3"> Results </h2>
-                <p class="is-centered">
-                    In the sections below we highlight some main results. For a complete analysis please read our paper.
-                </p>
+                <h3 style="font-family: 'Source Sans 3', sans-serif; font-weight: 400;">
+                 RoboAgent is more sample-efficient than existing methods.
+                </h3>
+                <!-- <h2> RoboAgent is more sample-efficient than existing methods.  </h2> -->
                 <br>
-                <h5><b>How well does our policy representation work?</b></h5>
-
                 <div class="columns is-vcentered">
                     <div class="column is-half">
                         <p class="has-text-justified">
@@ -308,58 +323,41 @@
                     </div>
                 </div>
                 <br>
-                <h5> <b>Scaling properties of generative augmentations </b></h5>
+
+                <h3 style="font-family: 'Source Sans 3', sans-serif; font-weight: 400;">
+                 RoboAgent performs well across multiple levels of generalization.
+                </h3>
                 <div class="column overlay-image has-text-centered">
-                    <img src="media/l123_generalization.png">
+                    <!-- <img src="media/l123_generalization.png"> -->
+                    <img src="media/l123_generalization_01.png">
                 </div>
                 <br>
                 <p class="has-text-justified">
-                    Figure above plots results for all methods across multiple levels of generalization -- L1,
-                    L2
-                    and
-                    L3.
-                    We also visualize the increasing levels of generalization, L1 with object pose changes, L2
-                    with
-                    diverse
-                    table backgrounds and distractors
-                    and L3 with novel skill-object combinations.
-                    From above figure we see that by virtue of semantic augmentations and action
-                    representations,
-                    our approach significantly outperforms all the baselines we consider.
-                    While semantic augmentations have less effect for L1-generalization (~ 30% relative),
-                    they provide a much more significant improvement for both L2-generalization (~100% relative)
-                    and
-                    L3-generalization (~400% relative).
+                    Above figure shows the different levels of generalization we test our approach on.
+                    We visualize levels of generalization, L1 with object pose changes, L2
+                    with diverse table backgrounds and distractors and L3 with novel skill-object combinations.
+                    In the below figure, we plot how each method performs on these levels of generalization.
+                    From below figure we clearly see that our approach significantly outperforms all other methods
+                    especially for harder generalization levels (L3).
                 </p>
-                <br><br>
-
-                <h5> <b>Diverse multi-task policies can lead to some policy dilution. </b></h5>
                 <div class="column overlay-image has-text-centered">
-                    <img src="media/single_task_vs_multi_task.png"">
-            </div>
-            <br>
-            <div class=" is-half">
+                    <img src="media/main_results.png" width="500">
+                </div>
+                <br>
+                <h3 style="font-family: 'Source Sans 3', sans-serif; font-weight: 400;">
+                 RoboAgent is highly scalable.
+                </h3>
+                <!-- <div class="column"> -->
                     <p class="has-text-justified">
-                        Given that we use most commonly used multi-task algorithms we also investigate
-                        if our universal multi-task policy can outperform all single-task as well as customized
-                        multi-task
-                        policies.
-                        For this we use one of the activities (Heat-Soup) and train single-task agents for all 4
-                        skills
-                        in this activity as well as one multi-task policy for all 4 skills.
-                        We compare this against our universal policy.
-                        From the above figure we see that single-task policies often perform poorly (especially for
-                        harder
-                        skills).
-                        However, our multi-task policy trained on the 4 evaluated skills alone out performs our
-                        universal
-                        policy.
-                        Thus, given limited training data training one policy for very diverse skills can lead to
-                        some
-                        policy
-                        dilution.
-                        We believe future research in efficient multi-task architectures may help reduce this gap.
+                        We also evaluate how roboagent performs with increasing levels of semantic augmentations.
+                        We evaluate this on one activity (5-skills). Below figure shows that with increased data
+                        (i.e. more augmentations per frame) 
+                        the performance significantly improves across all generalization levels. Importantly,
+                         the performance increase is much larger for the harder tasks (L3 generalization).
                     </p>
+                <!-- </div> -->
+                <div class="column overlay-image has-text-centered">
+                    <img src="media/l123_generalization_scale.png" width="400">
                 </div>
 
         </div>

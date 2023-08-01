@@ -150,118 +150,40 @@
         </section>
 
         <div class="column has-text-justified">
-            <p> The grand aim of having a single robot that can manipulate arbitrary objects in diverse settings has
-                been
-                a distant goal for several decades. This is in-part because of the paucity of diverse robotics datasets,
-                and
-                the lack of expressive architectures and policy learning algorithms that can leverage multi-modal
-                datasets for
-                generalization to out-of-domain scenarios. We develop a robot manipulation framework with commodity
-                hardware (RoboPen),
-                collect a large-scale high quality dataset with everyday objects (RoboSet), and develop an efficient
-                mutli-task
-                robot manipulation agent (RoboAgent) that can semantically augment trajectories with diverse variations,
-                and extract performant
-                policies with efficient action representations.
-            </p>
-        </div>
-        <div class="column has-text-centered">
-            <div class="publication-video">
-                <video poster="" autoplay muted loop playsinline height="100%">
-                    <source src="./media/roboagent_concept.mp4" type="video/mp4">
-                </video>
-                <!-- <iframe src="https://www.youtube.com/embed/ux4yisjYHeI?autoplay=1?controls=0"
-                    title="Overview of MT-ACT capabilities" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen>
-                </iframe> -->
-            </div>
-        </div><br><br>
-        <div class="column">
-            <p>
-                <strong>RoboAgent</strong> is capable of 12 unique skills demonstrated across <strong>38 tasks</strong>
-                categorized
-                into <strong>6 kitchen activities</strong>.
-                RoboAgent is capable of a <strong>wide diversity of non-trivial skills</strong> beyond picking/pushing,
-                including articulated object
-                manipulation and object re-orientation.
-                RoboAgent also <strong>generalizes to diverse unseen scenarios</strong> involving unseen objects,
-                unseen tasks, and to completely unseen kitchens.
+
+            <!-- Make central claim -->
+            <p style="text-align: center;">
+                RoboAgent can <strong>efficiently</strong> acquire a <strong>wide diversity of non-trivial skills</strong> and can <strong>generalizes them to diverse unseen scenarios</strong>.
             </p>
 
-            <h2 class="title is-3"> Overview</h2>
-            <p>
-                To build a robotic agent that can generalize to many different scenarios
-                requires broad data coverage. Towards this challenge some recent works such as
-                <a href=https://robotics-transformer1.github.io />RT-1</a> collect a large amount
-                (~130,000) of robot trajectories.
-                By contrast, we focus on building a <strong> more efficient </strong> robot learning
-                system. Specifically, we only use ~7500 robot trajectories (20x less data) for training
-                our RoboAgent. Our dataset <strong>sparsely</strong> covers 12 unique skills in few different
-                contexts. Our main aim is to thus learn one generalizable universal policy while avoiding overfitting in
-                this low data regime.
-            </p>
-            <h3 style="font-family: 'Source Sans 3', sans-serif; font-weight: 400;">
-                Dataset
-            </h3>
-            <p>
-                Our dataset <strong>RoboSet</strong> consists of 7,500 trajectories collected using human teleoperation
-                on commodity robotics hardware (<a href=https://www.franka.de />Franka-Emika robots</a> with
-                <a href="https://robotiq.com/products/2f85-140-adaptive-robot-gripper">Robotiq gripper</a>) across
-                multiple tasks and scenes.
-                RoboSet includes common pick-place skills but also includes contact-rich skills
-                such as <em>wipe, cap</em> as well as skills involving articulated objects.
-                RoboSet was collected by dividing everyday kitchen activities (e.g. making tea, baking) into different
-                sub-tasks, with teleop data collected for each sub-task (skill). In addition to the dataset we use for training RoboAgent,
-                we are releasing a much larger dataset collected over the course of the project containing a total of 100,050 
-                trajectories, including non-kitchen scenes.
-                The figure below presents a snapshot of our robot system and the objects used during data collection. 
-            </p>
-            <p class="has-text-centered">
-                <strong>We open-source all our data to enable future research.</strong>
-            </p>
-            <div class="column overlay-image has-text-centered">
-                <img src="media/data_collection_setup_01.png">
+            <!-- Add videos highlighting results-->
+            <div class="column has-text-centered">
+                <div class="publication-video">
+                    <iframe src="https://www.youtube.com/embed/ux4yisjYHeI?autoplay=1?controls=0"
+                        title="Overview of MT-ACT capabilities" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
             </div>
 
-            <h3 style="font-family: 'Source Sans 3', sans-serif; font-weight: 400;"> Approach </h3>
-            <div class="column has-text-left">
-                To learn generalizable policies in low-data regimes we focus on leveraging world priors
-                from foundation models as well as efficient policy representations to ingest
-                <ul>
-                    <li>
-                        <strong>Semantic Augmentations:</strong> We use world priors from existing foundation
-                        models to augment our limited data. We use <a href="https://segment-anything.com/">SAM</a>
-                        to segment target objects and semantically augment them to different objects with shape, color, texture variations.
-                    </li>
-                    <li>
-                        <strong>Policy Representation:</strong> We adapt <a
-                            href="https://tonyzhaozh.github.io/aloha/">action-chunking</a>
-                        to multi-task settings and build a more efficient policy representation to ingest the highly
-                        multi-modal
-                        data in
-                        RoboSet.
-                    </li>
-                </ul>
-            </div>
-            <div class="column is-centered is-vcentered has-text-centered">
-                <video autoplay="" muted="" loop="" playsinline="" width="80%">
-                    <source src="./media/libx264_output_28.mp4" type="video/mp4">
-                </video>
-            </div>
+            <!-- Video caption -->
+            <p>
+                Trained merely on <strong>7500 trajectories</strong>, we are demonstrating an universal RoboAgent that can exhibit a diverse set of <strong>12 non-trivial manipulation skills</strong> (beyond picking/pushing, including articulated object manipulation and object re-orientation) and can generalize them to diverse unseen scenarios</strong> (involving unseen objects, unseen tasks, and to completely unseen kitchens). RoboAgent can also <strong>evolve its capabilities</strong> with new experiences.
+                <!-- <strong>RoboAgent</strong> is capable of 12 unique skills demonstrated across <strong>38 tasks</strong> categorized into <strong>6 kitchen activities</strong>.  RoboAgent is capable of a <strong>wide diversity of non-trivial skills</strong> beyond picking/pushing, including articulated object manipulation and object re-orientation. RoboAgent also <strong>generalizes to diverse unseen scenarios</strong> involving unseen objects, unseen tasks, and to completely unseen kitchens. -->
+            </p>
 
-            <br>
             <h2 class="title is-3">
-                Skills
+                RoboAgent can exhibit 12 skills
             </h2>
 
             <section class="hero is-light is-small">
                 <div class="hero-body">
                     <div class="container">
                         <h5 id="vidtit">
-                            <b>
+                            <!-- <b>
                                 Skills 1-6
-                            </b>
+                            </b> -->
                         </h5>
                         <div id="results-carousel" class="carousel results-carousel">
                             <div class="card" id="slide-open">
@@ -344,9 +266,9 @@
                 <div class="hero-body">
                     <div class="container">
                         <h5 id="vidtit">
-                            <b>
+                            <!-- <b>
                                 Skills 7-12
-                            </b>
+                            </b> -->
                         </h5>
                         <div id="results-carousel" class="carousel results-carousel">
                             <div class="card" id="pick">
@@ -376,7 +298,7 @@
                             <div class="card" id="slide-in">
                                 <div class="card-image">
                                     <video poster="" autoplay muted loop playsinline height="100%">
-                                        <source src="media/skills/crop_720w/slide_in_720w_compress.mp4" video/mp4">
+                                        <source src="media/skills/crop_720w/slide_in_720w_compress.mp4" type="video/mp4">
                                     </video>
                                 </div>
                                 <div class="card-content">
@@ -413,6 +335,103 @@
                     </div>
                 </div>
             </section>
+        </div> <!-- Wrap up show and tell -->
+
+
+        <!-- Paint the vision / Overview-->
+        <div class="column has-text-justified">
+
+            <h2>Towards a universal robotic agent </h2>
+
+            <!-- <h4 style="font-family: 'Source Sans 3', sans-serif; font-weight: 400;"> The chicken and egg problem</h4> -->
+            <strong>The chicken and egg problem</strong>: The grand aim of having a single robot that can manipulate arbitrary objects in diverse settings has been a distant goal for several decades. This is in-part because of the paucity of diverse robotics datasets to train such agents, at the same time absence of generic agents than can generate such dataset.
+
+            <br>
+            <!-- <h4 style="font-family: 'Source Sans 3', sans-serif; font-weight: 400;"> Escaping the vicious circle</h4> -->
+            <strong>Escaping the vicious circle</strong>: To escape this vicious circle our focus is on developing an efficient paradigm that can deliver a universal agent capable acquiring and generalizing multiple skills under a practical data budget. RoboAgent builds on following ingredients --
+                <ul style="text-align: left;">
+                    <li> <a href=https://youtu.be/tUfWqIz5aR4/><strong>RoboPen</strong></a> - a distributed robotics infrastructure build with commodity hardware capable of long term uninterrupted operations.
+                    <li> <a href=https://sites.google.com/view/robohive/><strong>RoboHive</strong></a> - a unified framework for  robot learning across simulation and real-world operations.
+                    <li> <a href=https://sites.google.com/view/robohive/roboset><strong>RoboSet</strong></a> - a high quality dataset representing multiple skills with everyday objects in diverse scenarios.
+                    <li> <a href=media/robopen.pdf><strong>MT-ACT</strong></a> - an efficient language conditioned multi-task offline imitation learning framework multiplies offline datasets by creating a diverse collection of semantic augmentations over the existing robot’s experiences and employs a novel policy architecture with efficient action representation to recover performant policies under a data budget.</li>
+                </ul>
+            </p>
+
+        </div>
+
+
+        <!-- Dive into Details -->
+        <div class="column">
+            <h2 class="title is-3"> RoboSet: Diverse multi-skill multi-task multi-modal dataset</h2>
+            <!-- <h3 style="font-family: 'Source Sans 3', sans-serif; font-weight: 400;"> Diverse multi-tasks multi-task multi-modal dataset  </h3> -->
+
+            <p>
+                To build a robotic agent that can generalize to many different scenarios
+                requires broad data coverage. Towards this challenge some recent works such as
+                <a href=https://robotics-transformer1.github.io />RT-1</a> collect a large amount
+                (~130,000) of robot trajectories.
+                By contrast, we focus on building a <strong> more efficient </strong> robot learning
+                system. Specifically, we only use ~7500 robot trajectories (20x less data) for training
+                our RoboAgent. Our dataset <strong>sparsely</strong> covers 12 unique skills in few different
+                contexts. Our main aim is to thus learn one generalizable universal policy while avoiding overfitting in
+                this low data regime.
+            </p>
+            <!-- <h3 style="font-family: 'Source Sans 3', sans-serif; font-weight: 400;"> Dataset  </h3> -->
+            <p>
+                Our dataset <strong>RoboSet</strong> consists of 7,500 trajectories collected using human teleoperation
+                on commodity robotics hardware (<a href=https://www.franka.de />Franka-Emika robots</a> with
+                <a href="https://robotiq.com/products/2f85-140-adaptive-robot-gripper">Robotiq gripper</a>) across
+                multiple tasks and scenes.
+                RoboSet includes common pick-place skills but also includes contact-rich skills
+                such as <em>wipe, cap</em> as well as skills involving articulated objects.
+                RoboSet was collected by dividing everyday kitchen activities (e.g. making tea, baking) into different
+                sub-tasks, with teleop data collected for each sub-task (skill).
+                In addition to the dataset we use for training RoboAgent, we are releasing a much larger dataset collected over the course of the project containing a total of 100,050 trajectories, including non-kitchen scenes. The figure below presents a snapshot of our robot system and the objects used during data collection.
+            </p>
+            <p class="has-text-centered">
+                <strong>We open-source all our data to enable future research.</strong>
+            </p>
+            <div class="column overlay-image has-text-centered">
+                <img src="media/data_collection_setup_01.png">
+            </div>
+
+            <h2 class="title is-3"> MT-ACT: Multi-Task Action Chunking Transformer</h2>
+            <div class="column has-text-centered">
+                <div class="publication-video">
+                    <video poster="" autoplay muted loop playsinline height="100%">
+                        <source src="./media/roboagent_concept.mp4" type="video/mp4">
+                        caption
+                    </video>
+                </div>
+            </div><br><br>
+            <div class="column has-text-left">
+                To learn generalizable policies in low-data regimes we focus on leveraging world priors
+                from foundation models as well as efficient policy representations to ingest
+                <ul>
+                    <li>
+                        <strong>Semantic Augmentations:</strong> We use world priors from existing foundation
+                        models to augment our limited data. We use <a href="https://segment-anything.com/">SAM</a>
+                        to segment target objects and semantically augment them to different objects with shape, color, texture variations.
+
+                    </li>
+                    <li>
+                        <strong>Policy Representation:</strong> We adapt <a
+                            href="https://tonyzhaozh.github.io/aloha/">action-chunking</a>
+                        to multi-task settings and build a more efficient policy representation to ingest the highly
+                        multi-modal
+                        data in
+                        RoboSet.
+                    </li>
+                </ul>
+            </div>
+            <div class="column is-centered is-vcentered has-text-centered">
+                <video autoplay="" muted="" loop="" playsinline="" width="80%">
+                    <source src="./media/libx264_output_28.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <br>
+
 
 
             <h3 style="font-family: 'Source Sans 3', sans-serif; font-weight: 400;">
@@ -483,7 +502,7 @@
         </div>
         <br><br>
         <div class="column has-text-justified is-vcentered">
-            <h2>Videos</h2>
+            <h2>RoboAgent can exhibit skills across diverse activities</h2>
             <section class="hero is-light is-small">
                 <div class="hero-body">
                     <div class="container">
@@ -837,20 +856,19 @@
         </div>
         <section class="section" id="RelatedLinks">
             <div class="column has-text-left">
-                <h2 class="title is-3">Related Links</h2>
+                <h2 class="title is-3">Related Developments</h2>
                 <p>
-                    Many recent works have focused on learning generalizable robot manipultion policies.
-                    <br><br>
+                    RoboAgent is a convergence of multiple efforts (GenAug, CACTI, ACT) and a starting point at the same time for many more to come. During the course of its developments we have also been heavily inspired by and have learned a lot from many recent works on learning generalizable robot manipulation policies. For further reading in this space, refer to -- <br>
                     <a href="https://robotics-transformer1.github.io/">RT-1</a> and much more recent
                     <a href="https://robotics-transformer.github.io/">RT-2</a> use large demonstration data to learn
                     generalizable manipulation policies.
                     Differently, <a href="https://arxiv.org/pdf/2306.11706.pdf">RoboCat</a> uses an iterative learning
                     and data-generalization pipeline for fast adaptation.
 
-                    <br><br>
+                    <br>
                     Recent works have also shown advantages on using more efficient policy representations for
                     multi-modal data using
-                    either <a href="https://tonyzhaozh.github.io/aloha/">action chunking</a> or diffusion-models (
+                    either <a href="https://tonyzhaozh.github.io/aloha/">action chunking</a> or diffusion-models
                     <a href="https://intuitive-robots.github.io/beso-website/">Reuss et al.</a>,
                     <a href="https://diffusion-policy.cs.columbia.edu/">Chi et al.</a>).
                     <br><br>
@@ -860,19 +878,66 @@
                 </p>
             </div>
         </section>
-        <section class="section" id="BibTeX">
+
+        <section class="section" id="Acknowledgements">
             <!-- <div class="container is-max-desktop content"> -->
             <div class="column has-text-left">
-                <h2 class="title is-3">BibTeX</h2>
-                <pre><code>@article{roboagent,
-    author    = {Bhardwaj, Homanga and Vakil, Jay and Sharma, Mohit and Gupta, Abhinav and Tulsiani, Shubham and Kumar, Vikash},
-    title     = {RoboAgent: Towards Sample Efficient Robot Manipulation with Semantic Augmentations and Action Chunking},
-    journal   = {arxiv},
-    year      = {2023},
-}</code></pre>
-            </div>
+                <h2 class="title is-3">Acknowledgements</h2>
+                We acknowledgement various contributions large and small that contributed towards the success of this work.  <ToDo- add details>
 
+            </div>
         </section>
+
+        <div class="column has-text-centered">
+            <div class="publication-links">
+                <span class="link-block">
+                    <!-- <h2>BibTeX</h2> -->
+                    <a href="media/robopen.pdf"
+                        class="external-link button is-normal is-rounded" target="_blank">
+                        <!-- <span class="icon">
+                            <i class="fa fa-file-pdf-o" style="font-size:24px"></i>
+                        </span> -->
+                        <span>BibTeX</span>
+                    </a>
+                </span>
+                <span class="link-block">
+                    <a href="media/robopen.pdf"
+                        class="external-link button is-normal is-rounded is-dark" target="_blank">
+                        <span class="icon">
+                            <i class="fa fa-file-pdf-o" style="font-size:24px"></i>
+                        </span>
+                        <span>Paper</span>
+                    </a>
+                </span>
+                <span class="link-block">
+                    <a href="" class="external-link button is-normal is-rounded is-dark"
+                        target="_blank">
+                        <span class="icon">
+                            <i class="fa fa-github" style="font-size:24px"></i>
+                        </span>
+                        <span>Code</span>
+                    </a>
+                </span>
+                <span class="link-block">
+                    <a href="https://dl.fbaipublicfiles.com/RoboSet/roboset.html" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                            <i class="fa fa-database" style="font-size:24px"></i>
+                        </span>
+                        <span>RoboSet</span>
+                    </a>
+                </span>
+            </div>
+            <div class="column has-text-left">
+                <!-- <h2 class="title is-3">BibTeX</h2> -->
+                <pre><code>@article{roboagent,
+  author  = {Bhardwaj, Homanga and Vakil, Jay and Sharma, Mohit and Gupta, Abhinav and Tulsiani, Shubham and Kumar, Vikash},
+  title   = {RoboAgent: Towards Sample Efficient Robot Manipulation with Semantic Augmentations and Action Chunking},
+  journal = {arxiv},
+  year    = {2023}}</code></pre>
+            </div>
+        </div>
+
     </div>
 
     </div>

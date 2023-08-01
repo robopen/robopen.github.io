@@ -10,17 +10,20 @@
         display: none;
     }
 }
+
 @media only screen and (min-width: 1026px) {
     #burger {
         display: none;
     }
 }
+
 h1,
 h2,
-h6{
-  font-family: Poppins;
+h6 {
+    font-family: Poppins;
 }
-a{
+
+a {
     font-family: Raleway;
 }
 
@@ -29,66 +32,131 @@ a{
         display: none;
     }
 }
+
 @media only screen and (min-width: 1026px) {
     #burger {
         display: none;
     }
 }
+
 h1,
 h2,
 h6,
-h5{
-  font-family: Poppins;
+h5 {
+    font-family: Poppins;
 }
-a{
+
+a {
     font-family: Raleway;
 }
 
-p{
+p {
     text-align: justify;
 
 }
-#vidtit{
+
+#vidtit {
     padding: 2%;
 }
 
 h2 .subtitle {
     margin-top: -0.2em;
-  }
+}
 
 
-#slide-open{
+#slide-open {
     background-color: #dfa8ff;
 }
-#slide-close{
+
+#slide-close {
     background-color: #a8aeff;
 }
-#flap-open{
+
+#flap-open {
     background-color: #f78d8d;
 }
-#flap-close{
+
+#flap-close {
     background-color: #f7bb8d;
 }
-#cap{
+
+#cap {
     background-color: #fff9c2;
 }
-#uncap{
+
+#uncap {
     background-color: #ecffc2;
 }
-#pick{
+
+#pick {
     background-color: #c5ffc2;
 }
-#place{
+
+#place {
     background-color: #7dfae1;
 }
-#slide-in{
+
+#slide-in {
     background-color: #7dddfa;
 }
-#slide-out{
+
+#slide-out {
     background-color: #3269a1;
-    color:beige;
+    color: beige;
 }
-#wipe{
+
+#wipe {
     background-color: #a25ffa;
     color: beige;
+}
+
+/* Custom styles to create a full-page image */
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.full-page-image {
+    background-image: url('cover.png');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.orange {
+    /* Add a semi-transparent overlay to the image if needed */
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.jay {
+    /* Center your content vertically and horizontally */
+    position: absolute;
+    bottom: 0;
+    /* right: 25; */
+    /* transform: translate(-50%, -50%); */
+    z-index: 2;
+    color: #fff;
+    /* Set the color for your content */
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.banner-state {
+    height: 350px;
+    /* or whatever height you want for the banner */
+    transition: height 1s ease;
+}
+
+.vakil .jay {
+    opacity: 0;
+    transition: opacity 1s cubic-bezier(0.645, 0.045, 0.355, 1);
 }

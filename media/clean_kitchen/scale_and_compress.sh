@@ -10,7 +10,8 @@ do
   newf=${f%.*}"_720w.mp4"
   finalf=${f%.*}"_720w_compress.mp4"
   echo "new file ", $newf
-  ffmpeg -i $f -filter:v scale=720:-1 -c:a copy ${cropdir}${newf}
+  # -an to remove sound
+  ffmpeg -i $f -filter:v scale=720:-1 -c:a copy -an ${cropdir}${newf}
   ffmpeg -i ${cropdir}${newf}  -vcodec libx264 -crf 28 ${cropdir}${finalf}
   echo "Did crop and compress, ./crop_720w/"${newf}
 

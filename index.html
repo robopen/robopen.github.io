@@ -169,7 +169,7 @@
         <div class="column has-text-centered">
             <div class="publication-video">
                 <video poster="" autoplay muted loop playsinline height="100%">
-                    <source src="media/roboagent_concept.mp4" type="video/mp4">
+                    <source src="./media/roboagent_concept.mp4" type="video/mp4">
                 </video>
                 <!-- <iframe src="https://www.youtube.com/embed/ux4yisjYHeI?autoplay=1?controls=0"
                     title="Overview of MT-ACT capabilities" frameborder="0"
@@ -178,31 +178,73 @@
                 </iframe> -->
             </div>
         </div><br><br>
-        <!-- <div class="column has-text-centered" style="margin-right: 20%; margin-left: 20%;"> -->
-        <div class="column has-text-justified">
-
-            <p> RoboAgnent is capable of 12 unique skills demonstrated across 38 tasks categorized into 6 kitchen
-                activities. The system is
-                capable of a wide diversity of non-trivial skills beyond picking/pushing, including articulated object
-                manipulation
-                and object re-orientation. The system generalizes to diverse unseen scenarios involving unseen objects,
-                unseen tasks,
-                and to completely unseen kitchens.
+        <div class="column">
+            <p>
+                <strong>RoboAgent</strong> is capable of 12 unique skills demonstrated across <strong>38 tasks</strong> categorized 
+                into <strong>6 kitchen activities</strong>.
+                RoboAgent is capable of a <strong>wide diversity of non-trivial skills</strong> beyond picking/pushing, including articulated object
+                manipulation and object re-orientation.
+                RoboAgent also <strong>generalizes to diverse unseen scenarios</strong>  involving unseen objects,
+                unseen tasks, and to completely unseen kitchens.
             </p>
 
-            <h2 class="title is-3""> RoboAgent is capable of 12 skills across 38 tasks. </h2>
-                <p>
-                    Summary of the overall framework MT-ACT showing the two main stages: semantic augmentation
-                    for multiplying data, and leveraging efficient action representations for ingesting multi-modal
-                    multi-task
-                    data
-                    into a single multi-skill multi-task policy
-                </p>
-                <div class="column is-centered is-vcentered has-text-centered">
-                    <video autoplay="" muted="" loop="" playsinline="" height="200%" width="900%">
-                        <source src="./media/libx264_output_28.mp4" type="video/mp4">
-                    </video>
-                </div>
+            <h2 class="title is-3"> Overview</h2>
+            <p>
+                To build a robotic agent that can generalize to many different scenarios 
+                requires broad data coverage. Towards this challenge some recent works such as
+                    <a href=https://robotics-transformer1.github.io/>RT-1</a> collect a large amount
+                    (~130,000) of robot trajectories.
+                    By contrast, we focus on building a <strong> more efficient </strong> robot learning
+                    system. Specifically, we only use ~7500 robot trajectories (20x less data) for training
+                    our RoboAgent. Our dataset <strong>sparsely</strong> covers 12 unique skills in few different
+                    contexts. Our main aim is to thus learn one generalizable universal policy while avoiding overfitting in
+                    this low data regime.
+            </p>
+            <h3 style="font-family: 'Source Sans 3', sans-serif; font-weight: 400;">
+                Dataset
+            </h3>
+            <p>
+            Our dataset <strong>RoboSet</strong> consists of 7,500 trajectories collected using human teleoperation
+            on commodity robotics hardware (<a href=https://www.franka.de/>Franka-Emika robots</a> with 
+            <a href="https://robotiq.com/products/2f85-140-adaptive-robot-gripper">Robotiq gripper</a>) across multiple tasks and scenes.
+            RoboSet includes common pick-place skills but also includes contact-rich skills
+            such as <em>wipe, cap</em> as well as skills involving articulated objects.
+            RoboSet was collected by dividing everyday kitchen activities (e.g. making tea, baking) into different 
+            sub-tasks, with teleop data collected for each sub-task (skill).
+            Below figure presents a snapshot of our robot system and the objects used during data collection.
+            </p>
+            <p class="has-text-centered">
+                 <strong>We open-source all our data to enable future research.</strong>
+            </p>
+            <div class="column overlay-image has-text-centered">
+                <img src="media/data_collection_setup_01.png">
+            </div>
+
+            <h3 style="font-family: 'Source Sans 3', sans-serif; font-weight: 400;"> Approach </h3>
+            <div class="column has-text-left">
+                To learn generalizable policies in low-data regimes we focus on leveraging world priors
+                from foundation models as well as efficient policy representations to ingest
+                <ul>
+                    <li>
+                        <strong>Semantic Augmentations:</strong> We use world priors from existing foundation
+                        models to augment our limited data. We use <a href="https://segment-anything.com/">SAM</a>
+                        to segment target and other objects and diffusion models to hallucinate experiences.
+                    </li>
+                    <li>
+                        <strong>Policy Representation:</strong> We adapt <a
+                            href="https://tonyzhaozh.github.io/aloha/">action-chunking</a>
+                        to multi-task settings and build a more efficient policy representation to ingest the highly multi-modal
+                        data in
+                        RoboSet.
+                    </li>
+                </ul>
+            </div>
+            <div class="column is-centered is-vcentered has-text-centered">
+                <video autoplay="" muted="" loop="" playsinline="" height="200%" width="800%">
+                    <source src="./media/libx264_output_28.mp4" type="video/mp4">
+                </video>
+            </div>
+
                 <br>
                 <h2 class="title is-3">
                     Skills

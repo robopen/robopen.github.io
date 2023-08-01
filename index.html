@@ -212,8 +212,10 @@
                 RoboSet includes common pick-place skills but also includes contact-rich skills
                 such as <em>wipe, cap</em> as well as skills involving articulated objects.
                 RoboSet was collected by dividing everyday kitchen activities (e.g. making tea, baking) into different
-                sub-tasks, with teleop data collected for each sub-task (skill).
-                Below figure presents a snapshot of our robot system and the objects used during data collection.
+                sub-tasks, with teleop data collected for each sub-task (skill). In addition to the dataset we use for training RoboAgent,
+                we are releasing a much larger dataset collected over the course of the project containing a total of 100,050 
+                trajectories, including non-kitchen scenes.
+                The figure below presents a snapshot of our robot system and the objects used during data collection. 
             </p>
             <p class="has-text-centered">
                 <strong>We open-source all our data to enable future research.</strong>
@@ -230,7 +232,7 @@
                     <li>
                         <strong>Semantic Augmentations:</strong> We use world priors from existing foundation
                         models to augment our limited data. We use <a href="https://segment-anything.com/">SAM</a>
-                        to segment target and other objects and diffusion models to hallucinate experiences.
+                        to segment target objects and semantically augment them to different objects with shape, color, texture variations.
                     </li>
                     <li>
                         <strong>Policy Representation:</strong> We adapt <a
@@ -852,7 +854,7 @@
                     <a href="https://intuitive-robots.github.io/beso-website/">Reuss et al.</a>,
                     <a href="https://diffusion-policy.cs.columbia.edu/">Chi et al.</a>).
                     <br><br>
-                    Finally, recent work such as <a href=https://diffusion-rosie.github.io />ROSIE</a> have also used
+                    Finally, recent work such as <a href=https://diffusion-rosie.github.io />ROSIE</a>,  <a href=https://genaug.github.io/>GenAug</a>, <a href=https://cacti-framework.github.io/>CACTI</a> have also used
                     open-world object-detection
                     based methods for semantic augmentations.
                 </p>

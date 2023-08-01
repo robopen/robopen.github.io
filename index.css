@@ -55,3 +55,40 @@ p{
 h2 .subtitle {
     margin-top: -0.2em;
   }
+
+
+#slide-open{
+    background-color: #dfa8ff;
+}
+#slide-close{
+    background-color: #a8aeff;
+}
+#flap-open{
+    background-color: #f78d8d;
+}
+#flap-close{
+    background-color: #f7bb8d;
+}
+#cap{
+    background-color: #fff9c2;
+}
+#uncap{
+    background-color: #ecffc2;
+}
+#pick{
+    background-color: #c5ffc2;
+}
+#place{
+    background-color: #7dfae1;
+}
+#slide-in{
+    background-color: #7dddfa;
+}
+#slide-out{
+    background-color: #3269a1;
+    color:beige;
+}
+#wipe{
+    background-color: #a25ffa;
+    color: beige;
+}

@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://dl.fbaipublicfiles.com/RoboSet/roboset.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="description" content="RoboSet DataSet">
+  <meta name="keywords" content="Large-scale robotics dataset">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="https://dl.fbaipublicfiles.com/RoboSet/media/main.png">
+  <title>RoboSet Dataset</title>
+
+
+  <link href="./roboset_files/bootstrap.min.css" rel="stylesheet">
+  <script src="./roboset_files/bootstrap.bundle.min.js.download"></script>
+  <link rel="stylesheet" href="./roboset_files/bulma.min.css">
+  <link href="./roboset_files/css" rel="stylesheet">
+  <link rel="styesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./roboset_files/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./roboset_files/css2" rel="stylesheet">
+  <link href="./roboset_files/css2(1)" rel="stylesheet">
+<style>
+  html{
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: Poppins;
+  }
+
+  h1,
+  h2,
+  h6 {
+    font-family: Raleway;
+  }
+
+  table,
+  td,
+  th {
+    text-align: center;
+    width: 14.2%;
+    padding: 5px;
+  }
+
+  th {
+    background: #DDEEEE;
+  }
+
+  table {
+    width: 400px;
+    border-collapse: collapse;
+  }
+  @media only screen and (max-width: 1026px) {
+    #toc {
+        display: none;
+    }
+}
+@media only screen and (min-width: 1026px) {
+    #burger {
+        display: none;
+    }
+}
+
+  #myInput {
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+  }
+
+  #myTable {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 18px;
+  }
+
+  #myTable th,
+  #myTable td {
+    text-align: left;
+    padding: 12px;
+  }
+
+  #myTable tr {
+    border-bottom: 1px solid #ddd;
+  }
+
+  #myTable tr.header,
+  #myTable tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  .parallax {
+    /* The image used */
+    background-image: url("media/main.png");
+
+    /* Set a specific height */
+    min-height: 250px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style></head>
+
+<body><div class="content" style="margin-right: 5%; margin-left: 5%; ">
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a role="button" class="navbar-link" id="burger" aria-label="menu" aria-expanded="True">
+          Table of contents 
+        </a>
+    </div>
+    <div class="navbar-menu" id="nav-links">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" id="toc">
+            Table of contents
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://sites.google.com/view/robohive/roboset?authuser=0">
+              Website
+            </a>
+            <a class="navbar-item" href="https://dl.fbaipublicfiles.com/RoboSet/roboset.html#hierarchy">
+              Hierarchy
+            </a>
+            <a class="navbar-item" href="https://dl.fbaipublicfiles.com/RoboSet/roboset.html#datacomposition">
+            Data Composition
+            </a>
+            <a class="navbar-item" href="https://dl.fbaipublicfiles.com/RoboSet/roboset.html#data">
+              Data
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <h1>RoboSet Dataset</h1>
+
+  <p>
+    Introducing RoboSet, a large-scale real-world multi-task dataset collected across a range of everyday household
+    table-top activities. RoboSet consists of a mix of kinesthetic demonstrations as well as teleoperated
+    demonstrations. The dataset consists of multi-task activities with a variation in the scene at every demonstration
+    to induce visual diversity i n the data.
+  </p>
+
+  <h2 id="hierarchy">
+    Hierarchy of data
+  </h2>
+  <ul>
+    <li>Activity
+      <ul>
+        <li>
+          Task
+          <ul>
+            <li>
+              Scenes
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2 id="datacomposition">
+    Dataset composition
+  </h2>
+
+  <p>The dataset consists of various setups and features</p>
+  <ol>
+    <li>
+      <h6>
+        Source of dataset
+      </h6>
+      <ul>
+        <li>
+          The dataset has been collected from multiple sources, such as kinesthetic demonstrations and teleoperation.
+          Kinesthetic demonstrated data was collected by playing back a demo trajectory with a variated scene every
+          rollout. However, the teleoperated data was collected using an Oculus Quest 2 controller. The teleoperator
+          would use the controller to guide the robot to perform the task; teleoperation ensured that each rollout was
+          unique. Teleoperation was performed using an Oculus Quest 2 controller.
+        </li>
+      </ul>
+    </li>
+    <li>
+      <h6>
+        Camera viewpoints
+      </h6>
+      <ul>
+        <li>
+          We collected the dataset over multiple camera views, this way we ensure variety in the data and are not bind
+          to
+          a fixed camera viewpoint. 
+        </li>
+      </ul>
+    </li>
+    <li>
+      <h6>
+        Different Tasks
+      </h6>
+      <ul>
+        <li>
+          We collected data over a range of tasks and activities, this makes schematic tasks that we can associate and
+          relate to. This would also open up investigation opportunities in multi-step multi-task agents. Opportunities
+          for language guided sequencing and generalization.
+        </li>
+      </ul>
+    </li>
+  </ol>
+  <h2 id="data">
+    Data
+  </h2>
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by task name" title="Type task names">
+  <table class="table is-hoverable" id="myTable" style="width: 100%;">
+    <thead style="background-color:#ddd">
+      <tr><th>Activity</th>
+      <th>Task</th>
+      <th>Scene</th>
+      <th>Number of demonstrations</th>
+      <th>Example</th>
+      <th>Download</th>
+    </tr></thead>
+    <tbody>
+      <tr>
+        <th>
+          Baking Prep
+        </th>
+        <td>
+          Slide-Open Drawer
+        </td>
+        <td>
+          Scene 1
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/baking_prep_open_drawer_scene_1.gif" alt="open drawer">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Baking_Prep/Baking_Prep_Slide_Open_Drawer_Scene_1.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Baking Prep
+        </th>
+        <td>
+          Slide-Open Drawer
+        </td>
+        <td>
+          Scene 4
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/baking_prep_open_drawer_scene_4.gif" alt="open drawer">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Baking_Prep/Baking_Prep_Slide_Open_Drawer_Scene_4.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Baking Prep
+        </th>
+        <td>
+          Pick Butter
+        </td>
+        <td>
+          Scene 1
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/baking_prep_pick_butter_scene_1.gif" alt="open drawer">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Baking_Prep/Baking_Prep_Pick_Butter_Scene_1.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Baking Prep
+        </th>
+        <td>
+          Pick Butter
+        </td>
+        <td>
+          Scene 4
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/baking_prep_pick_butter_scene_4.gif" alt="open drawer">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Baking_Prep/Baking_Prep_Pick_Butter_Scene_4.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Baking Prep
+        </th>
+        <td>
+          Place Butter
+        </td>
+        <td>
+          Scene 1
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/baking_prep_place_butter_scene_1.gif" alt="open drawer">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Baking_Prep/Baking_Prep_Place_Butter_Scene_1.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Baking Prep
+        </th>
+        <td>
+          Place Butter
+        </td>
+        <td>
+          Scene 4
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/baking_prep_place_butter_scene_4.gif" alt="open drawer">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Baking_Prep/Baking_Prep_Place_Butter_Scene_4.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Baking Prep
+        </th>
+        <td>
+          Slide-Close Drawer
+        </td>
+        <td>
+          Scene 1
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/baking_prep_close_drawer_scene_1.gif" alt="open drawer">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Baking_Prep/Baking_Prep_Slide_Close_Drawer_Scene_1.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Baking Prep
+        </th>
+        <td>
+          Slide-Close Drawer
+        </td>
+        <td>
+          Scene 4
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/baking_prep_close_drawer_scene_4.gif" alt="open drawer">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Baking_Prep/Baking_Prep_Slide_Close_Drawer_Scene_4.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+      <!--
+        Clean Kitchen Starts here
+      -->
+      <tr>
+        <th>
+          Clean Kitchen
+        </th>
+        <td>
+          Pick Lid
+        </td>
+        <td>
+          Scene 3
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/clean_kitchen_pick_mug_scene_3.gif" alt="open drawer">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Clean_Kitchen/Clean_Kitchen_Pick_Lid_Scene_3.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Clean Kitchen
+        </th>
+        <td>
+          Cap Lid
+        </td>
+        <td>
+          Scene 3
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/clean_kitchen_cap_lid_scene_3.gif" alt="open drawer">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Clean_Kitchen/Clean_Kitchen_Cap_Lid_Scene_3.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Clean Kitchen
+        </th>
+        <td>
+          Slide-Close Drawer
+        </td>
+        <td>
+          Scene 3
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/clean_kitchen_close_drawer_scene_3.gif" alt="open drawer">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Clean_Kitchen/Clean_Kitchen_Slide_Close_Drawer_Scene_3.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Clean Kitchen
+        </th>
+        <td>
+          Flap-Close Oven
+        </td>
+        <td>
+          Scene 3
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/clean_kitchen_close_oven_scene_3.gif" alt="open drawer">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Clean_Kitchen/Clean_Kitchen_Flap_Close_Oven_Scene_3.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Clean Kitchen
+        </th>
+        <td>
+          Pick Towel
+        </td>
+        <td>
+          Scene 3
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/clean_kitchen_pick_towel_scene_3.gif" alt="open drawer">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Clean_Kitchen/Clean_Kitchen_Pick_Towel_Scene_3.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Clean Kitchen
+        </th>
+        <td>
+          Wipe Counter
+        </td>
+        <td>
+          Scene 3
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/clean_kitchen_wipe_towel_scene_3.gif" alt="open drawer">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Clean_Kitchen/Clean_Kitchen_Wipe_Counter_Scene_3.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+      <!--
+        Heat Soup Starts here
+      -->
+      <tr>
+        <th>
+          Heat Soup
+        </th>
+        <td>
+          Flap-Open Oven
+        </td>
+        <td>
+          Scene 2
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/heat_soup_open_oven_scene_2.gif" alt="open drawer">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Heat_Soup/Heat_Soup_Flap_Open_Oven_Scene_2.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Heat Soup
+        </th>
+        <td>
+          Flap-Open Oven
+        </td>
+        <td>
+          Scene 4
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/heat_soup_open_oven_scene_4.gif" alt="open drawer">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Heat_Soup/Heat_Soup_Flap_Open_Oven_Scene_4.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Heat Soup
+        </th>
+        <td>
+          Pick Bowl
+        </td>
+        <td>
+          Scene 2
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/heat_soup_pick_bowl_scene_2.gif" alt="open drawer">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Heat_Soup/Heat_Soup_Pick_Bowl_Scene_2.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Heat Soup
+        </th>
+        <td>
+          Pick Bowl
+        </td>
+        <td>
+          Scene 4
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/heat_soup_pick_bowl_scene_4.gif" alt="open drawer">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Heat_Soup/Heat_Soup_Pick_Bowl_Scene_4.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Heat Soup
+        </th>
+        <td>
+          Slide-In Bowl
+        </td>
+        <td>
+          Scene 2
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/heat_soup_slide_in_scene_2.gif" alt="open drawer">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Heat_Soup/Heat_Soup_Slide_In_Bowl_Scene_2.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Heat Soup
+        </th>
+        <td>
+          Slide-In Bowl
+        </td>
+        <td>
+          Scene 4
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/heat_soup_slide_in_scene_4.gif" alt="open drawer">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Heat_Soup/Heat_Soup_Slide_In_Bowl_Scene_4.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Heat Soup
+        </th>
+        <td>
+          Flap-Close Oven
+        </td>
+        <td>
+          Scene 2
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/heat_soup_close_oven_scene_2.gif" alt="open drawer">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Heat_Soup/Heat_Soup_Flap_Close_Oven_scene_2.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+      <!--
+        Making tea/chai
+      -->
+      <tr>
+        <th>
+          Make Tea
+        </th>
+        <td>
+          Uncap Lid
+        </td>
+        <td>
+          Scene 2
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/making_tea_uncap_lid_scene_2.gif" alt="">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Make_Tea/Make_Tea_Uncap_Lid_Scene_2.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Make Tea
+        </th>
+        <td>
+          Place Lid
+        </td>
+        <td>
+          Scene 2
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/making_tea_place_lid_scene_2.gif" alt="">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Make_Tea/Make_Tea_Place_Lid_Scene_2.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Make Tea
+        </th>
+        <td>
+          Pick tea
+        </td>
+        <td>
+          Scene 2
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/making_tea_pick_tea_scene_2.gif" alt="">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Make_Tea/Make_Tea_Pick_Tea_Scene_2.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Make Tea
+        </th>
+        <td>
+          Place Tea
+        </td>
+        <td>
+          Scene 2
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/making_tea_place_tea_scene_2.gif" alt="">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Make_Tea/Make_Tea_Place_Tea_Scene_2.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Make Tea
+        </th>
+        <td>
+          Pick Lid
+        </td>
+        <td>
+          Scene 2
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/making_tea_pick_lid_scene_2.gif" alt="">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Make_Tea/Make_Tea_Pick_Lid_Scene_2.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Make Tea
+        </th>
+        <td>
+          Cap Lid
+        </td>
+        <td>
+          Scene 2
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/making_tea_cap_lid_scene_2.gif" alt="Cap lid">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Make_Tea/Make_Tea_Cap_Lid_Scene_2.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+      <!--
+        Making toast
+      -->
+      <tr>
+        <th>
+          Make Toast
+        </th>
+        <td>
+          Plunge Toaster
+        </td>
+        <td>
+          Scene 2
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/making_toast_plunge_toaster_scene_2.gif" alt="Cap lid">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Make_Toast/Make_Toast_Plunge_Toaster_Scene_2.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Make Toast
+        </th>
+        <td>
+          Pick Toast
+        </td>
+        <td>
+          Scene 1
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/making_toast_pick_toast_scene_1.gif" alt="Cap lid">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Make_Toast/Make_Toast_Pick_Toast_Scene_1.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Make Toast
+        </th>
+        <td>
+          Place Toast
+        </td>
+        <td>
+          Scene 1
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/making_toast_place_toaster_scene_1.gif" alt="Cap lid">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Make_Toast/Make_Toast_Place_Toast_Scene_1.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+
+      <!--
+        Serve soup
+      -->
+      <tr>
+        <th>
+          Serve Soup
+        </th>
+        <td>
+          Flap-Open Oven
+        </td>
+        <td>
+          Scene 2
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/serve_soup_open_oven_scene_2.gif" alt="Cap lid">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Serve_Soup/Serve_Soup_Flap_Open_Oven_Scene_2.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Serve Soup
+        </th>
+        <td>
+          Slide-Out Bowl
+        </td>
+        <td>
+          Scene 2
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/serve_soup_slide_out_scene_2.gif" alt="Cap lid">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Serve_Soup/Serve_Soup_Slide_out_Bowl_Scene_2.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Serve Soup
+        </th>
+        <td>
+          Place Bowl
+        </td>
+        <td>
+          Scene 2
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/serve_soup_place_bowl_scene_2.gif" alt="Cap lid">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Serve_Soup/Serve_Soup_Place_Bowl_Scene_2.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Serve Soup
+        </th>
+        <td>
+          Flap-Close Oven
+        </td>
+        <td>
+          Scene 2
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/serve_soup_close_oven_scene_2.gif" alt="Cap lid">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Serve_Soup/Serve_Soup_Flap_Close_Oven_Scene_2.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+      <!--
+        Stow bowl
+      -->
+      <tr>
+        <th>
+          Stow Bowl
+        </th>
+        <td>
+          Slide-Open Drawer
+        </td>
+        <td>
+          Scene 3
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/stow_bowl_open_drawer_scene_3.gif" alt="Cap lid">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Stow_Bowl/Stow_Bowl_Slide_Open_Drawer_Scene_3.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Stow Bowl
+        </th>
+        <td>
+          Pick Bowl
+        </td>
+        <td>
+          Scene 3
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/stow_bowl_pick_bowl_scene_3.gif" alt="Cap lid">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Stow_Bowl/Stow_Bowl_Pick_Bowl_Scene_3.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Stow Bowl
+        </th>
+        <td>
+          Place Bowl
+        </td>
+        <td>
+          Scene 3
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/stow_bowl_place_bowl_scene_3.gif" alt="Cap lid">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Stow_Bowl/Stow_Bowl_Place_Bowl_Scene_3.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Stow Bowl
+        </th>
+        <td>
+          Slide-Close Drawer
+        </td>
+        <td>
+          Scene 3
+        </td>
+        <td>
+          250 Demonstrations
+        </td>
+        <td>
+          <img src="./roboset_files/stow_bowl_close_drawer_scene_3.gif" alt="Cap lid">
+        </td>
+        <td>
+          <a href="https://dl.fbaipublicfiles.com/RoboSet/Activities/Stow_Bowl/Stow_Bowl_Slide_Close_Drawer_Scene_3.tar.gz">Download
+            now</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    function myFunction() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+    const burgerIcon = document.querySelector('#burger');
+    const navbarMenu = document.querySelector('#nav-links');
+    burgerIcon.addEventListener('click', () => {
+      navbarMenu.classList.toggle('is-active');
+    });
+  </script>
+
+</div></body></html>

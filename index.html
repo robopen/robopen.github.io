@@ -6,7 +6,7 @@
     <meta name="description" content="RoboPen">
     <meta name="keywords" content="large-scale robot learning robotic dataset">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/plasticine/100/robot.png" />
+    <link rel="icon" type="image/x-icon" href="media/roboagent.png" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>RoboPen: Towards Sample Efficient Robot Manipulation with Semantic Augmentations and Action Chunking</title>
@@ -36,10 +36,10 @@
         crossorigin="anonymous"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-44241506-1"></script>
     <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){window.dataLayer.push(arguments);}
-              gtag('js', new Date());
-          gtag('config', 'UA-44241506-1');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { window.dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-44241506-1');
     </script>
 
     <link rel="stylesheet" href="./static/css/bulma.min.css">
@@ -72,7 +72,8 @@
 
         <div class="jay" style="padding: 0 20px">
             <h1 style="font-family: Poppins; font-size: 250%;">RoboAgent</h1>
-            <p style="font-family: Poppins; font-size: 125%;">Towards Sample Efficient Robot Manipulation with Semantic Augmentations and
+            <p style="font-family: Poppins; font-size: 125%;">Towards Sample Efficient Robot Manipulation with Semantic
+                Augmentations and
                 Action
                 Chunking</p>
         </div>
@@ -80,587 +81,668 @@
 
     <!-- <div class="content is-centered has-text-centered" style="margin-right: 20%; margin-left: 20%; "> -->
     <div class="content is-centered has-text-centered">
-    <section class="hero">
-        <div class="hero-body">
-            <div class="container is-max-desktop">
-                <div class="columns is-centered">
-                    <div class="column has-text-centered">
-                        <h2 class="title is-1 publication-title">
-                            <strong>RoboAgent</strong>
-                        </h2>
-                        <h2 class="subtitle" style="font-family: 'Source Sans 3', sans-serif; font-weight: 300;">
-                            <!-- <h2 style="font-family: 'Poppins', sans-serif; font-weight: 100;"> -->
-                            <strong>
-                                Towards Sample Efficient Robot Manipulation with Semantic Augmentations and Action
-                                Chunking
-                            </strong>
-                        </h2>
-                        <div class="is-size-5 publication-authors">
-                            <span class="author-block">
-                                <a href="https://homangab.github.io/" target="_blank">Homanga Bharadhwaj*</a>,
-                            </span>
-                            <span class="author-block">
-                                <a href="https://jdvakil.github.io" target="_blank">Jay Vakil*</a>,
-                            </span>
-                            <span class="author-block">
-                                <a href="https://mohitsharma0690.github.io/" target="_blank">Mohit Sharma*</a>,
-                            </span>
-                            <span class="author-block">
-                                <a href="http://www.cs.cmu.edu/~abhinavg/" target="_blank">Abhinav Gupta</a>,
-                            </span>
-                            <span class="author-block">
-                                <a href="http://shubhtuls.github.io/" target="_blank">Shubham Tulsiani</a>,
-                            </span>
-                            <span class="author-block">
-                                <a href="https://vikashplus.github.io" target="_blank">Vikash Kumar</a>
-                            </span>
-                        </div>
-                        <div class="is-size-8 publication-authors">
-                            <span class="author-block">
-                                *equal contribution, Carnegie Mellon University and Meta AI
-                            </span>
-                        </div>
-
+        <section class="hero">
+            <div class="hero-body">
+                <div class="container is-max-desktop">
+                    <div class="columns is-centered">
                         <div class="column has-text-centered">
-                            <div class="publication-links">
-                                <span class="link-block">
-                                    <a href="media/robopen.pdf"
-                                        class="external-link button is-normal is-rounded is-dark" target="_blank">
-                                        <span class="icon">
-                                            <i class="fa fa-file-pdf-o" style="font-size:24px"></i>
-                                        </span>
-                                        <span>Paper</span>
-                                    </a>
+                            <h2 class="title is-1 publication-title">
+                                <strong>RoboAgent</strong>
+                            </h2>
+                            <h2 class="subtitle" style="font-family: 'Source Sans 3', sans-serif; font-weight: 300;">
+                                <!-- <h2 style="font-family: 'Poppins', sans-serif; font-weight: 100;"> -->
+                                <strong>
+                                    Towards Sample Efficient Robot Manipulation with Semantic Augmentations and Action
+                                    Chunking
+                                </strong>
+                            </h2>
+                            <div class="is-size-5 publication-authors">
+                                <span class="author-block">
+                                    <a href="https://homangab.github.io/" target="_blank">Homanga Bharadhwaj*</a>,
                                 </span>
-                                <span class="link-block">
-                                    <a href="" class="external-link button is-normal is-rounded is-dark"
-                                        target="_blank">
-                                        <span class="icon">
-                                            <i class="fa fa-github" style="font-size:24px"></i>
-                                        </span>
-                                        <span>Code</span>
-                                    </a>
+                                <span class="author-block">
+                                    <a href="https://jdvakil.github.io" target="_blank">Jay Vakil*</a>,
                                 </span>
-                                <span class="link-block">
-                                    <a href="https://dl.fbaipublicfiles.com/RoboSet/roboset.html" target="_blank"
-                                        class="external-link button is-normal is-rounded is-dark">
-                                        <span class="icon">
-                                            <i class="fa fa-database" style="font-size:24px"></i>
-                                        </span>
-                                        <span>RoboSet</span>
-                                    </a>
+                                <span class="author-block">
+                                    <a href="https://mohitsharma0690.github.io/" target="_blank">Mohit Sharma*</a>,
                                 </span>
+                                <span class="author-block">
+                                    <a href="http://www.cs.cmu.edu/~abhinavg/" target="_blank">Abhinav Gupta</a>,
+                                </span>
+                                <span class="author-block">
+                                    <a href="http://shubhtuls.github.io/" target="_blank">Shubham Tulsiani</a>,
+                                </span>
+                                <span class="author-block">
+                                    <a href="https://vikashplus.github.io" target="_blank">Vikash Kumar</a>
+                                </span>
+                            </div>
+                            <div class="is-size-8 publication-authors">
+                                <span class="author-block">
+                                    *equal contribution, Carnegie Mellon University and Meta AI
+                                </span>
+                            </div>
+
+                            <div class="column has-text-centered">
+                                <div class="publication-links">
+                                    <span class="link-block">
+                                        <a href="media/robopen.pdf"
+                                            class="external-link button is-normal is-rounded is-dark" target="_blank">
+                                            <span class="icon">
+                                                <i class="fa fa-file-pdf-o" style="font-size:24px"></i>
+                                            </span>
+                                            <span>Paper</span>
+                                        </a>
+                                    </span>
+                                    <span class="link-block">
+                                        <a href="" class="external-link button is-normal is-rounded is-dark"
+                                            target="_blank">
+                                            <span class="icon">
+                                                <i class="fa fa-github" style="font-size:24px"></i>
+                                            </span>
+                                            <span>Code</span>
+                                        </a>
+                                    </span>
+                                    <span class="link-block">
+                                        <a href="https://dl.fbaipublicfiles.com/RoboSet/roboset.html" target="_blank"
+                                            class="external-link button is-normal is-rounded is-dark">
+                                            <span class="icon">
+                                                <i class="fa fa-database" style="font-size:24px"></i>
+                                            </span>
+                                            <span>RoboSet</span>
+                                        </a>
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
     </div>
 
     <section class="section">
         <div class="container is-max-desktop">
-        <div class="content is-centered has-text-centered" >
+            <div class="content is-centered has-text-centered">
 
-        <div class="column has-text-justified">
+                <div class="column has-text-justified">
 
-            <!-- Make central claim -->
-            <p style="text-align: center;">
-                RoboAgent can <strong>efficiently</strong> acquire a <strong>wide diversity of non-trivial skills</strong> and can <strong>generalizes them to diverse unseen scenarios</strong>.
-            </p>
+                    <!-- Make central claim -->
+                    <p style="text-align: center;">
+                        RoboAgent can <strong>efficiently</strong> acquire a <strong>wide diversity of non-trivial
+                            skills</strong> and can <strong>generalizes them to diverse unseen scenarios</strong>.
+                    </p>
 
-            <!-- Add videos highlighting results-->
-            <div class="column has-text-centered">
-                <div class="publication-video">
-                    <iframe src="https://www.youtube.com/embed/_nArEh7fUzk?autoplay=1?controls=0"
-                        title="Overview of MT-ACT capabilities" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen>
-                    </iframe>
+                    <!-- Add videos highlighting results-->
+                    <div class="column has-text-centered">
+                        <div class="publication-video">
+                            <iframe src="https://www.youtube.com/embed/_nArEh7fUzk?autoplay=1?controls=0"
+                                title="Overview of MT-ACT capabilities" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <!-- Video caption -->
+                    <p>
+                        Trained merely on <strong>7500 trajectories</strong>, we are demonstrating an universal
+                        RoboAgent that can exhibit a diverse set of <strong>12 non-trivial manipulation skills</strong>
+                        (beyond picking/pushing, including articulated object manipulation and object re-orientation)
+                        and can generalize them to diverse unseen scenarios</strong> (involving unseen objects, unseen
+                        tasks, and to completely unseen kitchens). RoboAgent can also <strong>evolve its
+                            capabilities</strong> with new experiences.
+                        <!-- <strong>RoboAgent</strong> is capable of 12 unique skills demonstrated across <strong>38 tasks</strong> categorized into <strong>6 kitchen activities</strong>.  RoboAgent is capable of a <strong>wide diversity of non-trivial skills</strong> beyond picking/pushing, including articulated object manipulation and object re-orientation. RoboAgent also <strong>generalizes to diverse unseen scenarios</strong> involving unseen objects, unseen tasks, and to completely unseen kitchens. -->
+                    </p>
+
+                    <h2 class="title is-3">
+                        RoboAgent can exhibit 12 skills
+                    </h2>
                 </div>
             </div>
-
-            <!-- Video caption -->
-            <p>
-                Trained merely on <strong>7500 trajectories</strong>, we are demonstrating an universal RoboAgent that can exhibit a diverse set of <strong>12 non-trivial manipulation skills</strong> (beyond picking/pushing, including articulated object manipulation and object re-orientation) and can generalize them to diverse unseen scenarios</strong> (involving unseen objects, unseen tasks, and to completely unseen kitchens). RoboAgent can also <strong>evolve its capabilities</strong> with new experiences.
-                <!-- <strong>RoboAgent</strong> is capable of 12 unique skills demonstrated across <strong>38 tasks</strong> categorized into <strong>6 kitchen activities</strong>.  RoboAgent is capable of a <strong>wide diversity of non-trivial skills</strong> beyond picking/pushing, including articulated object manipulation and object re-orientation. RoboAgent also <strong>generalizes to diverse unseen scenarios</strong> involving unseen objects, unseen tasks, and to completely unseen kitchens. -->
-            </p>
-
-            <h2 class="title is-3">
-                RoboAgent can exhibit 12 skills
-            </h2>
-        </div>
-        </div>
         </div>
     </section>
 
     <div class="container is-max-desktop">
-    <div class="content is-centered has-text-centered" >
+        <div class="content is-centered has-text-centered">
 
-    <div class="column has-text-justified">
-            <section class="hero is-light is-small">
-                <div class="hero-body">
-                    <div class="container">
-                        <h5 id="vidtit">
-                            <!-- <b>
+            <div class="column has-text-justified">
+                <section class="hero is-light is-small">
+                    <div class="hero-body">
+                        <div class="container">
+                            <h5 id="vidtit">
+                                <!-- <b>
                                 Skills 1-6
                             </b> -->
-                        </h5>
-                        <div id="results-carousel" class="carousel results-carousel">
-                            <div class="card" id="slide-open">
-                                <div class="card-image">
-                                    <video poster="" autoplay muted loop playsinline height="100%">
-                                        <source src="media/skills/crop_720w/slide_open_720w_compress.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="card-content">
-                                    <div class="item__title" style="text-align: center;">
-                                        Slide-Open
+                            </h5>
+                            <div id="results-carousel" class="carousel results-carousel">
+                                <div class="card" id="slide-open">
+                                    <div class="card-image">
+                                        <video poster="" autoplay muted loop playsinline height="100%">
+                                            <source src="media/skills/crop_720w/slide_open_720w_compress.mp4"
+                                                type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="item__title" style="text-align: center;">
+                                            Slide-Open
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card" id="slide-close">
-                                <div class="card-image">
-                                    <video poster="" autoplay muted loop playsinline height="100%">
-                                        <source src="media/skills/crop_720w/slide_close_720w_compress.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="card-content">
-                                    <div class="item__title" style="text-align: center;">
-                                        Slide-Close
+                                <div class="card" id="slide-close">
+                                    <div class="card-image">
+                                        <video poster="" autoplay muted loop playsinline height="100%">
+                                            <source src="media/skills/crop_720w/slide_close_720w_compress.mp4"
+                                                type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="item__title" style="text-align: center;">
+                                            Slide-Close
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card" id="flap-open">
-                                <div class="card-image">
-                                    <video poster="" autoplay muted loop playsinline height="100%">
-                                        <source src="media/skills/crop_720w/flap_open_720w_compress.mp4" video/mp4">
-                                    </video>
-                                </div>
-                                <div class="card-content">
-                                    <div class="item__title" style="text-align: center;">
-                                        Flap-Open
+                                <div class="card" id="flap-open">
+                                    <div class="card-image">
+                                        <video poster="" autoplay muted loop playsinline height="100%">
+                                            <source src="media/skills/crop_720w/flap_open_720w_compress.mp4" video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="item__title" style="text-align: center;">
+                                            Flap-Open
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card" id="flap-close">
-                                <div class="card-image">
-                                    <video poster="" autoplay muted loop playsinline height="100%">
-                                        <source src="media/skills/crop_720w/flap_close_720w_compress.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="card-content">
-                                    <div class="item__title" style="text-align: center;">
-                                        Flap-Close
+                                <div class="card" id="flap-close">
+                                    <div class="card-image">
+                                        <video poster="" autoplay muted loop playsinline height="100%">
+                                            <source src="media/skills/crop_720w/flap_close_720w_compress.mp4"
+                                                type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="item__title" style="text-align: center;">
+                                            Flap-Close
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card" id="cap">
-                                <div class="card-image">
-                                    <video poster="" autoplay muted loop playsinline height="100%">
-                                        <source src="media/make_tea/crop_720w/close_lid_cropped_720w_compress.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="card-content">
-                                    <div class="item__title" style="text-align: center;">
-                                        Cap
+                                <div class="card" id="cap">
+                                    <div class="card-image">
+                                        <video poster="" autoplay muted loop playsinline height="100%">
+                                            <source src="media/make_tea/crop_720w/close_lid_cropped_720w_compress.mp4"
+                                                type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="item__title" style="text-align: center;">
+                                            Cap
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card" id="uncap">
-                                <div class="card-image">
-                                    <video poster="" autoplay muted loop playsinline height="100%">
-                                        <source src="media/skills/crop_720w/uncap_720w_compress.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="card-content">
-                                    <div class="item__title" style="text-align: center;">
-                                        Uncap
+                                <div class="card" id="uncap">
+                                    <div class="card-image">
+                                        <video poster="" autoplay muted loop playsinline height="100%">
+                                            <source src="media/skills/crop_720w/uncap_720w_compress.mp4"
+                                                type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="item__title" style="text-align: center;">
+                                            Uncap
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-            <section class="hero is-light is-small">
-                <div class="hero-body">
-                    <div class="container">
-                        <h5 id="vidtit">
-                            <!-- <b>
+                </section>
+                <section class="hero is-light is-small">
+                    <div class="hero-body">
+                        <div class="container">
+                            <h5 id="vidtit">
+                                <!-- <b>
                                 Skills 7-12
                             </b> -->
-                        </h5>
-                        <div id="results-carousel" class="carousel results-carousel">
-                            <div class="card" id="pick">
-                                <div class="card-image">
-                                    <video poster="" autoplay muted loop playsinline height="100%">
-                                        <source src="media/skills/crop_720w/pick_butter_720w_compress.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="card-content">
-                                    <div class="item__title" style="text-align: center;">
-                                        Pick
+                            </h5>
+                            <div id="results-carousel" class="carousel results-carousel">
+                                <div class="card" id="pick">
+                                    <div class="card-image">
+                                        <video poster="" autoplay muted loop playsinline height="100%">
+                                            <source src="media/skills/crop_720w/pick_butter_720w_compress.mp4"
+                                                type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="item__title" style="text-align: center;">
+                                            Pick
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card" id="place">
-                                <div class="card-image">
-                                    <video poster="" autoplay muted loop playsinline height="100%">
-                                        <source src="media/skills/crop_720w/place_tea_720w_compress.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="card-content">
-                                    <div class="item__title" style="text-align: center;">
-                                        Place
+                                <div class="card" id="place">
+                                    <div class="card-image">
+                                        <video poster="" autoplay muted loop playsinline height="100%">
+                                            <source src="media/skills/crop_720w/place_tea_720w_compress.mp4"
+                                                type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="item__title" style="text-align: center;">
+                                            Place
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card" id="slide-in">
-                                <div class="card-image">
-                                    <video poster="" autoplay muted loop playsinline height="100%">
-                                        <source src="media/skills/crop_720w/slide_in_720w_compress.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="card-content">
-                                    <div class="item__title" style="text-align: center;">
-                                        Slide-in
+                                <div class="card" id="slide-in">
+                                    <div class="card-image">
+                                        <video poster="" autoplay muted loop playsinline height="100%">
+                                            <source src="media/skills/crop_720w/slide_in_720w_compress.mp4"
+                                                type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="item__title" style="text-align: center;">
+                                            Slide-in
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card" id="slide-out">
-                                <div class="card-image">
-                                    <video poster="" autoplay muted loop playsinline height="100%">
-                                        <source src="media/skills/crop_720w/slide_out_720w_compress.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="card-content">
-                                    <div class="item__title" style="text-align: center;">
-                                        Slide-Out
+                                <div class="card" id="slide-out">
+                                    <div class="card-image">
+                                        <video poster="" autoplay muted loop playsinline height="100%">
+                                            <source src="media/skills/crop_720w/slide_out_720w_compress.mp4"
+                                                type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="item__title" style="text-align: center;">
+                                            Slide-Out
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card" id="wipe">
-                                <div class="card-image">
-                                    <video poster="" autoplay muted loop playsinline height="100%">
-                                        <source src="media/skills/crop_720w/wipe_720w_compress.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="card-content">
-                                    <div class="item__title" style="text-align: center;">
-                                        Wipe
+                                <div class="card" id="wipe">
+                                    <div class="card-image">
+                                        <video poster="" autoplay muted loop playsinline height="100%">
+                                            <source src="media/skills/crop_720w/wipe_720w_compress.mp4"
+                                                type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="item__title" style="text-align: center;">
+                                            Wipe
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        </div> <!-- Wrap up show and tell -->
+                </section>
+            </div> <!-- Wrap up show and tell -->
         </div>
-        </div>
+    </div>
     <!-- </section> -->
 
     <section class="section">
-    <div class="container is-max-desktop">
-    <div class="content is-centered has-text-centered" >
+        <div class="container is-max-desktop">
+            <div class="content is-centered has-text-centered">
 
-        <!-- Paint the vision / Overview-->
-        <div class="column has-text-justified">
+                <!-- Paint the vision / Overview-->
+                <div class="column has-text-justified">
 
-            <h2>Towards a universal robotic agent </h2>
+                    <h2>Towards a universal robotic agent </h2>
 
-            <!-- <h4 style="font-family: 'Source Sans 3', sans-serif; font-weight: 400;"> The chicken and egg problem</h4> -->
-            <strong>The chicken and egg problem</strong>: The grand aim of having a single robot that can manipulate arbitrary objects in diverse settings has been a distant goal for several decades. This is in-part because of the paucity of diverse robotics datasets to train such agents, at the same time absence of generic agents than can generate such dataset.
+                    <!-- <h4 style="font-family: 'Source Sans 3', sans-serif; font-weight: 400;"> The chicken and egg problem</h4> -->
+                    <strong>The chicken and egg problem</strong>: The grand aim of having a single robot that can
+                    manipulate arbitrary objects in diverse settings has been a distant goal for several decades. This
+                    is in-part because of the paucity of diverse robotics datasets to train such agents, at the same
+                    time absence of generic agents than can generate such dataset.
 
-            <br>
-            <!-- <h4 style="font-family: 'Source Sans 3', sans-serif; font-weight: 400;"> Escaping the vicious circle</h4> -->
-            <strong>Escaping the vicious circle</strong>: To escape this vicious circle our focus is on developing an efficient paradigm that can deliver a universal agent capable acquiring and generalizing multiple skills under a practical data budget. RoboAgent builds on following ingredients --
-                <ul style="text-align: left;">
-                    <li> <a href=https://youtu.be/tUfWqIz5aR4/><strong>RoboPen</strong></a> - a distributed robotics infrastructure build with commodity hardware capable of long term uninterrupted operations.
-                    <li> <a href=https://sites.google.com/view/robohive/><strong>RoboHive</strong></a> - a unified framework for  robot learning across simulation and real-world operations.
-                    <li> <a href=https://sites.google.com/view/robohive/roboset><strong>RoboSet</strong></a> - a high quality dataset representing multiple skills with everyday objects in diverse scenarios.
-                    <li> <a href=media/robopen.pdf><strong>MT-ACT</strong></a> - an efficient language conditioned multi-task offline imitation learning framework multiplies offline datasets by creating a diverse collection of semantic augmentations over the existing robot’s experiences and employs a novel policy architecture with efficient action representation to recover performant policies under a data budget.</li>
-                </ul>
-            </p>
+                    <br>
+                    <!-- <h4 style="font-family: 'Source Sans 3', sans-serif; font-weight: 400;"> Escaping the vicious circle</h4> -->
+                    <strong>Escaping the vicious circle</strong>: To escape this vicious circle our focus is on
+                    developing an efficient paradigm that can deliver a universal agent capable acquiring and
+                    generalizing multiple skills under a practical data budget. RoboAgent builds on following
+                    ingredients --
+                    <ul style="text-align: left;">
+                        <li> <a href=https://youtu.be/tUfWqIz5aR4 /><strong>RoboPen</strong></a> - a distributed
+                            robotics infrastructure build with commodity hardware capable of long term uninterrupted
+                            operations.
+                        <li> <a href=https://sites.google.com/view/robohive /><strong>RoboHive</strong></a> - a unified
+                            framework for robot learning across simulation and real-world operations.
+                        <li> <a href=https://sites.google.com/view/robohive/roboset><strong>RoboSet</strong></a> - a
+                            high quality dataset representing multiple skills with everyday objects in diverse
+                            scenarios.
+                        <li> <a href=media/robopen.pdf><strong>MT-ACT</strong></a> - an efficient language conditioned
+                            multi-task offline imitation learning framework multiplies offline datasets by creating a
+                            diverse collection of semantic augmentations over the existing robot’s experiences and
+                            employs a novel policy architecture with efficient action representation to recover
+                            performant policies under a data budget.</li>
+                    </ul>
+                    </p>
 
-        </div>
-
-
-        <!-- Dive into Details -->
-        <div class="column">
-            <h2 class="title is-3"> RoboSet: Diverse multi-skill multi-task multi-modal dataset</h2>
-            <!-- <h3 style="font-family: 'Source Sans 3', sans-serif; font-weight: 400;"> Diverse multi-tasks multi-task multi-modal dataset  </h3> -->
-
-            <p>
-                To build a robotic agent that can generalize to many different scenarios
-                requires broad data coverage. Towards this challenge some recent works such as
-                <a href=https://robotics-transformer1.github.io />RT-1</a> collect a large amount
-                (~130,000) of robot trajectories.
-                By contrast, we focus on building a <strong> more efficient </strong> robot learning
-                system. Specifically, we only use ~7500 robot trajectories (20x less data) for training
-                our RoboAgent. Our dataset <strong>sparsely</strong> covers 12 unique skills in few different
-                contexts. Our main aim is to thus learn one generalizable universal policy while avoiding overfitting in
-                this low data regime.
-            </p>
-            <!-- <h3 style="font-family: 'Source Sans 3', sans-serif; font-weight: 400;"> Dataset  </h3> -->
-            <p>
-                Our dataset <strong>RoboSet</strong> consists of 7,500 trajectories collected using human teleoperation
-                on commodity robotics hardware (<a href=https://www.franka.de />Franka-Emika robots</a> with
-                <a href="https://robotiq.com/products/2f85-140-adaptive-robot-gripper">Robotiq gripper</a>) across
-                multiple tasks and scenes.
-                RoboSet includes common pick-place skills but also includes contact-rich skills
-                such as <em>wipe, cap</em> as well as skills involving articulated objects.
-                RoboSet was collected by dividing everyday kitchen activities (e.g. making tea, baking) into different
-                sub-tasks, with teleop data collected for each sub-task (skill).
-                In addition to the dataset we use for training RoboAgent, we are releasing a much larger dataset collected over the course of the project containing a total of 100,050 trajectories, including non-kitchen scenes. The figure below presents a snapshot of our robot system and the objects used during data collection.
-            </p>
-            <p class="has-text-centered">
-                <strong>We open-source all our data to enable future research.</strong>
-            </p>
-            <div class="column overlay-image has-text-centered">
-                <img src="media/data_collection_setup_01.png">
-            </div>
-
-            <h2 class="title is-3"> MT-ACT: Multi-Task Action Chunking Transformer</h2>
-            <div class="column has-text-centered">
-                <div class="publication-video">
-                    <video poster="" autoplay muted loop playsinline height="100%">
-                        <source src="./media/roboagent_concept.mp4" type="video/mp4">
-                        caption
-                    </video>
                 </div>
-            </div><br><br>
-            <div class="column has-text-left">
-                To learn generalizable policies in low-data regimes we focus on leveraging world priors
-                from foundation models as well as efficient policy representations to ingest
-                <ul>
-                    <li>
-                        <strong>Semantic Augmentations:</strong> We use world priors from existing foundation
-                        models to augment our limited data. We use <a href="https://segment-anything.com/">SAM</a>
-                        to segment target objects and semantically augment them to different objects with shape, color, texture variations.
-
-                    </li>
-                    <li>
-                        <strong>Policy Representation:</strong> We adapt <a
-                            href="https://tonyzhaozh.github.io/aloha/">action-chunking</a>
-                        to multi-task settings and build a more efficient policy representation to ingest the highly
-                        multi-modal
-                        data in
-                        RoboSet.
-                    </li>
-                </ul>
-            </div>
-            <div class="column is-centered is-vcentered has-text-centered">
-                <video autoplay="" muted="" loop="" playsinline="" width="80%">
-                    <source src="./media/libx264_output_28.mp4" type="video/mp4">
-                </video>
-            </div>
-
-            <br>
 
 
+                <!-- Dive into Details -->
+                <div class="column">
+                    <h2 class="title is-3"> RoboSet: Diverse multi-skill multi-task multi-modal dataset</h2>
+                    <!-- <h3 style="font-family: 'Source Sans 3', sans-serif; font-weight: 400;"> Diverse multi-tasks multi-task multi-modal dataset  </h3> -->
 
-            <h3 style="font-family: 'Source Sans 3', sans-serif; font-weight: 400;">
-                RoboAgent is more sample-efficient than existing methods.
-            </h3>
-            <!-- <h2> RoboAgent is more sample-efficient than existing methods.  </h2> -->
-            <br>
-            <div class="columns is-vcentered">
-                <div class="column is-half">
+                    <p>
+                        To build a robotic agent that can generalize to many different scenarios
+                        requires broad data coverage. Towards this challenge some recent works such as
+                        <a href=https://robotics-transformer1.github.io />RT-1</a> collect a large amount
+                        (~130,000) of robot trajectories.
+                        By contrast, we focus on building a <strong> more efficient </strong> robot learning
+                        system. Specifically, we only use ~7500 robot trajectories (20x less data) for training
+                        our RoboAgent. Our dataset <strong>sparsely</strong> covers 12 unique skills in few different
+                        contexts. Our main aim is to thus learn one generalizable universal policy while avoiding
+                        overfitting in
+                        this low data regime.
+                    </p>
+                    <!-- <h3 style="font-family: 'Source Sans 3', sans-serif; font-weight: 400;"> Dataset  </h3> -->
+                    <p>
+                        Our dataset <strong>RoboSet</strong> consists of 7,500 trajectories collected using human
+                        teleoperation
+                        on commodity robotics hardware (<a href=https://www.franka.de />Franka-Emika robots</a> with
+                        <a href="https://robotiq.com/products/2f85-140-adaptive-robot-gripper">Robotiq gripper</a>)
+                        across
+                        multiple tasks and scenes.
+                        RoboSet includes common pick-place skills but also includes contact-rich skills
+                        such as <em>wipe, cap</em> as well as skills involving articulated objects.
+                        RoboSet was collected by dividing everyday kitchen activities (e.g. making tea, baking) into
+                        different
+                        sub-tasks, with teleop data collected for each sub-task (skill).
+                        In addition to the dataset we use for training RoboAgent, we are releasing a much larger dataset
+                        collected over the course of the project containing a total of 100,050 trajectories, including
+                        non-kitchen scenes. The figure below presents a snapshot of our robot system and the objects
+                        used during data collection.
+                    </p>
+                    <p class="has-text-centered">
+                        <strong>We open-source all our data to enable future research.</strong>
+                    </p>
+                    <div class="column overlay-image has-text-centered">
+                        <img src="media/data_collection_setup_01.png">
+                    </div>
+
+                    <h2 class="title is-3"> MT-ACT: Multi-Task Action Chunking Transformer</h2>
+                    <div class="column has-text-centered">
+                        <div class="publication-video">
+                            <video poster="" autoplay muted loop playsinline height="100%">
+                                <source src="./media/roboagent_concept.mp4" type="video/mp4">
+                                caption
+                            </video>
+                        </div>
+                    </div><br><br>
+                    <div class="column has-text-left">
+                        To learn generalizable policies in low-data regimes we focus on leveraging world priors
+                        from foundation models as well as efficient policy representations to ingest
+                        <ul>
+                            <li>
+                                <strong>Semantic Augmentations:</strong> We use world priors from existing foundation
+                                models to augment our limited data. We use <a
+                                    href="https://segment-anything.com/">SAM</a>
+                                to segment target objects and semantically augment them to different objects with shape,
+                                color, texture variations.
+
+                            </li>
+                            <li>
+                                <strong>Policy Representation:</strong> We adapt <a
+                                    href="https://tonyzhaozh.github.io/aloha/">action-chunking</a>
+                                to multi-task settings and build a more efficient policy representation to ingest the
+                                highly
+                                multi-modal
+                                data in
+                                RoboSet.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column is-centered is-vcentered has-text-centered">
+                        <video autoplay="" muted="" loop="" playsinline="" width="80%">
+                            <source src="./media/libx264_output_28.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <br>
+
+
+
+                    <h3 style="font-family: 'Source Sans 3', sans-serif; font-weight: 400;">
+                        RoboAgent is more sample-efficient than existing methods.
+                    </h3>
+                    <!-- <h2> RoboAgent is more sample-efficient than existing methods.  </h2> -->
+                    <br>
+                    <div class="columns is-vcentered">
+                        <div class="column is-half">
+                            <p class="has-text-justified">
+                                Figure on the right compares our proposed MT-ACT policy representation against several
+                                imitation
+                                learning architectures.
+                                For this result we use environment variations that include object pose changes and some
+                                lighting
+                                changes only.
+                                Somewhat similar to previous works, we refer to this as L1-generalization. From our
+                                results
+                                we
+                                can
+                                clearly
+                                see that using action-checking to model sub-trajectories significantly outperforms all
+                                baselines.
+                                Thus, a more sophisicated policy representation is crucial for sample efficient
+                                learning.
+                            </p>
+                        </div>
+                        <div class="column overlay-image has-text-centered">
+                            <img src="media/l1_website.png">
+                        </div>
+                    </div>
+                    <br>
+
+                    <h3 style="font-family: 'Source Sans 3', sans-serif; font-weight: 400;">
+                        RoboAgent performs well across multiple levels of generalization.
+                    </h3>
+                    <div class="column overlay-image has-text-centered">
+                        <img src="media/l123_generalization_02.png">
+                    </div>
+                    <br>
+                    <div class="columns is-vcentered">
+                    <div class="column is-half">
                     <p class="has-text-justified">
-                        Figure on the right compares our proposed MT-ACT policy representation against several
-                        imitation
-                        learning architectures.
-                        For this result we use environment variations that include object pose changes and some
-                        lighting
-                        changes only.
-                        Somewhat similar to previous works, we refer to this as L1-generalization. From our results
-                        we
-                        can
-                        clearly
-                        see that using action-checking to model sub-trajectories significantly outperforms all
-                        baselines.
-                        Thus, a more sophisicated policy representation is crucial for sample efficient learning.
+                        Above figure shows the different levels of generalization we test our approach on.
+                        We visualize levels of generalization, L1 with object pose changes, L2
+                        with diverse table backgrounds and distractors and L3 with novel skill-object combinations.
+                        In the below figure, we plot how each method performs on these levels of generalization.
+                        From below figure we clearly see that our approach significantly outperforms all other methods
+                        especially for harder generalization levels (L3).
                     </p>
                 </div>
-                <div class="column overlay-image has-text-centered">
-                    <img src="media/l1_website.png">
+                    <div class="column overlay-image has-text-centered">
+                        <img src="media/main_results.png" width="500">
+                    </div>
+                </div>
+                    <br>
+                    <!-- <h3 style="font-family: 'Source Sans 3', sans-serif; font-weight: 400;">
+                        RoboAgent is highly scalable.
+                    </h3>
+                    <div class="column">
+                        <p class="has-text-justified">
+                            We also evaluate how roboagent performs with increasing levels of semantic
+                            augmentations.
+                            We evaluate this on one activity (5-skills). Below figure shows that with increased data
+                            (i.e. more augmentations per frame)
+                            the performance significantly improves across all generalization levels. Importantly,
+                            the performance increase is much larger for the harder tasks (L3 generalization).
+                        </p>
+                    </div>
+                    <div class="column overlay-image has-text-centered">
+                        <img src="media/l123_generalization_scale.png" width="400">
+                    </div> -->
+                    <h3 style="font-family: 'Source Sans 3', sans-serif; font-weight: 400;">
+                        RoboAgent is highly scalable.
+                    </h3>
+                    <div class="columns is-vcentered">
+                        <div class="column is-half">
+                            <p class="has-text-justified">
+                                We also evaluate how roboagent performs with increasing levels of semantic
+                                augmentations.
+                                We evaluate this on one activity (5-skills). Below figure shows that with increased data
+                                (i.e. more augmentations per frame)
+                                the performance significantly improves across all generalization levels. Importantly,
+                                the performance increase is much larger for the harder tasks (L3 generalization).
+                            </p>
+                        </div>
+                        <div class="column overlay-image has-text-centered">
+                            <img src="media/l123_generalization_scale.png" width="400">
+                        </div>
+                    </div>
                 </div>
             </div>
-            <br>
-
-            <h3 style="font-family: 'Source Sans 3', sans-serif; font-weight: 400;">
-                RoboAgent performs well across multiple levels of generalization.
-            </h3>
-            <div class="column overlay-image has-text-centered">
-                <img src="media/l123_generalization_02.png">
-            </div>
-            <br>
-            <p class="has-text-justified">
-                Above figure shows the different levels of generalization we test our approach on.
-                We visualize levels of generalization, L1 with object pose changes, L2
-                with diverse table backgrounds and distractors and L3 with novel skill-object combinations.
-                In the below figure, we plot how each method performs on these levels of generalization.
-                From below figure we clearly see that our approach significantly outperforms all other methods
-                especially for harder generalization levels (L3).
-            </p>
-            <div class="column overlay-image has-text-centered">
-                <img src="media/main_results.png" width="500">
-            </div>
-            <br>
-            <h3 style="font-family: 'Source Sans 3', sans-serif; font-weight: 400;">
-                RoboAgent is highly scalable.
-            </h3>
-            <!-- <div class="column"> -->
-            <p class="has-text-justified">
-                We also evaluate how roboagent performs with increasing levels of semantic augmentations.
-                We evaluate this on one activity (5-skills). Below figure shows that with increased data
-                (i.e. more augmentations per frame)
-                the performance significantly improves across all generalization levels. Importantly,
-                the performance increase is much larger for the harder tasks (L3 generalization).
-            </p>
-            <!-- </div> -->
-            <div class="column overlay-image has-text-centered">
-                <img src="media/l123_generalization_scale.png" width="400">
-            </div>
-
         </div>
-    </div>
-    </div>
     </section>
 
 
     <div class="container is-max-desktop">
-    <div class="content is-centered has-text-centered" >
+        <div class="content is-centered has-text-centered">
 
-        <!-- <br><br> -->
-        <div class="column has-text-justified is-vcentered">
-            <h2>RoboAgent can exhibit skills across diverse activities</h2>
-            <section class="hero is-light is-small">
-                <div class="hero-body">
-                    <div class="container">
-                        <h5 id="vidtit">
-                            <b>
-                                Baking Prep
-                            </b>
-                        </h5>
-                        <div id="results-carousel" class="carousel results-carousel">
-                            <div class="card" id="slide-open">
-                                <div class="card-image">
-                                    <video poster="" autoplay muted loop playsinline height="100%">
-                                        <source src="media/baking_prep/crop_720w/open_drawer_cropped_720w_compress.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="card-content">
-                                    <div class="item__title" style="text-align: center;">
-                                        Slide-Open Drawer
+            <!-- <br><br> -->
+            <div class="column has-text-justified is-vcentered">
+                <h2>RoboAgent can exhibit skills across diverse activities</h2>
+                <section class="hero is-light is-small">
+                    <div class="hero-body">
+                        <div class="container">
+                            <h5 id="vidtit">
+                                <b>
+                                    Baking Prep
+                                </b>
+                            </h5>
+                            <div id="results-carousel" class="carousel results-carousel">
+                                <div class="card" id="slide-open">
+                                    <div class="card-image">
+                                        <video poster="" autoplay muted loop playsinline height="100%">
+                                            <source
+                                                src="media/baking_prep/crop_720w/open_drawer_cropped_720w_compress.mp4"
+                                                type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="item__title" style="text-align: center;">
+                                            Slide-Open Drawer
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card" id="pick">
-                                <div class="card-image">
-                                    <video poster="" autoplay muted loop playsinline height="100%">
-                                        <source src="media/baking_prep/crop_720w/pick_butter_cropped_720w_compress.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="card-content">
-                                    <div class="item__title" style="text-align: center;">
-                                        Pick Butter
+                                <div class="card" id="pick">
+                                    <div class="card-image">
+                                        <video poster="" autoplay muted loop playsinline height="100%">
+                                            <source
+                                                src="media/baking_prep/crop_720w/pick_butter_cropped_720w_compress.mp4"
+                                                type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="item__title" style="text-align: center;">
+                                            Pick Butter
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card" id="place">
-                                <div class="card-image">
-                                    <video poster="" autoplay muted loop playsinline height="100%">
-                                        <source src="media/baking_prep/crop_720w/place_butter_cropped_720w_compress.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="card-content">
-                                    <div class="item__title" style="text-align: center;">
-                                        Place Butter
+                                <div class="card" id="place">
+                                    <div class="card-image">
+                                        <video poster="" autoplay muted loop playsinline height="100%">
+                                            <source
+                                                src="media/baking_prep/crop_720w/place_butter_cropped_720w_compress.mp4"
+                                                type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="item__title" style="text-align: center;">
+                                            Place Butter
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card" id="slide-close">
-                                <div class="card-image">
-                                    <video poster="" autoplay muted loop playsinline height="100%">
-                                        <source src="media/baking_prep/crop_720w/close_drawer_cropped_720w_compress.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="card-content ">
-                                    <div class="item__title" style="text-align: center;">
-                                        Slide-Close Drawer
+                                <div class="card" id="slide-close">
+                                    <div class="card-image">
+                                        <video poster="" autoplay muted loop playsinline height="100%">
+                                            <source
+                                                src="media/baking_prep/crop_720w/close_drawer_cropped_720w_compress.mp4"
+                                                type="video/mp4">
+                                        </video>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="hero is-light is-small">
-                <div class="hero-body">
-                    <div class="container">
-                        <h5 id="vidtit">
-                            <b>
-                                Clean Kitchen
-                            </b>
-                        </h5>
-                        <div id="results-carousel" class="carousel results-carousel">
-                            <div class="card" id="slide-close">
-                                <div class="card-image">
-                                    <video poster="" autoplay muted loop playsinline height="100%">
-                                        <source src="media/clean_kitchen/crop_720w/close_drawer_cropped_720w_compress.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="card-content">
-                                    <div class="item__title" style="text-align: center;">
-                                        Slide-Close Drawer
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card" id="flap-close">
-                                <div class="card-image">
-                                    <video poster="" autoplay muted loop playsinline height="100%">
-                                        <source src="media/clean_kitchen/crop_720w/close_oven_cropped_720w_compress.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="card-content">
-                                    <div class="item__title" style="text-align: center;">
-                                        Flap-Close Oven
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card" id="pick">
-                                <div class="card-image">
-                                    <video poster="" autoplay muted loop playsinline height="100%">
-                                        <source src="media/clean_kitchen/crop_720w/pick_towel_cropped_720w_compress.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="card-content">
-                                    <div class="item__title" style="text-align: center;">
-                                        Pick Towel
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card" id="wipe">
-                                <div class="card-image">
-                                    <video poster="" autoplay muted loop playsinline height="100%">
-                                        <source src="media/clean_kitchen/crop_720w/wipe_towel_cropped_720w_compress.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="card-content">
-                                    <div class="item__title" style="text-align: center;">
-                                        Wipe Counter
+                                    <div class="card-content ">
+                                        <div class="item__title" style="text-align: center;">
+                                            Slide-Close Drawer
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-            <!-- <section class="hero is-light is-small">
+                </section>
+                <section class="hero is-light is-small">
+                    <div class="hero-body">
+                        <div class="container">
+                            <h5 id="vidtit">
+                                <b>
+                                    Clean Kitchen
+                                </b>
+                            </h5>
+                            <div id="results-carousel" class="carousel results-carousel">
+                                <div class="card" id="slide-close">
+                                    <div class="card-image">
+                                        <video poster="" autoplay muted loop playsinline height="100%">
+                                            <source
+                                                src="media/clean_kitchen/crop_720w/close_drawer_cropped_720w_compress.mp4"
+                                                type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="item__title" style="text-align: center;">
+                                            Slide-Close Drawer
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card" id="flap-close">
+                                    <div class="card-image">
+                                        <video poster="" autoplay muted loop playsinline height="100%">
+                                            <source
+                                                src="media/clean_kitchen/crop_720w/close_oven_cropped_720w_compress.mp4"
+                                                type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="item__title" style="text-align: center;">
+                                            Flap-Close Oven
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card" id="pick">
+                                    <div class="card-image">
+                                        <video poster="" autoplay muted loop playsinline height="100%">
+                                            <source
+                                                src="media/clean_kitchen/crop_720w/pick_towel_cropped_720w_compress.mp4"
+                                                type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="item__title" style="text-align: center;">
+                                            Pick Towel
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card" id="wipe">
+                                    <div class="card-image">
+                                        <video poster="" autoplay muted loop playsinline height="100%">
+                                            <source
+                                                src="media/clean_kitchen/crop_720w/wipe_towel_cropped_720w_compress.mp4"
+                                                type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="item__title" style="text-align: center;">
+                                            Wipe Counter
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- <section class="hero is-light is-small">
                 <div class="hero-body">
                     <div class="container">
                         <h5 id="vidtit">
@@ -693,287 +775,312 @@
                     </div>
                 </div>
             </section> -->
-            <section class="hero is-light is-small">
-                <div class="hero-body">
-                    <div class="container">
-                        <h5 id="vidtit">
-                            <b>
-                                Serve Soup
-                            </b>
-                        </h5>
-                        <div id="results-carousel" class="carousel results-carousel">
-                            <div class="card" id="flap-open">
-                                <div class="card-image">
-                                    <video poster="" autoplay muted loop playsinline height="100%">
-                                        <source src="media/serve_souo/crop_720w/open_oven_cropped_720w_compress.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="card-content">
-                                    <div class="item__title" style="text-align: center;">
-                                        Flap-Open Oven
+                <section class="hero is-light is-small">
+                    <div class="hero-body">
+                        <div class="container">
+                            <h5 id="vidtit">
+                                <b>
+                                    Serve Soup
+                                </b>
+                            </h5>
+                            <div id="results-carousel" class="carousel results-carousel">
+                                <div class="card" id="flap-open">
+                                    <div class="card-image">
+                                        <video poster="" autoplay muted loop playsinline height="100%">
+                                            <source src="media/serve_souo/crop_720w/open_oven_cropped_720w_compress.mp4"
+                                                type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="item__title" style="text-align: center;">
+                                            Flap-Open Oven
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card" id="pick">
-                                <div class="card-image">
-                                    <video poster="" autoplay muted loop playsinline height="100%">
-                                        <source src="media/serve_souo/crop_720w/pick_bowl_cropped_720w_compress.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="card-content">
-                                    <div class="item__title" style="text-align: center;">
-                                        Pick Bowl
+                                <div class="card" id="pick">
+                                    <div class="card-image">
+                                        <video poster="" autoplay muted loop playsinline height="100%">
+                                            <source src="media/serve_souo/crop_720w/pick_bowl_cropped_720w_compress.mp4"
+                                                type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="item__title" style="text-align: center;">
+                                            Pick Bowl
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card" id="place">
-                                <div class="card-image">
-                                    <video poster="" autoplay muted loop playsinline height="100%">
-                                        <source src="media/serve_souo/crop_720w/place_bowl_cropped_720w_compress.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="card-content">
-                                    <div class="item__title" style="text-align: center;">
-                                        Place Bowl
+                                <div class="card" id="place">
+                                    <div class="card-image">
+                                        <video poster="" autoplay muted loop playsinline height="100%">
+                                            <source
+                                                src="media/serve_souo/crop_720w/place_bowl_cropped_720w_compress.mp4"
+                                                type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="item__title" style="text-align: center;">
+                                            Place Bowl
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card" id="flap-close">
-                                <div class="card-image">
-                                    <video poster="" autoplay muted loop playsinline height="100%">
-                                        <source src="media/serve_souo/crop_720w/close_oven_cropped_720w_compress.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="card-content">
-                                    <div class="item__title" style="text-align: center;">
-                                        Flap-Close Oven
+                                <div class="card" id="flap-close">
+                                    <div class="card-image">
+                                        <video poster="" autoplay muted loop playsinline height="100%">
+                                            <source
+                                                src="media/serve_souo/crop_720w/close_oven_cropped_720w_compress.mp4"
+                                                type="video/mp4">
+                                        </video>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="hero is-light is-small">
-                <div class="hero-body">
-                    <div class="container">
-                        <h5 id="vidtit">
-                            <b>
-                                Make Tea
-                            </b>
-                        </h5>
-                        <div id="results-carousel" class="carousel results-carousel">
-                            <div class="card" id="uncap">
-                                <div class="card-image">
-                                    <video poster="" autoplay muted loop playsinline height="100%">
-                                        <source src="media/make_tea/crop_720w/unlid_cropped_720w_compress.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="card-content">
-                                    <div class="item__title" style="text-align: center;">
-                                        Uncap Lid
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card" id="pick">
-                                <div class="card-image">
-                                    <video poster="" autoplay muted loop playsinline height="100%">
-                                        <source src="media/make_tea/crop_720w/pick_teabag_cropped_720w_compress.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="card-content">
-                                    <div class="item__title" style="text-align: center;">
-                                        Pick Teabag
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card" id="place">
-                                <div class="card-image">
-                                    <video poster="" autoplay muted loop playsinline height="100%">
-                                        <source src="media/make_tea/crop_720w/place_teabag_cropped_720w_compress.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="card-content">
-                                    <div class="item__title" style="text-align: center;">
-                                        Place Teabag
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card" id="pick">
-                                <div class="card-image">
-                                    <video poster="" autoplay muted loop playsinline height="100%">
-                                        <source src="media/make_tea/crop_720w/picklid_cropped_720w_compress.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="card-content">
-                                    <div class="item__title" style="text-align: center;">
-                                        Pick Lid
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card" id="cap">
-                                <div class="card-image">
-                                    <video poster="" autoplay muted loop playsinline height="100%">
-                                        <source src="media/make_tea/crop_720w/close_lid_cropped_720w_compress.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="card-content">
-                                    <div class="item__title" style="text-align: center;">
-                                        Cap Lid
+                                    <div class="card-content">
+                                        <div class="item__title" style="text-align: center;">
+                                            Flap-Close Oven
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-            <section class="hero is-light is-small">
-                <div class="hero-body">
-                    <div class="container">
-                        <h5 id="vidtit">
-                            <b>
-                                Stow Bowl
-                            </b>
-                        </h5>
-                        <div id="results-carousel" class="carousel results-carousel">
-                            <div class="card" id="slide-open">
-                                <div class="card-image">
-                                    <video poster="" autoplay muted loop playsinline height="100%">
-                                        <source src="media/putting_away/crop_720w/open_drawer_cropped_720w_compress.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="card-content">
-                                    <div class="item__title" style="text-align: center;">
-                                        Slide-Open Drawer
+                </section>
+                <section class="hero is-light is-small">
+                    <div class="hero-body">
+                        <div class="container">
+                            <h5 id="vidtit">
+                                <b>
+                                    Make Tea
+                                </b>
+                            </h5>
+                            <div id="results-carousel" class="carousel results-carousel">
+                                <div class="card" id="uncap">
+                                    <div class="card-image">
+                                        <video poster="" autoplay muted loop playsinline height="100%">
+                                            <source src="media/make_tea/crop_720w/unlid_cropped_720w_compress.mp4"
+                                                type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="item__title" style="text-align: center;">
+                                            Uncap Lid
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card" id="pick">
-                                <div class="card-image">
-                                    <video poster="" autoplay muted loop playsinline height="100%">
-                                        <source src="media/putting_away/crop_720w/pick_cup_cropped_720w_compress.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="card-content">
-                                    <div class="item__title" style="text-align: center;">
-                                        Pick Cup
+                                <div class="card" id="pick">
+                                    <div class="card-image">
+                                        <video poster="" autoplay muted loop playsinline height="100%">
+                                            <source src="media/make_tea/crop_720w/pick_teabag_cropped_720w_compress.mp4"
+                                                type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="item__title" style="text-align: center;">
+                                            Pick Teabag
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card" id="place">
-                                <div class="card-image">
-                                    <video poster="" autoplay muted loop playsinline height="100%">
-                                        <source src="media/putting_away/crop_720w/place_cup_cropped_720w_compress.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="card-content">
-                                    <div class="item__title" style="text-align: center;">
-                                        Place Cup
+                                <div class="card" id="place">
+                                    <div class="card-image">
+                                        <video poster="" autoplay muted loop playsinline height="100%">
+                                            <source
+                                                src="media/make_tea/crop_720w/place_teabag_cropped_720w_compress.mp4"
+                                                type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="item__title" style="text-align: center;">
+                                            Place Teabag
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card" id="slide-close">
-                                <div class="card-image">
-                                    <video poster="" autoplay muted loop playsinline height="100%">
-                                        <source src="media/putting_away/crop_720w/close_drawer_cropped_720w_compress.mp4" type="video/mp4">
-                                    </video>
+                                <div class="card" id="pick">
+                                    <div class="card-image">
+                                        <video poster="" autoplay muted loop playsinline height="100%">
+                                            <source src="media/make_tea/crop_720w/picklid_cropped_720w_compress.mp4"
+                                                type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="item__title" style="text-align: center;">
+                                            Pick Lid
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="card-content">
-                                    <div class="item__title" style="text-align: center;">
-                                        Slide-Close Drawer
+                                <div class="card" id="cap">
+                                    <div class="card-image">
+                                        <video poster="" autoplay muted loop playsinline height="100%">
+                                            <source src="media/make_tea/crop_720w/close_lid_cropped_720w_compress.mp4"
+                                                type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="item__title" style="text-align: center;">
+                                            Cap Lid
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        </div>
-        <section class="section" id="RelatedLinks">
-            <div class="column has-text-left">
-                <h2 class="title is-3">Related Developments</h2>
-                <p>
-                    RoboAgent is a convergence of multiple efforts (GenAug, CACTI, ACT) and a starting point at the same time for many more to come. During the course of its developments we have also been heavily inspired by and have learned a lot from many recent works on learning generalizable robot manipulation policies. For further reading in this space, refer to -- <br>
-                    <a href="https://robotics-transformer1.github.io/">RT-1</a> and much more recent
-                    <a href="https://robotics-transformer.github.io/">RT-2</a> use large demonstration data to learn
-                    generalizable manipulation policies.
-                    Differently, <a href="https://arxiv.org/pdf/2306.11706.pdf">RoboCat</a> uses an iterative learning
-                    and data-generalization pipeline for fast adaptation.
-
-                    <br>
-                    Recent works have also shown advantages on using more efficient policy representations for
-                    multi-modal data using
-                    either <a href="https://tonyzhaozh.github.io/aloha/">action chunking</a> or diffusion-models
-                    <a href="https://intuitive-robots.github.io/beso-website/">Reuss et al.</a>,
-                    <a href="https://diffusion-policy.cs.columbia.edu/">Chi et al.</a>).
-                    <br><br>
-                    Finally, recent work such as <a href=https://diffusion-rosie.github.io />ROSIE</a>,  <a href=https://genaug.github.io/>GenAug</a>, <a href=https://cacti-framework.github.io/>CACTI</a> have also used
-                    open-world object-detection
-                    based methods for semantic augmentations.
-                </p>
+                </section>
+                <section class="hero is-light is-small">
+                    <div class="hero-body">
+                        <div class="container">
+                            <h5 id="vidtit">
+                                <b>
+                                    Stow Bowl
+                                </b>
+                            </h5>
+                            <div id="results-carousel" class="carousel results-carousel">
+                                <div class="card" id="slide-open">
+                                    <div class="card-image">
+                                        <video poster="" autoplay muted loop playsinline height="100%">
+                                            <source
+                                                src="media/putting_away/crop_720w/open_drawer_cropped_720w_compress.mp4"
+                                                type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="item__title" style="text-align: center;">
+                                            Slide-Open Drawer
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card" id="pick">
+                                    <div class="card-image">
+                                        <video poster="" autoplay muted loop playsinline height="100%">
+                                            <source
+                                                src="media/putting_away/crop_720w/pick_cup_cropped_720w_compress.mp4"
+                                                type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="item__title" style="text-align: center;">
+                                            Pick Cup
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card" id="place">
+                                    <div class="card-image">
+                                        <video poster="" autoplay muted loop playsinline height="100%">
+                                            <source
+                                                src="media/putting_away/crop_720w/place_cup_cropped_720w_compress.mp4"
+                                                type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="item__title" style="text-align: center;">
+                                            Place Cup
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card" id="slide-close">
+                                    <div class="card-image">
+                                        <video poster="" autoplay muted loop playsinline height="100%">
+                                            <source
+                                                src="media/putting_away/crop_720w/close_drawer_cropped_720w_compress.mp4"
+                                                type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="item__title" style="text-align: center;">
+                                            Slide-Close Drawer
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
-        </section>
+            <section class="section" id="RelatedLinks">
+                <div class="column has-text-left">
+                    <h2 class="title is-3">Related Developments</h2>
+                    <p>
+                        RoboAgent is a convergence of multiple efforts (GenAug, CACTI, ACT) and a starting point at the
+                        same time for many more to come. During the course of its developments we have also been heavily
+                        inspired by and have learned a lot from many recent works on learning generalizable robot
+                        manipulation policies. For further reading in this space, refer to -- <br>
+                        <a href="https://robotics-transformer1.github.io/">RT-1</a> and much more recent
+                        <a href="https://robotics-transformer.github.io/">RT-2</a> use large demonstration data to learn
+                        generalizable manipulation policies.
+                        Differently, <a href="https://arxiv.org/pdf/2306.11706.pdf">RoboCat</a> uses an iterative
+                        learning
+                        and data-generalization pipeline for fast adaptation.
 
-        <section class="section" id="Acknowledgements">
-            <!-- <div class="container is-max-desktop content"> -->
-            <div class="column has-text-left">
-                <h2 class="title is-3">Acknowledgements</h2>
-                We acknowledgement various contributions large and small that contributed towards the success of this work.  <ToDo- add details>
+                        <br>
+                        Recent works have also shown advantages on using more efficient policy representations for
+                        multi-modal data using
+                        either <a href="https://tonyzhaozh.github.io/aloha/">action chunking</a> or diffusion-models
+                        <a href="https://intuitive-robots.github.io/beso-website/">Reuss et al.</a>,
+                        <a href="https://diffusion-policy.cs.columbia.edu/">Chi et al.</a>).
+                        <br><br>
+                        Finally, recent work such as <a href=https://diffusion-rosie.github.io />ROSIE</a>, <a
+                            href=https://genaug.github.io />GenAug</a>, <a
+                            href=https://cacti-framework.github.io />CACTI</a> have also used
+                        open-world object-detection
+                        based methods for semantic augmentations.
+                    </p>
+                </div>
+            </section>
 
-            </div>
-        </section>
+            <section class="section" id="Acknowledgements">
+                <!-- <div class="container is-max-desktop content"> -->
+                <div class="column has-text-left">
+                    <h2 class="title is-3">Acknowledgements</h2>
+                    We acknowledgement various contributions large and small that contributed towards the success of
+                    this work. <ToDo- add details>
 
-        <div class="column has-text-centered">
-            <div class="publication-links">
-                <span class="link-block">
-                    <!-- <h2>BibTeX</h2> -->
-                    <a href="media/robopen.pdf"
-                        class="external-link button is-normal is-rounded" target="_blank">
-                        <!-- <span class="icon">
+                </div>
+            </section>
+
+            <div class="column has-text-centered">
+                <div class="publication-links">
+                    <span class="link-block">
+                        <!-- <h2>BibTeX</h2> -->
+                        <a href="media/robopen.pdf" class="external-link button is-normal is-rounded" target="_blank">
+                            <!-- <span class="icon">
                             <i class="fa fa-file-pdf-o" style="font-size:24px"></i>
                         </span> -->
-                        <span>BibTeX</span>
-                    </a>
-                </span>
-                <span class="link-block">
-                    <a href="media/robopen.pdf"
-                        class="external-link button is-normal is-rounded is-dark" target="_blank">
-                        <span class="icon">
-                            <i class="fa fa-file-pdf-o" style="font-size:24px"></i>
-                        </span>
-                        <span>Paper</span>
-                    </a>
-                </span>
-                <span class="link-block">
-                    <a href="" class="external-link button is-normal is-rounded is-dark"
-                        target="_blank">
-                        <span class="icon">
-                            <i class="fa fa-github" style="font-size:24px"></i>
-                        </span>
-                        <span>Code</span>
-                    </a>
-                </span>
-                <span class="link-block">
-                    <a href="https://dl.fbaipublicfiles.com/RoboSet/roboset.html" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                            <i class="fa fa-database" style="font-size:24px"></i>
-                        </span>
-                        <span>RoboSet</span>
-                    </a>
-                </span>
-            </div>
-            <div class="column has-text-left">
-                <!-- <h2 class="title is-3">BibTeX</h2> -->
-                <pre><code>@article{roboagent,
+                            <span>BibTeX</span>
+                        </a>
+                    </span>
+                    <span class="link-block">
+                        <a href="media/robopen.pdf" class="external-link button is-normal is-rounded is-dark"
+                            target="_blank">
+                            <span class="icon">
+                                <i class="fa fa-file-pdf-o" style="font-size:24px"></i>
+                            </span>
+                            <span>Paper</span>
+                        </a>
+                    </span>
+                    <span class="link-block">
+                        <a href="" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                            <span class="icon">
+                                <i class="fa fa-github" style="font-size:24px"></i>
+                            </span>
+                            <span>Code</span>
+                        </a>
+                    </span>
+                    <span class="link-block">
+                        <a href="https://dl.fbaipublicfiles.com/RoboSet/roboset.html" target="_blank"
+                            class="external-link button is-normal is-rounded is-dark">
+                            <span class="icon">
+                                <i class="fa fa-database" style="font-size:24px"></i>
+                            </span>
+                            <span>RoboSet</span>
+                        </a>
+                    </span>
+                </div>
+                <div class="column has-text-left">
+                    <!-- <h2 class="title is-3">BibTeX</h2> -->
+                    <pre><code>@article{roboagent,
   author  = {Bhardwaj, Homanga and Vakil, Jay and Sharma, Mohit and Gupta, Abhinav and Tulsiani, Shubham and Kumar, Vikash},
   title   = {RoboAgent: Towards Sample Efficient Robot Manipulation with Semantic Augmentations and Action Chunking},
   journal = {arxiv},
   year    = {2023}}</code></pre>
+                </div>
             </div>
-        </div>
 
-    </div>
+        </div>
 
     </div>
 
@@ -993,7 +1100,8 @@
                     <div class="content">
                         <p>
                             Website template inspired by <a href="https://github.com/nerfies/nerfies.github.io">Nerfies:
-                                Deformable Neural Radiance Fields</a> and <a href="https://robotics-transformer2.github.io/">RT-2: Vision-Language-Action Models</a>
+                                Deformable Neural Radiance Fields</a> and <a
+                                href="https://robotics-transformer2.github.io/">RT-2: Vision-Language-Action Models</a>
                         </p>
                     </div>
                 </div>

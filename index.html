@@ -44,7 +44,6 @@
 
     <link rel="stylesheet" href="./static/css/bulma.min.css">
     <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <link rel="stylesheet" href="./static/css/index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -53,20 +52,40 @@
     <script src="./static/js/index.js"></script>
 </head>
 <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const videoElement = document.getElementById('bg-video');
+
+        // When the video metadata is loaded
+        videoElement.addEventListener('loadedmetadata', function () {
+            videoElement.style.opacity = 1.0;
+        });
+    });
+
     window.addEventListener("scroll", function () {
         let imageDiv = document.querySelector('.full-page-image');
+        const videoElement = document.getElementById('bg-video');
 
+
+
+        if (window.scrollY > 75) {
+            videoElement.style.opacity = 0;
+        }
         // Check if page is scrolled
-        if (window.scrollY > 150) { // You can adjust this value based on your requirement
+        if (window.scrollY > 50) { // You can adjust this value based on your requirement
             imageDiv.classList.add('banner-state');
-            imageDiv.classList.add('vakil');
-            imageDiv.style.backgroundImage = `url(media/banner.gif)`;
+            imageDiv.classList.add('ncont');
+            imageDiv.style.backgroundImage = `url(media/small_banner.png)`;
         };
     });
+
 </script>
 
-<body class="vsc-initialized" onload="updateResultVideo();">
+<body class="vsc-initialized">
     <div class="full-page-image">
+        <video id="bg-video" autoplay loop muted playsinline>
+            <source src="media/roboagent_grid_04 (1)(1).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <!-- You can add an overlay and content inside the container -->
         <div class="orange"></div>
 
@@ -177,7 +196,6 @@
                         <div class="publication-video">
                             <iframe src="https://www.youtube.com/embed/_nArEh7fUzk?autoplay=1?controls=0"
                                 title="Overview of MT-ACT capabilities" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen>
                             </iframe>
                         </div>
@@ -543,20 +561,22 @@
                     </div>
                     <br>
                     <div class="columns is-vcentered">
-                    <div class="column is-half">
-                    <p class="has-text-justified">
-                        Above figure shows the different levels of generalization we test our approach on.
-                        We visualize levels of generalization, L1 with object pose changes, L2
-                        with diverse table backgrounds and distractors and L3 with novel skill-object combinations.
-                        In the below figure, we plot how each method performs on these levels of generalization.
-                        From below figure we clearly see that our approach significantly outperforms all other methods
-                        especially for harder generalization levels (L3).
-                    </p>
-                </div>
-                    <div class="column overlay-image has-text-centered">
-                        <img src="media/main_results.png" width="500">
+                        <div class="column is-half">
+                            <p class="has-text-justified">
+                                Above figure shows the different levels of generalization we test our approach on.
+                                We visualize levels of generalization, L1 with object pose changes, L2
+                                with diverse table backgrounds and distractors and L3 with novel skill-object
+                                combinations.
+                                In the below figure, we plot how each method performs on these levels of generalization.
+                                From below figure we clearly see that our approach significantly outperforms all other
+                                methods
+                                especially for harder generalization levels (L3).
+                            </p>
+                        </div>
+                        <div class="column overlay-image has-text-centered">
+                            <img src="media/main_results.png" width="500">
+                        </div>
                     </div>
-                </div>
                     <br>
                     <!-- <h3 style="font-family: 'Source Sans 3', sans-serif; font-weight: 400;">
                         RoboAgent is highly scalable.
@@ -1086,13 +1106,13 @@
 
     </div>
 
-    <script>
+    <!-- <script>
         const burgerIcon = document.querySelector('#burger');
         const navbarMenu = document.querySelector('#nav-links');
         burgerIcon.addEventListener('click', () => {
             navbarMenu.classList.toggle('is-active');
         });
-    </script>
+    </script> -->
     <footer class="footer">
         <div class="container">
             <div class="columns is-centered">

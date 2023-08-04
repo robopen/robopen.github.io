@@ -52,24 +52,24 @@
     <script src="./static/js/index.js"></script>
 </head>
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const videoElement = document.getElementById('bg-video');
+    // document.addEventListener('DOMContentLoaded', function () {
+    //     const videoElement = document.getElementById('bg-video');
 
-        // When the video metadata is loaded
-        videoElement.addEventListener('loadedmetadata', function () {
-            videoElement.style.opacity = 1.0;
-        });
-    });
+    //     // When the video metadata is loaded
+    //     videoElement.addEventListener('loadedmetadata', function () {
+    //         videoElement.style.opacity = 1.0;
+    //     });
+    // });
 
     window.addEventListener("scroll", function () {
         let imageDiv = document.querySelector('.full-page-image');
-        const videoElement = document.getElementById('bg-video');
+        // const videoElement = document.getElementById('bg-video');
 
 
 
-        if (window.scrollY > 75) {
-            videoElement.style.opacity = 0;
-        }
+        // if (window.scrollY > 75) {
+        //     videoElement.style.opacity = 0;
+        // }
         // Check if page is scrolled
         if (window.scrollY > 50) { // You can adjust this value based on your requirement
             imageDiv.classList.add('banner-state');
@@ -82,10 +82,11 @@
 
 <body class="vsc-initialized">
     <div class="full-page-image">
-        <video id="bg-video" autoplay loop muted playsinline>
+        
+        <!-- <video id="bg-video" autoplay loop muted playsinline>
             <source src="media/roboagent_grid_04 (1)(1).mp4" type="video/mp4">
             Your browser does not support the video tag.
-        </video>
+        </video> -->
         <!-- You can add an overlay and content inside the container -->
         <div class="orange"></div>
 

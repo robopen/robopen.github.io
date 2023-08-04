@@ -74,18 +74,18 @@ $(document).ready(function() {
     // setInterpolationImage(0);
     // $('#interpolation-slider').prop('max', NUM_INTERP_FRAMES - 1);
 
-    bulmaSlider.attach();
+    // bulmaSlider.attach();
 
 })
-function updateResultVideo() {
-  var task = document.getElementById("single-menu-replay").value;
+// function updateResultVideo() {
+//   var task = document.getElementById("single-menu-replay").value;
 
-  console.log("qpred", "media/" + task + ".mp4");
-  var video = document.getElementById("result-video");
-  video.src = "media/" + task + ".mp4";
-  video.playbackRate = 0.5;
-  video.play();
+//   console.log("qpred", "media/" + task + ".mp4");
+//   var video = document.getElementById("result-video");
+//   video.src = "media/" + task + ".mp4";
+//   video.playbackRate = 0.5;
+//   video.play();
 
 
-  includeHTML()
-}
+//   includeHTML()
+// }

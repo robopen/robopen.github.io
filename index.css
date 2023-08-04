@@ -118,6 +118,7 @@ html {
     padding: 0;
 }
 .full-page-image {
+    background-image: url(media/banner_GIF.gif);
     background-size: cover;
     background-position: center;
     height: 100%;
@@ -150,7 +151,7 @@ html {
 }
 
 .banner-state {
-    height: 600px;
+    height: 400px;
     /* or whatever height you want for the banner */
     transition: height 1.5s ease;
 }

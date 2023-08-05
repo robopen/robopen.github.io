@@ -118,7 +118,7 @@ html {
     padding: 0;
 }
 .full-page-image {
-    background-image: url(media/banner_GIF.gif);
+    background-image: url(media/big_banner.png);
     background-size: cover;
     background-position: center;
     height: 100%;

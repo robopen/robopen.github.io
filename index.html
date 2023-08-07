@@ -202,9 +202,10 @@
                 <!-- Add videos highlighting results-->
                 <div class="column has-text-centered">
                     <div class="publication-video">
-                        <iframe src="https://www.youtube.com/embed/_nArEh7fUzk?autoplay=1?controls=0"
-                            title="Overview of MT-ACT capabilities" frameborder="0" allowfullscreen>
-                        </iframe>
+                        <video poster="" autoplay muted loop playsinline height="100%">
+                            <source src="./media/roboagent_concept.mp4" type="video/mp4">
+                            caption
+                        </video>
                     </div>
                 </div>
 
@@ -423,8 +424,17 @@
                     <!-- <h4 style="font-family: 'Source Sans 3', sans-serif; font-weight: 400;"> Escaping the vicious circle</h4> -->
                     <strong>Escaping the vicious circle</strong>: To escape this vicious circle our focus is on
                     developing an efficient paradigm that can deliver a universal agent capable acquiring and
-                    generalizing multiple skills under a practical data budget. RoboAgent builds on following
-                    ingredients --
+                    generalizing multiple skills under a practical data budget.
+
+                    <div class="column has-text-centered">
+                        <div class="publication-video">
+                            <iframe src="https://www.youtube.com/embed/_nArEh7fUzk?autoplay=1?controls=0"
+                                title="Overview of MT-ACT capabilities" frameborder="0" allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                    RoboAgent builds on the following ingredients --
                     <ul style="text-align: left;">
                         <li> <a href=https://youtu.be/tUfWqIz5aR4 /><strong>RoboPen</strong></a> - a distributed
                             robotics infrastructure build with commodity hardware capable of long term uninterrupted
@@ -448,54 +458,41 @@
                 <!-- Dive into Details -->
                 <div class="column">
                     <h2 class="title is-3"> RoboSet: Diverse multi-skill multi-task multi-modal dataset</h2>
-                    <!-- <h3 style="font-family: 'Source Sans 3', sans-serif; font-weight: 400;"> Diverse multi-tasks multi-task multi-modal dataset  </h3> -->
 
                     <p>
-                        To build a robotic agent that can generalize to many different scenarios
-                        requires broad data coverage. Towards this challenge some recent works such as
-                        <a href=https://robotics-transformer1.github.io />RT-1</a> collect a large amount
-                        (~130,000) of robot trajectories.
-                        By contrast, we focus on building a <strong> more efficient </strong> robot learning
-                        system. Specifically, we only use ~7500 robot trajectories (20x less data) for training
-                        our RoboAgent. Our dataset <strong>sparsely</strong> covers 12 unique skills in few different
+                        Building a robotic agent that can generalize to many different scenarios
+                        requires broad data coverage. With the recognition that scaling efforts will generally help (e.g.
+                        <a href=https://robotics-transformer1.github.io />RT-1</a> presents results with (~130,000) of robot trajectories), our goal is to understand the principles of <strong> efficiency </strong> and <strong> generalization</strong> in learning system under a <strong>data budget</strong>. Specifically, we only use ~7500 robot trajectories (20x less data) for training our RoboAgent. Our dataset <strong>sparsely</strong> covers 12 unique skills in few different
                         contexts. Our main aim is to thus learn one generalizable universal policy while avoiding
-                        overfitting in
-                        this low data regime.
-                    </p>
-                    <!-- <h3 style="font-family: 'Source Sans 3', sans-serif; font-weight: 400;"> Dataset  </h3> -->
-                    <p>
-                        Our dataset <strong>RoboSet</strong> consists of 7,500 trajectories collected using human
-                        teleoperation
-                        on commodity robotics hardware (<a href=https://www.franka.de />Franka-Emika robots</a> with
-                        <a href="https://robotiq.com/products/2f85-140-adaptive-robot-gripper">Robotiq gripper</a>)
-                        across
-                        multiple tasks and scenes.
-                        RoboSet includes common pick-place skills but also includes contact-rich skills
-                        such as <em>wipe, cap</em> as well as skills involving articulated objects.
-                        RoboSet was collected by dividing everyday kitchen activities (e.g. making tea, baking) into
-                        different
-                        sub-tasks, with teleop data collected for each sub-task (skill).
-                        In addition to the dataset we use for training RoboAgent, we are releasing a much larger dataset
-                        collected over the course of the project containing a total of 100,050 trajectories, including
-                        non-kitchen scenes. The figure below presents a snapshot of our robot system and the objects
-                        used during data collection.
-                    </p>
-                    <p class="has-text-centered">
-                        <strong>We open-source all our data to enable future research.</strong>
+                        overfitting in this low data regime.
                     </p>
                     <div class="column overlay-image has-text-centered">
-                        <img src="media/data_collection_setup_01.png">
+                        <img src="imgs/data_skill_landscape.png">
+                        Skill vs DataSet landscape in Robot Learning.
                     </div>
 
-                    <h2 class="title is-3"> MT-ACT: Multi-Task Action Chunking Transformer</h2>
-                    <div class="column has-text-centered">
-                        <div class="publication-video">
-                            <video poster="" autoplay muted loop playsinline height="100%">
-                                <source src="./media/roboagent_concept.mp4" type="video/mp4">
-                                caption
-                            </video>
+                    <!-- <h3 style="font-family: 'Source Sans 3', sans-serif; font-weight: 400;"> Dataset  </h3> -->
+                    <p>
+                        Our dataset <strong>RoboSet(MT-ACT)</strong> consists of 7,500 trajectories collected using human
+                        teleoperation on commodity robotics hardware (<a href=https://www.franka.de />Franka-Emika robots</a> with
+                        <a href="https://robotiq.com/products/2f85-140-adaptive-robot-gripper">Robotiq gripper</a>)
+                        across multiple tasks and scenes.
+                        The dataset includes common pick-place skills but also includes contact-rich skills
+                        such as <em>wipe, cap</em> as well as skills involving articulated objects.
+                        RoboSet was collected by dividing everyday kitchen activities (e.g. making tea, baking) into
+                        different sub-tasks, with teleop data collected for each sub-task (skill).
+                        <div class="column overlay-image has-text-centered">
+                            <img src="media/data_collection_setup_01.png">
+                            A snapshot of our robot system and the objects used during data collection.
                         </div>
-                    </div><br><br>
+                    </p>
+                    <p>
+                        In addition to the dataset we use for training RoboAgent, we are also releasing <a href=robopen.github.io/roboset />RoboSet</a> a much larger dataset collected over the course of the project containing a total of 100,050 trajectories, including non-kitchen scenes. <strong>We open-source all our entire dataset to enable future research.</strong>
+                    </p>
+
+
+                    <h2 class="title is-3"> MT-ACT: Multi-Task Action Chunking Transformer</h2>
+
                     <div class="column has-text-left">
                         To learn generalizable policies in low-data regimes we focus on leveraging world priors
                         from foundation models as well as efficient policy representations to ingest

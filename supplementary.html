@@ -118,40 +118,62 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
-</style>
-<div class="content" style="margin-right: 5%; margin-left: 5%; ">
 
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a role="button" class="navbar-link" id="burger" aria-label="menu" aria-expanded="True">
-                Table of contents
-            </a>
-        </div>
-        <div class="navbar-menu" id="nav-links">
-            <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link" id="toc">
-                        Table of contents
-                    </a>
-                    <div class="navbar-dropdown">
-                        <a class="navbar-item" href="https://sites.google.com/view/robohive/roboset?authuser=0">
-                            Website
-                        </a>
-                        <a class="navbar-item" href="#hierarchy">
-                            Hierarchy
-                        </a>
-                        <a class="navbar-item" href="#datacomposition">
-                            Data Composition
-                        </a>
-                        <a class="navbar-item" href="#data">
-                            Data
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-</div>
+    #vidtit {
+        padding: 2%;
+    }
+
+    h2 .subtitle {
+        margin-top: -0.2em;
+    }
+
+
+    #slide-open {
+        background-color: #dfa8ff;
+    }
+
+    #slide-close {
+        background-color: #a8aeff;
+    }
+
+    #flap-open {
+        background-color: #f78d8d;
+    }
+
+    #flap-close {
+        background-color: #f7bb8d;
+    }
+
+    #cap {
+        background-color: #fff9c2;
+    }
+
+    #uncap {
+        background-color: #ecffc2;
+    }
+
+    #pick {
+        background-color: #c5ffc2;
+    }
+
+    #place {
+        background-color: #7dfae1;
+    }
+
+    #slide-in {
+        background-color: #7dddfa;
+    }
+
+    #slide-out {
+        background-color: #3269a1;
+        color: beige;
+    }
+
+    #wipe {
+        background-color: #a25ffa;
+        color: beige;
+    }
+</style>
 <div class="content is-centered has-text-centered">
     <section class="hero">
         <div class="hero-body">
@@ -176,107 +198,71 @@
 </div>
 <div class="container is-max-desktop">
     <div class="content is-centered has-text-centered">
-        <div class="container is-max-desktop">
-            <div class="content is-centered has-text-centered">
-    
-                <div class="column has-text-justified">
-                    <section class="hero is-light is-small">
-                        <div class="hero-body">
-                            <div class="container">
-                                <h5 id="vidtit">
-                                    <!-- <b>
-                                    Skills 1-6
-                                </b> -->
-                                </h5>
-                                <div id="results-carousel" class="carousel results-carousel">
-                                    <div class="card" id="slide-open">
-                                        <div class="card-image">
-                                            <video poster="" autoplay muted loop playsinline height="100%">
-                                                <source src="media/skills/crop_720w/slide_open_720w_compress.mp4"
-                                                    type="video/mp4">
-                                            </video>
-                                        </div>
-                                        <div class="card-content">
-                                            <div class="item__title" style="text-align: center;">
-                                                Slide-Open
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card" id="slide-close">
-                                        <div class="card-image">
-                                            <video poster="" autoplay muted loop playsinline height="100%">
-                                                <source src="media/skills/crop_720w/slide_close_720w_compress.mp4"
-                                                    type="video/mp4">
-                                            </video>
-                                        </div>
-                                        <div class="card-content">
-                                            <div class="item__title" style="text-align: center;">
-                                                Slide-Close
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card" id="flap-open">
-                                        <div class="card-image">
-                                            <video poster="" autoplay muted loop playsinline height="100%">
-                                                <source src="media/skills/crop_720w/flap_open_720w_compress.mp4"
-                                                    type="video/mp4">
-                                            </video>
-                                        </div>
-                                        <div class="card-content">
-                                            <div class="item__title" style="text-align: center;">
-                                                Flap-Open
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card" id="flap-close">
-                                        <div class="card-image">
-                                            <video poster="" autoplay muted loop playsinline height="100%">
-                                                <source src="media/skills/crop_720w/flap_close_720w_compress.mp4"
-                                                    type="video/mp4">
-                                            </video>
-                                        </div>
-                                        <div class="card-content">
-                                            <div class="item__title" style="text-align: center;">
-                                                Flap-Close
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card" id="cap">
-                                        <div class="card-image">
-                                            <video poster="" autoplay muted loop playsinline height="100%">
-                                                <source src="media/skills/crop_720w/close_lid_720w_compress.mp4"
-                                                    type="video/mp4">
-                                            </video>
-                                        </div>
-                                        <div class="card-content">
-                                            <div class="item__title" style="text-align: center;">
-                                                Cap
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card" id="uncap">
-                                        <div class="card-image">
-                                            <video poster="" autoplay muted loop playsinline height="100%">
-                                                <source src="media/skills/crop_720w/uncap_720w_compress.mp4"
-                                                    type="video/mp4">
-                                            </video>
-                                        </div>
-                                        <div class="card-content">
-                                            <div class="item__title" style="text-align: center;">
-                                                Uncap
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+        <div class="column has-text-justified">
+            <h2 class="title is-3 has-text-centered" id="techvid">
+                <strong>Technical Video</strong>
+            </h2>
+            <!-- Add videos highlighting results-->
+            <div class="column has-text-centered">
+                <div class="publication-video">
+                    <video poster="" autoplay muted loop playsinline width="100%" height="100%">
+                        <source src="./media/roboagent_showcase.mp4" type="video/mp4">
+                        caption
+                    </video>
                 </div>
             </div>
+
+            <!-- Video caption -->
+            <p class="subtitle is-centered has-text-centered">
+                RoboAgent technical video
+            </p>
         </div>
     </div>
 </div>
 
+<br>
+
+<div class="container is-max-desktop">
+    <div class="content is-centered has-text-centered">
+        <div class="column has-text-justified">
+            <h2 class="title is-3 has-text-centered">
+                RoboAgent Scene Variation
+            </h2>
+            <section class="hero is-light is-small">
+                <div class="hero-body">
+                    <div class="columns is-centered has-text-centered is-vcentered">
+                        <div class="column is-centered has-text-centered is-vcentered">
+                            <video poster="" autoplay muted loop playsinline height="100%">
+                                <source src="media/pick_but_var.mp4" type="video/mp4">
+                            </video>
+                            <p class="subtitle">
+                                Pick Butter Variations
+                            </p>
+                        </div>
+                        <div class="column is-centered has-text-centered is-vcentered">
+                            <video poster="" autoplay muted loop playsinline height="100%">
+                                <source src="media/pick_towel.mp4" type="video/mp4">
+                            </video>
+                            <p class="subtitle">Pick Towel Variations</p>
+                        </div>
+                    </div>
+                    <div class="columns is-centered has-text-centered is-vcentered">
+                        <div class="column is-centered has-text-centered is-vcentered">
+                            <video poster="" autoplay muted loop playsinline height="100%">
+                                <source src="media/open_drawer.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="column is-centered has-text-centered is-vcentered">
+                            <video poster="" autoplay muted loop playsinline height="100%">
+                                <source src="media/pick_but_var.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
 
 <script>
     function myFunction() {

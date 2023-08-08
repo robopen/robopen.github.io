@@ -10,19 +10,22 @@
     <link rel="icon" type="image/x-icon" href="media/roboagent.png" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>RoboAgent: Towards Sample Efficient Robot Manipulation with Semantic Augmentations and Action Chunking</title>
+    <title>RoboAgent: Towards Sample Efficient Robot Manipulation with Semantic Augmentations and Action Chunking
+    </title>
 
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://robopen.github.io/imgs/roboagent_webpreview.png" />
     <meta property="og:image:type" content="image/jpg">
     <meta property="og:url" content="https://robopen.github.io/index.html" />
     <meta property="og:title" content="RoboAgent" />
-    <meta property="og:description" content="Towards Sample Efficient Robot Manipulation with Semantic Augmentations and Action Chunking" />
+    <meta property="og:description"
+        content="Towards Sample Efficient Robot Manipulation with Semantic Augmentations and Action Chunking" />
 
     <!--TWITTER-->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="RoboAgent" />
-    <meta name="twitter:description" content="Towards Sample Efficient Robot Manipulation with Semantic Augmentations and Action Chunking" />
+    <meta name="twitter:description"
+        content="Towards Sample Efficient Robot Manipulation with Semantic Augmentations and Action Chunking" />
 
     <link rel="stylesheet" href="index.css">
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css'>
@@ -88,6 +91,15 @@
             imageDiv.style.backgroundImage = `url(media/small_banner.png)`;
         };
     });
+
+    function copyToClipboard(element) {
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($(element).text()).select();
+        document.execCommand("copy");
+        $temp.remove();
+    }
+
 
 </script>
 
@@ -471,8 +483,13 @@
 
                     <p>
                         Building a robotic agent that can generalize to many different scenarios
-                        requires broad data coverage. With the recognition that scaling efforts will generally help (e.g.
-                        <a href=https://robotics-transformer1.github.io />RT-1</a> presents results with (~130,000) of robot trajectories), our goal is to understand the principles of <strong> efficiency </strong> and <strong> generalization</strong> in learning system under a <strong>data budget</strong>. Specifically, we only use ~7500 robot trajectories (20x less data) for training our RoboAgent. Our dataset <strong>sparsely</strong> covers 12 unique skills in few different
+                        requires broad data coverage. With the recognition that scaling efforts will generally help
+                        (e.g.
+                        <a href=https://robotics-transformer1.github.io />RT-1</a> presents results with (~130,000) of
+                        robot trajectories), our goal is to understand the principles of <strong> efficiency </strong>
+                        and <strong> generalization</strong> in learning system under a <strong>data budget</strong>.
+                        Specifically, we only use ~7500 robot trajectories (20x less data) for training our RoboAgent.
+                        Our dataset <strong>sparsely</strong> covers 12 unique skills in few different
                         contexts. Our main aim is to thus learn one generalizable universal policy while avoiding
                         overfitting in this low data regime.
                     </p>
@@ -483,21 +500,26 @@
 
                     <!-- <h3 style="font-family: 'Source Sans 3', sans-serif; font-weight: 400;"> Dataset  </h3> -->
                     <p>
-                        Our dataset <strong>RoboSet(MT-ACT)</strong> consists of 7,500 trajectories collected using human
-                        teleoperation on commodity robotics hardware (<a href=https://www.franka.de />Franka-Emika robots</a> with
+                        Our dataset <strong>RoboSet(MT-ACT)</strong> consists of 7,500 trajectories collected using
+                        human
+                        teleoperation on commodity robotics hardware (<a href=https://www.franka.de />Franka-Emika
+                        robots</a> with
                         <a href="https://robotiq.com/products/2f85-140-adaptive-robot-gripper">Robotiq gripper</a>)
                         across multiple tasks and scenes.
                         The dataset includes common pick-place skills but also includes contact-rich skills
                         such as <em>wipe, cap</em> as well as skills involving articulated objects.
                         RoboSet was collected by dividing everyday kitchen activities (e.g. making tea, baking) into
                         different sub-tasks, with teleop data collected for each sub-task (skill).
-                        <div class="column overlay-image has-text-centered">
-                            <img src="media/data_collection_setup_01.png">
-                            A snapshot of our robot system and the objects used during data collection.
-                        </div>
+                    <div class="column overlay-image has-text-centered">
+                        <img src="media/data_collection_setup_01.png">
+                        A snapshot of our robot system and the objects used during data collection.
+                    </div>
                     </p>
                     <p>
-                        In addition to the dataset we use for training RoboAgent, we are also releasing <a href=robopen.github.io/roboset />RoboSet</a> a much larger dataset collected over the course of the project containing a total of 100,050 trajectories, including non-kitchen scenes. <strong>We open-source all our entire dataset to enable future research.</strong>
+                        In addition to the dataset we use for training RoboAgent, we are also releasing <a
+                            href=robopen.github.io/roboset />RoboSet</a> a much larger dataset collected over the course
+                        of the project containing a total of 100,050 trajectories, including non-kitchen scenes.
+                        <strong>We open-source all our entire dataset to enable future research.</strong>
                     </p>
 
 
@@ -1068,13 +1090,13 @@
 
             <div class="column has-text-centered">
                 <div class="publication-links">
-                    <span class="link-block">
+                    <span class="link-block" onclick="copyToClipboard('#p1')">
                         <!-- <h2>BibTeX</h2> -->
                         <a href="media/roboagent.pdf" class="external-link button is-normal is-rounded" target="_blank">
                             <!-- <span class="icon">
                             <i class="fa fa-file-pdf-o" style="font-size:24px"></i>
                         </span> -->
-                            <span>BibTeX</span>
+                            <span>BibTeX (click to copy)</span>
                         </a>
                     </span>
                     <span class="link-block">
@@ -1107,7 +1129,7 @@
                 </div>
                 <div class="column has-text-left">
                     <!-- <h2 class="title is-3">BibTeX</h2> -->
-                    <pre><code>@article{roboagent,
+                    <pre><code id="p1">@article{roboagent,
   author  = {Bhardwaj, Homanga and Vakil, Jay and Sharma, Mohit and Gupta, Abhinav and Tulsiani, Shubham and Kumar, Vikash},
   title   = {RoboAgent: Towards Sample Efficient Robot Manipulation with Semantic Augmentations and Action Chunking},
   journal = {arxiv},

@@ -183,7 +183,7 @@
                                             <span>arXiv</span>
                                         </a>
                                     </span>
-                                    
+
                                     <span class="link-block">
                                         <a href="https://github.com/robopen/roboagent/"
                                             class="external-link button is-normal is-rounded is-dark" target="_blank">
@@ -245,9 +245,11 @@
                 <p>
                     Trained merely on <strong>7500 trajectories</strong>, we are demonstrating a universal
                     RoboAgent that can exhibit a diverse set of <strong>12 non-trivial manipulation skills</strong>
-                    (beyond picking/pushing, including articulated object manipulation and object re-orientation)<strong> across
-                    38 tasks</strong>
-                    and can generalize them to <strong> 100s</strong> of diverse unseen scenarios</strong> (involving unseen objects, unseen
+                    (beyond picking/pushing, including articulated object manipulation and object
+                    re-orientation)<strong> across
+                        38 tasks</strong>
+                    and can generalize them to <strong> 100s</strong> of diverse unseen scenarios</strong> (involving
+                    unseen objects, unseen
                     tasks, and to completely unseen kitchens). RoboAgent can also <strong>evolve its
                         capabilities</strong> with new experiences.
                     <!-- <strong>RoboAgent</strong> is capable of 12 unique skills demonstrated across <strong>38 tasks</strong> categorized into <strong>6 kitchen activities</strong>.  RoboAgent is capable of a <strong>wide diversity of non-trivial skills</strong> beyond picking/pushing, including articulated object manipulation and object re-orientation. RoboAgent also <strong>generalizes to diverse unseen scenarios</strong> involving unseen objects, unseen tasks, and to completely unseen kitchens. -->
@@ -456,7 +458,8 @@
                     <br>
                     <!-- <h4 style="font-family: 'Source Sans 3', sans-serif; font-weight: 400;"> Escaping the vicious circle</h4> -->
                     <strong>Escaping the vicious circle</strong>: To escape this vicious circle our focus is on
-                    developing an efficient paradigm that can deliver a universal agent capable acquiring multiple skills under a practical data budget and generalizing them to diverse unseen situations.
+                    developing an efficient paradigm that can deliver a universal agent capable acquiring multiple
+                    skills under a practical data budget and generalizing them to diverse unseen situations.
 
                     <div class="column has-text-centered">
                         <div class="publication-video">
@@ -466,7 +469,8 @@
                         </div>
                     </div>
 
-                    RoboAgent is a culmination of effort spanning over two years. It builds on the following modular and recompensable ingredients -
+                    RoboAgent is a culmination of effort spanning over two years. It builds on the following modular and
+                    recompensable ingredients -
                     <ul style="text-align: left;">
                         <li> <a href=https://youtu.be/tUfWqIz5aR4 /><strong>RoboPen</strong></a> - a distributed
                             robotics infrastructure build with commodity hardware capable of long term uninterrupted
@@ -477,7 +481,8 @@
                             high quality dataset representing multiple skills with everyday objects in diverse
                             scenarios.
                         <li> <a href=media/roboagent.pdf><strong>MT-ACT</strong></a> - an efficient language conditioned
-                            multi-task offline imitation learning framework that multiplies offline datasets by creating a
+                            multi-task offline imitation learning framework that multiplies offline datasets by creating
+                            a
                             diverse collection of semantic augmentations over the existing robot’s experiences and
                             employs a novel policy architecture with efficient action representation to recover
                             performant policies under a data budget.</li>
@@ -492,7 +497,14 @@
                     <h2 class="title is-3"> RoboSet: Diverse multi-skill multi-task multi-modal dataset</h2>
 
                     <p>
-                        Building a robotic agent that can generalize to many different scenarios requires a dataset with broad coverage. With the recognition that scaling efforts will generally help (e.g. <a href=https://robotics-transformer1.github.io />RT-1</a> presents results with ~130,000 robot trajectories), our goal is to understand the principles of <strong> efficiency </strong> and <strong> generalization</strong> in learning system under a <strong>data budget</strong>. Low data regimes often results in over-fitting. Our main aim is to thus develop a powerful paradigms that can learn a generalizable universal policy while avoiding overfitting in this low-data regime.
+                        Building a robotic agent that can generalize to many different scenarios requires a dataset with
+                        broad coverage. With the recognition that scaling efforts will generally help (e.g. <a
+                            href=https://robotics-transformer1.github.io />RT-1</a> presents results with ~130,000 robot
+                        trajectories), our goal is to understand the principles of <strong> efficiency </strong> and
+                        <strong> generalization</strong> in learning system under a <strong>data budget</strong>. Low
+                        data regimes often results in over-fitting. Our main aim is to thus develop a powerful paradigms
+                        that can learn a generalizable universal policy while avoiding overfitting in this low-data
+                        regime.
                     </p>
                     <div class="column overlay-image has-text-centered">
                         <img src="imgs/data_skill_landscape.png">
@@ -501,29 +513,55 @@
 
                     <!-- <h3 style="font-family: 'Source Sans 3', sans-serif; font-weight: 400;"> Dataset  </h3> -->
                     <p>
-                        The dataset <strong>RoboSet(MT-ACT)</strong> used for training RoboAgent consists of merely 7,500 trajectories (18x less data than RT1). The dataset was collected ahead of time, and was kept frozen. It consists of high quality (mostly successful) trajectories collected using human teleoperation on commodity robotics hardware (<a href=https://www.franka.de />Franka-Emika robots</a> with <a href="https://robotiq.com/products/2f85-140-adaptive-robot-gripper">Robotiq gripper</a>) across multiple tasks and scenes.
+                        The dataset <strong>RoboSet(MT-ACT)</strong> used for training RoboAgent consists of merely
+                        7,500 trajectories (18x less data than RT1). The dataset was collected ahead of time, and was
+                        kept frozen. It consists of high quality (mostly successful) trajectories collected using human
+                        teleoperation on commodity robotics hardware (<a href=https://www.franka.de />Franka-Emika
+                        robots</a> with <a href="https://robotiq.com/products/2f85-140-adaptive-robot-gripper">Robotiq
+                            gripper</a>) across multiple tasks and scenes.
 
-                        RoboSet(MT-ACT) <strong>sparsely</strong> covers 12 unique skills in a few different contexts. It was collected by dividing everyday kitchen activities (e.g. making tea, baking) into different sub-tasks, each representing a unique skill. The dataset includes common pick-place skills but also includes contact-rich skills such as <em>wipe, cap</em> as well as skills involving articulated objects.
-                        <div class="column overlay-image has-text-centered">
-                            <img src="media/data_collection_setup_01.png">
-                            A snapshot of our robot system and the objects used during data collection.
-                        </div>
+                        RoboSet(MT-ACT) <strong>sparsely</strong> covers 12 unique skills in a few different contexts.
+                        It was collected by dividing everyday kitchen activities (e.g. making tea, baking) into
+                        different sub-tasks, each representing a unique skill. The dataset includes common pick-place
+                        skills but also includes contact-rich skills such as <em>wipe, cap</em> as well as skills
+                        involving articulated objects.
+                    <div class="column overlay-image has-text-centered">
+                        <img src="media/data_collection_setup_01.png">
+                        A snapshot of our robot system and the objects used during data collection.
+                    </div>
                     </p>
                     <p>
-                        In addition to the RoboSet(MT-ACT) we use for training RoboAgent, we are also releasing <a href=robopen.github.io/roboset />RoboSet</a> a much larger dataset collected over the course of a few related project containing a total of 100,050 trajectories, including non-kitchen scenes. <strong>We are open-sourcing our entire <a href=robopen.github.io/roboset />RoboSet</a></strong> to facilitate and accelerate open-source research in robot-learning.
+                        In addition to the RoboSet(MT-ACT) we use for training RoboAgent, we are also releasing <a
+                            href=robopen.github.io/roboset />RoboSet</a> a much larger dataset collected over the course
+                        of a few related project containing a total of 100,050 trajectories, including non-kitchen
+                        scenes. <strong>We are open-sourcing our entire <a
+                                href=robopen.github.io/roboset />RoboSet</a></strong> to facilitate and accelerate
+                        open-source research in robot-learning.
                     </p>
 
 
                     <h2 class="title is-3"> MT-ACT: Multi-Task Action Chunking Transformer</h2>
 
                     <div class="column has-text-left">
-                        RoboAgent builds on two critical insights to learn generalizable policies in low-data regimes. It leverages world priors from foundation models to avoid mode collapse and a novel efficient policy representations capable of ingesting highly multi-modal data.
+                        RoboAgent builds on two critical insights to learn generalizable policies in low-data regimes.
+                        It leverages world priors from foundation models to avoid mode collapse and a novel efficient
+                        policy representations capable of ingesting highly multi-modal data.
                         <ul>
                             <li>
-                                <strong>Semantic Augmentations:</strong> RoboAgent injects world priors from existing foundation models by creating semantic augmentations of the RoboSet(MT-ACT). The resulting dataset multiplies robots experiences with world priors at no extra human/robot cost. We use <a href="https://segment-anything.com/">SAM</a> to segment target objects and semantically augment them to different objects with shape, color, texture variations.
+                                <strong>Semantic Augmentations:</strong> RoboAgent injects world priors from existing
+                                foundation models by creating semantic augmentations of the RoboSet(MT-ACT). The
+                                resulting dataset multiplies robots experiences with world priors at no extra
+                                human/robot cost. We use <a href="https://segment-anything.com/">SAM</a> to segment
+                                target objects and semantically augment them to different objects with shape, color,
+                                texture variations.
                             </li>
                             <li>
-                                <strong>Efficient Policy Representation:</strong> The resulting dataset is heavily multi-modal and contains a rich diversity of skills, tasks, and scenarios. We adapt <a href="https://tonyzhaozh.github.io/aloha/">action-chunking</a> to multi-task settings to develop <strong>MT-ACT</strong> -- a novel efficient policy representation that can ingest highly multi-modal dataset while avoiding over-fitting in low data budget settings.
+                                <strong>Efficient Policy Representation:</strong> The resulting dataset is heavily
+                                multi-modal and contains a rich diversity of skills, tasks, and scenarios. We adapt <a
+                                    href="https://tonyzhaozh.github.io/aloha/">action-chunking</a> to multi-task
+                                settings to develop <strong>MT-ACT</strong> -- a novel efficient policy representation
+                                that can ingest highly multi-modal dataset while avoiding over-fitting in low data
+                                budget settings.
                             </li>
                         </ul>
                     </div>
@@ -543,7 +581,13 @@
                     <div class="columns is-vcentered">
                         <div class="column is-half">
                             <p class="has-text-justified">
-                                Figure on the right compares our proposed MT-ACT policy representation against several imitation learning architectures. For this result we use environment variations that include object pose changes and some lighting changes only. Somewhat similar to previous works, we refer to this as L1-generalization. From our results we can clearly see that using action-chunking to model sub-trajectories significantly outperforms all baselines, thereby reinforcing the effectiveness of our proposed policy representation for sample efficient learning.
+                                Figure on the right compares our proposed MT-ACT policy representation against several
+                                imitation learning architectures. For this result we use environment variations that
+                                include object pose changes and some lighting changes only. Somewhat similar to previous
+                                works, we refer to this as L1-generalization. From our results we can clearly see that
+                                using action-chunking to model sub-trajectories significantly outperforms all baselines,
+                                thereby reinforcing the effectiveness of our proposed policy representation for sample
+                                efficient learning.
                             </p>
                         </div>
                         <div class="column overlay-image has-text-centered">
@@ -565,7 +609,9 @@
                                 Above figure shows the different levels of generalization we test our approach on.
                                 We visualize levels of generalization, L1 with object pose changes, L2
                                 with diverse table backgrounds and distractors and L3 with novel skill-object
-                                combinations. Next we show how each method performs on these levels of generalization. In a rigorous evaluation study under, we observe that MT-ACT significantly outperforms all other
+                                combinations. Next we show how each method performs on these levels of generalization.
+                                In a rigorous evaluation study under, we observe that MT-ACT significantly outperforms
+                                all other
                                 methods especially on harder generalization levels (L3).
                             </p>
                         </div>
@@ -581,7 +627,8 @@
                     <div class="columns is-vcentered">
                         <div class="column is-half">
                             <p class="has-text-justified">
-                                Next we evaluate how RoboAgent performs with increasing levels of semantic augmentations.
+                                Next we evaluate how RoboAgent performs with increasing levels of semantic
+                                augmentations.
                                 We evaluate this on one activity (5-skills). Below figure shows that with increased data
                                 (i.e. more augmentations per frame)
                                 the performance significantly improves across all generalization levels. Importantly,
@@ -997,20 +1044,34 @@
                     <p>
                         RoboAgent is a convergence of multiple research thread
                         (<a href=https://genaug.github.io />GenAug</a>,
-                            <a href=https://cacti-framework.github.io />CACTI</a>,
-                            <a href=https://tonyzhaozh.github.io/aloha/ />ACT</a>)
-                            spanning two years, and a starting point at the same time for many more future research directions. During the course of its developments we have also been heavily
-                        inspired by and have learned a lot from many recent generalizable robot learning projects. For further reading in this space, refer to --
-                        <a href=https://robotics-transformer1.github.io/>RT-1</a> (and much more recent <a href="https://robotics-transformer.github.io/">RT-2</a>) which studies generalization in robot learning at scale with large demonstration dataset in association with large langugage models. Differently, <a href="https://arxiv.org/pdf/2306.11706.pdf">RoboCat</a> uses an iterative learning  and data-generalization pipeline for fast adaptation.
+                        <a href=https://cacti-framework.github.io />CACTI</a>,
+                        <a href=https://tonyzhaozh.github.io/aloha/ />ACT</a>)
+                        spanning two years, and a starting point at the same time for many more future research
+                        directions. During the course of its developments we have also been heavily
+                        inspired by and have learned a lot from many recent generalizable robot learning projects. For
+                        further reading in this space, refer to --
+                        <a href=https://robotics-transformer1.github.io />RT-1</a> (and much more recent <a
+                            href="https://robotics-transformer.github.io/">RT-2</a>) which studies generalization in
+                        robot learning at scale with large demonstration dataset in association with large langugage
+                        models. Differently, <a href="https://arxiv.org/pdf/2306.11706.pdf">RoboCat</a> uses an
+                        iterative learning and data-generalization pipeline for fast adaptation.
 
                         <br>
-                        Recent works have also shown advantages on using more efficient policy representations for multi-modal data using either <a href="https://tonyzhaozh.github.io/aloha/">action chunking</a> or diffusion-models
-                        <a href="https://intuitive-robots.github.io/beso-website/">Reuss et al.</a>, <a href="https://diffusion-policy.cs.columbia.edu/">Chi et al.</a>). Finally, recent work such as <a href=https://diffusion-rosie.github.io />ROSIE</a>, <a
+                        Recent works have also shown advantages on using more efficient policy representations for
+                        multi-modal data using either <a href="https://tonyzhaozh.github.io/aloha/">action chunking</a>
+                        or diffusion-models
+                        <a href="https://intuitive-robots.github.io/beso-website/">Reuss et al.</a>, <a
+                            href="https://diffusion-policy.cs.columbia.edu/">Chi et al.</a>). Finally, recent work such
+                        as <a href=https://diffusion-rosie.github.io />ROSIE</a>, <a
                             href=https://genaug.github.io />GenAug</a>, <a
-                            href=https://cacti-framework.github.io />CACTI</a> have also used open-world object-detection based methods for semantic augmentations, and other related works
-                            (e.g. <a href="https://arxiv.org/abs/2203.12601">R3M</a>, 
-                            <a href="https://homangab.github.io/papers/Zero_Shot_Robot_Manipulation_from_Passive_Human_Videos.pdf">H2R</a>, <a href="https://vision-robotics-bridge.github.io/resources/vrb_paper.pdf">VRB</a>)
-                             have investigated different ways of combining largely passive learning with some active fine-tuning.
+                            href=https://cacti-framework.github.io />CACTI</a> have also used open-world
+                        object-detection based methods for semantic augmentations, and other related works
+                        (e.g. <a href="https://arxiv.org/abs/2203.12601">R3M</a>,
+                        <a
+                            href="https://homangab.github.io/papers/Zero_Shot_Robot_Manipulation_from_Passive_Human_Videos.pdf">H2R</a>,
+                        <a href="https://vision-robotics-bridge.github.io/resources/vrb_paper.pdf">VRB</a>)
+                        have investigated different ways of combining largely passive learning with some active
+                        fine-tuning.
                     </p>
                 </div>
             </section>
@@ -1019,16 +1080,18 @@
                 <!-- <div class="container is-max-desktop content"> -->
                 <div class="column has-text-left">
                     <h2 class="title is-3">Acknowledgements</h2>
-                    We acknowledge various contributions, large and small, from the authors of following projects without which RoboAgent wouldn't be possible --
+                    We acknowledge various contributions, large and small, from the authors of following projects
+                    without which RoboAgent wouldn't be possible --
                     <a href=https://sites.google.com/view/robohive>RoboHive</a>,
-                    <a href=https://robopen.github.io/roboset/>RoboSet</a>,
-                    <a href=https://facebookresearch.github.io/fairo/polymetis>Polymetis</a>, and the entire Embodied AI team at Meta.
+                    <a href=https://robopen.github.io/roboset />RoboSet</a>,
+                    <a href=https://facebookresearch.github.io/fairo/polymetis>Polymetis</a>, and the entire Embodied AI
+                    team at Meta.
 
-                    <br>RoboAgent has also significantly benefitted from  brainstorming sessions from --
+                    <br>RoboAgent has also significantly benefitted from brainstorming sessions from --
                     <a href=https://aravindr93.github.io>Aravind Rajeswaran</a>,
                     <a href=https://cpaxton.github.io>Chris Paxton</a>,
-                    <a href=https://tonyzhaozh.github.io/>Tony Zhao</a>,
-                    <a href=https://homes.cs.washington.edu/~abhgupta/>Abhishek Gupta</a>,
+                    <a href=https://tonyzhaozh.github.io />Tony Zhao</a>,
+                    <a href=https://homes.cs.washington.edu/~abhgupta />Abhishek Gupta</a>,
 
                     and individual contributions from
                     <a href=https://www.giriman.com>Giri Anantharaman</a>,
@@ -1038,12 +1101,18 @@
                     <a href="https://www.linkedin.com/in/chandler-meadows-08821b242/">Chandler Meadows</a>,
                     <a href="https://sahirgomez.com/">Sahir Gomez</a>,
                     and
-                    <a href=https://kayke.xyz>Liyiming Ke</a>. We thank <a href="https://gaoyuezhou.github.io/">Gaoyue Zhou</a>,
-                    <a href="https://raunaqbhirangi.github.io/">Raunaq Bhirangi</a>,  <a href="https://sudeepdasari.github.io/">Sudeep Dasari</a>
-                    ,  <a href="https://judyye.github.io/">Yufei Ye</a>, <a href="https://www.mustafamukadam.com/">Mustafa Mukadam</a>,
-                     <a href="https://www.cs.cmu.edu/~sbahl2/">Shikhar Bahl</a>, <a href="https://mandizhao.github.io/">Mandi Zhao</a>,
-                    <a href="https://wenxuan-zhou.github.io/">Wenxuan Zhou</a>, <a href="https://www.seas.upenn.edu/~jasonyma/">Jason Ma</a>,
-                    and <a href="https://unnat.github.io/">Unnat Jain</a> for helpful discussions at different stages of the project.
+                    <a href=https://kayke.xyz>Liyiming Ke</a>. We thank <a href="https://gaoyuezhou.github.io/">Gaoyue
+                        Zhou</a>,
+                    <a href="https://raunaqbhirangi.github.io/">Raunaq Bhirangi</a>, <a
+                        href="https://sudeepdasari.github.io/">Sudeep Dasari</a>
+                    , <a href="https://judyye.github.io/">Yufei Ye</a>, <a
+                        href="https://www.mustafamukadam.com/">Mustafa Mukadam</a>,
+                    <a href="https://www.cs.cmu.edu/~sbahl2/">Shikhar Bahl</a>, <a
+                        href="https://mandizhao.github.io/">Mandi Zhao</a>,
+                    <a href="https://wenxuan-zhou.github.io/">Wenxuan Zhou</a>, <a
+                        href="https://www.seas.upenn.edu/~jasonyma/">Jason Ma</a>,
+                    and <a href="https://unnat.github.io/">Unnat Jain</a> for helpful discussions at different stages of
+                    the project.
                 </div>
             </section>
 
@@ -1097,11 +1166,16 @@
                 </div>
                 <div class="column has-text-left">
                     <!-- <h2 class="title is-3">BibTeX</h2> -->
-                    <pre><code id="p1">@article{roboagent,
-  author  = {Bharadhwaj, Homanga and Vakil, Jay and Sharma, Mohit and Gupta, Abhinav and Tulsiani, Shubham and Kumar, Vikash},
-  title   = {RoboAgent: Towards Sample Efficient Robot Manipulation with Semantic Augmentations and Action Chunking},
-  journal = {arxiv},
-  year    = {2023}}</code></pre>
+                    <pre><code id="p1">
+                        @misc{bharadhwaj2023roboagent,
+                            title={RoboAgent: Generalization and Efficiency in Robot Manipulation via Semantic Augmentations and Action Chunking},
+                            author={Homanga Bharadhwaj and Jay Vakil and Mohit Sharma and Abhinav Gupta and Shubham Tulsiani and Vikash Kumar},
+                            year={2023},
+                            eprint={2309.01918},
+                            archivePrefix={arXiv},
+                            primaryClass={cs.RO}
+                      }
+                    </code></pre>
                 </div>
             </div>
 

@@ -173,3 +173,8 @@ html {
     /* #transition: opacity 1.0s ease; */
     transition: opacity 1.0s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
+
+#news img{
+    height: 60px; width: auto;
+    margin-bottom: 15px;
+}
